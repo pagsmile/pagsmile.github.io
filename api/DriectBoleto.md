@@ -124,5 +124,5 @@ info | String | Yes | 128 | 返回信息 |
 
 >## 签名生成算法  
 
-参考直[连签名算法](api/DirectSign)
+参考直[连签名算法](DriectSign)
 
