@@ -6,7 +6,7 @@ layout: default
 # [](#server)订单平台
 
 [集成式接口](api/CreateOrder)  
-[直连boleto接口](api/DirectBoleto)
+[直连boleto接口](api/DriectBoleto)
 
 # [](#fcontrol)风控平台
 
