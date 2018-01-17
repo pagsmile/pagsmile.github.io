@@ -5,7 +5,7 @@ layout: default
 
 # [](#server)订单平台
 
-[统一下单接口](api/CreateOrder)
+[集成式接口](api/CreateOrder)
 
 # [](#fcontrol)风控平台
 
