@@ -2,7 +2,7 @@
 
 >## 流程示意
 
-![](/assets/img/CreateOrderFlow01.png)
+
 
 >## 接口链接
     测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
