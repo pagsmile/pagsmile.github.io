@@ -1,8 +1,7 @@
 ---
+title: Pagsmile开发接口文档
 layout: default
 ---
-
-# Pagsmile开发接口文档
 
 # [](#server)订单平台
 
