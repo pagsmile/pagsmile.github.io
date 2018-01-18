@@ -5,6 +5,7 @@
 ![](/assets/img/CreateOrderFlow01.png)
 
 >## 接口链接
+
     URL地址：https://pserver.pagsmile.com/gateway.json
 
 >## 请求参数
@@ -34,6 +35,7 @@ sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
 >## 返回结果
+
   请求异常时不进行页面跳转，返回错误状态。
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值

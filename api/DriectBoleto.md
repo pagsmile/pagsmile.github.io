@@ -5,13 +5,16 @@
 
 
 >## 接口链接
+
     测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
     正式URL地址：https://paychannel.pagsmile.com/api/boleto 
     
 >## 请求方式
+
      POST
 
->## 数据格式     
+>## 数据格式   
+  
     json
     
 >## 请求参数
