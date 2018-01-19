@@ -26,7 +26,7 @@ timestamp | String | Yes | 19 | 发送请求的时间单位为秒 | 21516081919
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
 payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。 | 88.88
-payment.currency | String | Yes | 3 | 币种 | BRL、USD、EUR 
+payment.currency | String | Yes | 3 | 币种 | BRL 
 payment.subject | String | No | 255 | 订单标题 |
 payment.content | String | No | 255 | 订单内容 |
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
@@ -38,7 +38,6 @@ customer.username | String | Yes | 255 | 用户姓名 | 商城商户此处为必
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
-charset | String | Yes | 10 | 请求使用的编码格式，如utf-8,gbk,gb2312等 | utf-8
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
 >## 请求样例
@@ -53,7 +52,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         "sign_type":"md5",
         "payment":{
                     "out_order_no":"test-003192",
-                    "order_amount":10,"currency":"BRL",
+                    "order_amount":10,
+                    "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",
                     "method":"103001",
