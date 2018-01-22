@@ -43,6 +43,8 @@ customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
+    说明：boleto 币种目前只支持BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
+
 >## 请求样例
 
 ```
