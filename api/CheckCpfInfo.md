@@ -1,9 +1,11 @@
 # 风控CPF校验接口说明
 
 >## 接口链接
+
     URL: https://fcontrol.pagsmile.com/api/checkCpfInfo.json
 
 >## 请求参数
+
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
 ps_mid | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
@@ -16,12 +18,14 @@ gender | String | Yes(type=2) | 1 | 请求校验的性别（只在高级验证�
 sign | String | Yes | 32 | 签名 | 
 
 >## 返回结果
+
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
 code | String | Yes | 16 | 返回状态码 | 200:成功
 info | String | Yes | 128 | 返回信息 | 
 
 >## 错误码
+
 错误码 | 描述 | 原因 | 解决方案
 ---  | ---  | ---  | ---
 401 | SYSTEM_PARAM_ERROR | 包类型不正确 | 检查参数设置。
