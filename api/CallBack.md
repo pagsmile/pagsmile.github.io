@@ -16,6 +16,7 @@
 通知url必须为直接可访问的url，不能携带参数。示例：notify_url：“https://callback.pagsmile.com/pay/callback.json”
 
 >## 通知参数
+
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
 trade_no | String | Yes | 20 | pagsmile下单后生成的交易ID | 2018011908344902008
@@ -30,6 +31,7 @@ sign_type | String | Yes | 32 | 固定为：MD5 即可。 |
 sign | String | Yes | 32 | 参照[签名算法](DriectSign)
 
 >## 返回结果
+
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
 result | String | Yes | 32 | 返回结果 | 'success':成功
