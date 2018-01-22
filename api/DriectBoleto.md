@@ -6,7 +6,7 @@
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
+    测试URL地址：https://paychanneldev.pagsmile.com:8443/api/boleto
     正式URL地址：https://paychannel.pagsmile.com/api/boleto 
     
 >## 请求方式
