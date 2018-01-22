@@ -10,6 +10,6 @@ layout: default
 
 # [](#fcontrol)风控平台
 
-[风控CPF校验接口说明](api/QueryCpfInfo)
+[风控CPF校验接口说明](api/CheckCpfInfo)
 
 
