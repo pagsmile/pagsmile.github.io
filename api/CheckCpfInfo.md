@@ -11,7 +11,7 @@
 ps_mid | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 type | String | Yes | 2 | 请求包类型：1为基础校验，CPF号码和姓名校验；2为高级校验，校验包括姓名，性别，母亲姓名，生日信息。 | 1或2
 cpf_no | String | Yes | 11 | 请求校验的CPF号码，不带特殊符号 | 
-name | String | Yes | 255 | 请求校验的姓名
+username | String | Yes | 255 | 请求校验的姓名
 nameOfMom | String | Yes(type=2) | 255 | 请求校验的母亲的姓名（只在高级验证中必填）
 birthday | String | Yes(type=2) | 10 | 请求校验的生日（只在高级验证中必填） | DD/MM/YYYY
 gender | String | Yes(type=2) | 1 | 请求校验的性别（只在高级验证中必填） | （M \| F）
