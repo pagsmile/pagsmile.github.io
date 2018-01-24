@@ -13,6 +13,6 @@ layout: default
 
 # [](#fcontrol)风控平台
 
-[风控CPF校验接口说明](api/CheckCpfInfo)
+[风控CPF邮箱校验绑定接口说明](api/CheckEmailInfo)
 
 
