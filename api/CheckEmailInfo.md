@@ -2,7 +2,7 @@
 
 >## 接口链接
 
-   测试URL地址：https://paychanneldev.pagsmile.com:8443/api/mailcheck
+   测试URL地址：https://paychanneldev.pagsmile.com:8443/api/mailcheck  
    正式URL地址：https://paychannel.pagsmile.com/api/mailcheck 
 
 >## 请求方式
