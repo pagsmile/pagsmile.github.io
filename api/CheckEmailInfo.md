@@ -21,7 +21,7 @@ merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 102420170814001
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
 cpf_no | String | Yes | 11 | 请求校验的CPF号码，不带特殊符号 | 50284414727 
 username | String | Yes | 255 | 请求校验的姓名 | Test User Name
-email | String | Yes | 255 | 请求校验的姓名
+email | String | Yes | 255 | 请求校验的邮箱
 return_url | String | No | 255 | 用户在邮箱点击验证成功后的跳转链接 | https://www.pagsmile.com
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
