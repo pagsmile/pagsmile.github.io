@@ -49,8 +49,9 @@ info | String | Yes | 128 | 返回信息 |
 402 | SIGN_VERIFY_FAILURE | 签名错误 | 根据给定的规则设置签名，并确认参数sign字段设置正确。
 502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
+759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
-
+930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
 
 >## 签名生成算法  
 

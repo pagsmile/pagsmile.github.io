@@ -66,11 +66,11 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "notify_url":"www.pagsmile.com"
                    },
         "customer":{
-                    "name":"Test User Name",
+                    "username":"Test User Name",
                     "buyer_ip":"127.0.0.1",
                     "browser":"safari",
                     "email":"test@pagsmile.com",
-                    "cpf":"50284414727",
+                    "cpf_no":"50284414727",
                     "out_uid":"out_uid",
                     "phone":"11941523675"
                     },
@@ -120,7 +120,9 @@ info | String | Yes | 128 | 返回信息 |
 507 | MERCHANT_ID_NOT_ACTIVE | 商户号未激活 | 联系客服查看未激活原因。
 602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
+759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
+930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
 512 | MERCHANT_TRADE_NO_ISNULL | 商户订单号为空 | 检查参数设置。
 806 | TRADE_TIMEOUT_CLOSE | 该订单已经超过指定过期时效 | 检查参数设置或确认订单信息。
 400 | SYSTEM_ERROR | 订单创建失败 | 请尝试重新下单。
