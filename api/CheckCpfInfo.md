@@ -31,5 +31,7 @@ info | String | Yes | 128 | 返回信息 |
 401 | SYSTEM_PARAM_ERROR | 包类型不正确 | 检查参数设置。
 402 | SIGN_VERIFY_FAILURE | 签名错误 | 根据给定的规则设置签名，并确认参数sign字段设置正确。
 502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
+508 | MERCHANT_STATUS_ISLOCK | 商户状态不可用 | 检查参数中的商户号是否正确或尝试联系客服。
+509 | MERCHANT_REQUEST_REFUSED | 商户请求被拒绝 | 商户接口请求次数不足或没有请求权限，请联系客服开通。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
