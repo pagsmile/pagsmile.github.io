@@ -23,6 +23,7 @@ sign | String | Yes | 32 | 签名 |
 ---  | ---  | ---      | ---      | ---  | ---
 code | String | Yes | 16 | 返回状态码 | 200:成功
 info | String | Yes | 128 | 返回信息 | 
+data | String | Yes | 256 | 返回数据 | 查询剩余次数
 
 >## 错误码
 
