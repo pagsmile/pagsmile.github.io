@@ -2,7 +2,16 @@
 
 >## 接口链接
 
-    URL: https://fcontrol.pagsmile.com/api/checkCpfInfo.json
+    测试URL地址: https://paychanneldev.pagsmile.com:8443/api/checkcpf
+    正式URL地址: https://paychannel.pagsmile.com/api/checkcpf
+    
+>## 请求方式
+
+     POST
+
+>## 数据格式   
+  
+    json    
 
 >## 请求参数
 
@@ -16,6 +25,8 @@ nameOfMom | String | Yes(type=2) | 255 | 请求校验的母亲的姓名（只在
 birthday | String | Yes(type=2) | 10 | 请求校验的生日（只在高级验证中必填） | DD/MM/YYYY
 gender | String | Yes(type=2) | 1 | 请求校验的性别（只在高级验证中必填） | （M \| F）
 sign | String | Yes | 32 | 签名 | 
+
+测试：在测试环境使用cpf和姓名对应为 50284414727 和 Test User Name
 
 >## 返回结果
 
@@ -36,3 +47,7 @@ data | String | Yes | 256 | 返回数据 | 查询剩余次数
 509 | MERCHANT_REQUEST_REFUSED | 商户请求被拒绝 | 商户接口请求次数不足或没有请求权限，请联系客服开通。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
+
+>## 签名生成算法  
+
+参考[签名算法](DriectSign)
