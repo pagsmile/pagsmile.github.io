@@ -41,6 +41,12 @@ customer.username | String | Yes | 255 | 用户姓名 | 商城商户此处为必
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
+address.zip_code | String | Yes | 100 | 商户的用户的邮政编码| 06233-200
+address.street_name | String | Yes | 100 | 商户的用户的街道名称| Av. das Nações Unidas
+address.street_number | String | Yes | 100 | 商户的用户的街道编号| 3003
+address.neighborhood | String | Yes | 100 | 商户的用户的社区地址| Bonfim
+address.city | String | Yes | 100 | 商户的用户的城市| Osasco
+address.federal_unit | String | Yes | 100 | 商户的用户的州| SP
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
     说明：boleto 币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
@@ -61,7 +67,6 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",
-                    "method":"103001",
                     "return_url":"www.pagsmile.com",
                     "notify_url":"www.pagsmile.com"
                    },
@@ -74,6 +79,14 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "out_uid":"out_uid",
                     "phone":"11941523675"
                     },
+        "address":{
+                    "zip_code":"06233-200",
+                    "street_name":"Av. das Nações Unidas",
+                    "street_number":"3003",
+                    "neighborhood":"Bonfim",
+                    "city":"Osasco",
+                    "federal_unit":"SP"
+                    },               
         "sign":"c7412c2458a135dd3d37a655ef796a41"
     }
 
