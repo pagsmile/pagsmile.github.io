@@ -41,12 +41,12 @@ customer.username | String | Yes | 255 | 用户姓名 | 商城商户此处为必
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
-address.zip_code | String | Yes | 100 | 商户的用户的邮政编码| 06233-200
-address.street_name | String | Yes | 100 | 商户的用户的街道名称| Av. das Nações Unidas
-address.street_number | String | Yes | 100 | 商户的用户的街道编号| 3003
-address.neighborhood | String | Yes | 100 | 商户的用户的社区地址| Bonfim
-address.city | String | Yes | 100 | 商户的用户的城市| Osasco
-address.federal_unit | String | Yes | 100 | 商户的用户的州| SP
+address.zip_code | String | Yes | 100 | 用户的通讯地址邮政编码| 06233-200
+address.street_name | String | Yes | 100 | 用户的通讯地址街道名称| Av. das Nações Unidas
+address.street_number | String | Yes | 100 | 用户的通讯地址街道编号| 3003
+address.neighborhood | String | Yes | 100 | 用户的通讯地址社区地址| Bonfim
+address.city | String | Yes | 100 | 用户的通讯地址的城市| Osasco
+address.federal_unit | String | Yes | 100 | 商户的用户通讯地址的州| SP
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
     说明：boleto 币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
