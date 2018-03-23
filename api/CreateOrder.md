@@ -5,8 +5,9 @@
 ![](/assets/img/CreateOrderFlow01.png)
 
 >## 接口链接
-
-    URL地址：https://pserver.pagsmile.com/gateway.json
+    
+    测试URL地址：https://testenv.pagsmile.com:8443/pserver/gateway.json  
+    正式URL地址：https://pserver.pagsmile.com/gateway.json
 
 >## 请求参数
 
