@@ -7,7 +7,7 @@
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com:8443/api/cedit
-    正式URL地址：https://paychannel.pagsmile.com/api/boleto 
+    正式URL地址：https://paychannel.pagsmile.com/api/credit 
     
 >## 请求方式
 
