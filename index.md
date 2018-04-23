@@ -7,11 +7,13 @@ layout: default
 
 [集成式接口](api/CreateOrder)  
 
-[直连boleto接口](api/DriectBoleto)  
+[直连boleto接口](api/DriectBoleto)
+  
+[直连信用卡接口](api/DriectCreditCard)
 
 [支付结果通知](api/CallBack)  
 
-[退款请求接口](api/RefundApply)
+[boleto退款请求接口](api/RefundApply)
 
 # [](#fcontrol)风控平台
 
