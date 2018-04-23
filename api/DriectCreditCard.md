@@ -165,5 +165,8 @@ info.currency | String | Yes | 10 | 币种 |
 
 >## 签名生成算法  
 
-参考直[连签名算法](DriectSign)
+参考[直连签名算法](DriectSign)
 
+>## 启用授权链接
+
+参考[启用授权链接](AuthenticateUrl)
