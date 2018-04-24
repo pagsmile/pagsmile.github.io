@@ -6,8 +6,8 @@
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com:8443/api/credit
-    正式URL地址：https://paychannel.pagsmile.com/api/credit 
+    测试URL地址：https://paychanneldev.pagsmile.com:8443/api/refund
+    正式URL地址：https://paychannel.pagsmile.com/api/refund 
     
 >## 请求方式
 
@@ -25,7 +25,6 @@ merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 102420170814001
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
 version | String | Yes | 10 | 调用的接口版本，固定为：1.0 | 1.0
 timeout_express | String | Yes | 255 | 订单有效期 | 1d；1m；1h；1s
-passback_params | String | Yes | 255 | 透传参数 | 默认passback_params
 timestamp | String | Yes | 19 | 发送请求的时间单位为秒 | 21516081919
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
@@ -77,7 +76,6 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         "timestamp":1516187084,
         "version":"1.0",
         "timeout_express":"15d",
-        "passback_params":"passback_params",
         "sign_type":"md5",
         "payment":{
                     "out_order_no":"test-003192",
