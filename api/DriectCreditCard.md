@@ -55,7 +55,7 @@ address.street_name | String | No | 70 | 用户的通讯地址街道名称| Av. 
 address.street_number | String | No | 10 | 用户的通讯地址街道编号| 3003
 address.neighborhood | String | No | 50 | 用户的通讯地址社区地址| Bonfim
 address.city | String | No | 50 | 用户的通讯地址的城市| Osasco
-address.federal_unit | String | No | 2-2 | 用户的通讯地址的州缩写| SP
+address.federal_unit | String | No | 2 | 用户的通讯地址的州缩写| SP
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
      说明：币种目前只支持USD和BRL，在测试环境中使用的
