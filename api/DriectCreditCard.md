@@ -57,7 +57,15 @@ address.city | String | No | 50 | 用户的通讯地址的城市| Osasco
 address.federal_unit | String | No | 2-2 | 用户的通讯地址的州缩写| SP
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
-     说明：币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
+     说明：币种目前只支持USD和BRL，在测试环境中使用的
+     
+        cpf_no 和username是50284414727和Test User Name
+     
+     测试卡号，卡类型不限，推荐visa
+        
+        成功 0000000000000001 或者 0000000000000004
+        失败 0000000000000002 或者 0000000000000008
+     
 
 >## 请求样例
 
