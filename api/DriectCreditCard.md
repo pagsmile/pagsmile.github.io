@@ -167,6 +167,14 @@ info.currency | String | Yes | 10 | 币种 |
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
 910 | CARD_NO_ISNULL | 卡号为空     | 检查参数
+911 | CARD_TYPE_ISNULL | 卡类型为空     | 检查参数
+912 | CARD_IS_BLACK_CARD | 卡号被所     | 检查参数
+913 | CARD_USER_INFO_NOT_MATCH | 卡信息不符     | 检查参数
+914 | CARD_USER_USER_TO_MANY | 绑卡超过上限     | 检查参数
+915 | CARD_TRADE_TOO_FREQUENT | 卡交易太频繁     | 检查参数
+917 | CARD_TRADE_IP_LIMIT | 卡号IP受限    | 检查参数
+922 | CPF_IS_BLACK_CPF | 身份证号被锁定     | 检查参数
+923 | CPF_IS_VERIFYING | 身份证好验证中     | 检查参数
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
 930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
 512 | MERCHANT_TRADE_NO_ISNULL | 商户订单号为空 | 检查参数设置。
