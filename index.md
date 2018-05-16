@@ -11,6 +11,8 @@ layout: default
   
 [直连信用卡接口](api/DriectCreditCard)
 
+[直连信用卡分期接口](api/DriectRecurrent.md)
+
 [支付结果通知](api/CallBack)  
 
 [boleto退款请求接口](api/RefundApply)
