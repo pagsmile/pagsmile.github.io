@@ -24,7 +24,7 @@
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
 version | String | Yes | 10 | 调用的接口版本，固定为：1.0 | 1.0
-timeout_express | String | Yes | 255 | 订单有效期 | 1d；1m；1h；1s
+timeout_express | String | Yes | 255 | 订单有效期 | 一天的时间赋值为:1d或者24h或者1440m；
 passback_params | String | Yes | 255 | 透传参数 | 默认passback_params
 timestamp | String | Yes | 19 | 发送请求的时间单位为秒 | 21516081919
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
