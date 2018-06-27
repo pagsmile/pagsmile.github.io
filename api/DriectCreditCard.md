@@ -133,6 +133,15 @@ info.out_order_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 | 
 
+
+  如果有授权跳转链接 ,请求成功后，返回在一个post表单中，其中提交地址为authenticate_back_url
+  
+  参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+  ---  | ---  | ---      | ---      | ---  | ---
+  status | String | Yes | 16 | 返回状态码 (成功为success)| success
+  trade_no | String | Yes | 16 | 平台订单号 | 2017042311015505011
+  info | String | Yes | 16 | 返回状态信息 (成功为success)| success
+
 >## 成功样例
 
 ```
