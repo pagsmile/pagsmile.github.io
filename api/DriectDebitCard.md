@@ -195,14 +195,10 @@ info.currency | String | Yes | 10 | 币种 |
 无授权链接返回
 
 ```
-    array(3) {
-          ["status"]=>
-          string(7) "success"
-          ["trade_no"]=>
-          string(19) "2018062703501809079"
-          ["info"]=>
-          string(8) "success "
-        }
+     { 
+        "code":"403",
+        "info":"SIGN_ISNULL"
+     }
     
 ```  
 
