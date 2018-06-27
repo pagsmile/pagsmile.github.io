@@ -81,7 +81,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         "payment":{
                     "out_order_no":"test-003192",
                     "order_amount":10,
-                    "method":"101001",
+                    "method":"102001",
                     "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",
