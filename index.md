@@ -5,13 +5,15 @@ layout: default
 
 # [](#server)订单平台
 
-[集成式接口](api/CreateOrder)  
+[集成式接口](api/CreateOrder) 
+ 
+[支付接口流程图](api/Flow) 
 
 [直连boleto接口](api/DriectBoleto)
   
 [直连信用卡接口](api/DriectCreditCard)
 
-[直连信用卡分期接口](api/DriectRecurrent.md)
+[直连信用卡分期接口](api/DriectRecurrent)
 
 [直连借记卡接口](api/DriectDebitCard)
 
