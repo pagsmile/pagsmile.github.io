@@ -10,6 +10,8 @@ layout: default
 [支付接口流程图](api/Flow) 
 
 [直连boleto接口](api/DriectBoleto)
+
+[现金闪付接口](api/FlashPay)
   
 [直连信用卡接口](api/DriectCreditCard)
 
