@@ -42,7 +42,7 @@ customer.cpf_no | String | Yes | 64 | CPF号码 |
 customer.username | String | Yes | 255 | 用户姓名 | 
 customer.buyer_ip | String | No | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | No | 255 | 商户的用户浏览器类型|
-customer.phone | String | Yes | 9 | 商户的用户的电话，9位数字| 
+customer.phone | String | Yes | 9 | 商户的用户的电话，8位或9位数字| 
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
      说明：币种目前只支持USD和BRL，在测试环境中使用的
@@ -148,13 +148,7 @@ info.check_url | String | Yes | 10 | 支付凭证验证链接 |
 602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
-910 | CARD_NO_ISNULL | 卡号为空     | 检查参数
-911 | CARD_TYPE_ISNULL | 卡类型为空     | 检查参数
-912 | CARD_IS_BLACK_CARD | 卡号被所     | 检查参数
-913 | CARD_USER_INFO_NOT_MATCH | 卡信息不符     | 检查参数
-914 | CARD_USER_USER_TO_MANY | 绑卡超过上限     | 检查参数
-915 | CARD_TRADE_TOO_FREQUENT | 卡交易太频繁     | 检查参数
-917 | CARD_TRADE_IP_LIMIT | 卡号IP受限    | 检查参数
+760 | PHONE_ISNULL | 请求电话号码为空 | 检查参数设置。
 922 | CPF_IS_BLACK_CPF | 身份证号被锁定     | 检查参数
 923 | CPF_IS_VERIFYING | 身份证好验证中     | 检查参数
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
@@ -168,7 +162,3 @@ info.check_url | String | Yes | 10 | 支付凭证验证链接 |
 >## 签名生成算法  
 
 参考[直连签名算法](DriectSign)
-
->## 启用授权链接
-
-参考[启用授权链接](AuthenticateUrl)
