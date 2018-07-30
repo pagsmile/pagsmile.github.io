@@ -18,8 +18,8 @@ app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 20170519141722
 method | String | No | 11 | 支付渠道ID | 101003002(Credit Card); 102001(Debit Card) ; 103001(Boleto) ; 110010(Deposite Express) |
 out_order_no | String | Yes | 64 | 商户订单号 | 
 out_uid | String | Yes | 255 | 商户的用户ID | 
-subject | String | No | 255 | 订单标题 |
-content | String | No | 255 | 订单内容 |
+subject | String | Yes | 255 | 订单标题 |
+content | String | Yes | 255 | 订单内容 |
 order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。 | 88.88
 currency | String | Yes | 3 | 币种 | BRL、USD、EUR
 email | String | No | 255 | 邮箱地址 |  
