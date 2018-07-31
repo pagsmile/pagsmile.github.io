@@ -18,19 +18,19 @@
                 'out_uid' => 'merchant_uid_001', //商户用户唯一标示
                 'cpf_no' => '50284414727',  //巴西用户身份编号
                 'username' =>'Test User Name', //用户姓名
-                'email'=> 'test@pagsmile.com',
-                'subject' => 'order subject',
-                'content' => 'order content',
-                'order_amount' => '13.14',
-                'currency' => 'BRL',
-                'charset' => 'utf-8',
-                'timestamp' => $order_time,
-                'version' => '1.0',
+                'email'=> 'test@pagsmile.com', //用户邮箱
+                'subject' => 'order subject',  //订单标题
+                'content' => 'order content',  //订单内容
+                'order_amount' => '13.14',    //金额
+                'currency' => 'BRL', //币种
+                'charset' => 'utf-8', //编码默认
+                'timestamp' => $order_time, //下单时间
+                'version' => '1.0', //默认
                 'timeout_express' => '15d', //订单过期时间
-                'passback_params' => 'passback_params', //透出参数原样返回
-                'sign_type' => 'md5',
-                'notify_url' => 'www.pagsmile.com',
-                'return_url' => 'www.pagsmile.com'
+                'passback_params' => 'passback_params', //透出参数，回调原样返回
+                'sign_type' => 'md5',//加密方式
+                'notify_url' => 'www.pagsmile.com', //异步通知
+                'return_url' => 'www.pagsmile.com' //同步跳转
             );
     
         ksort($order_data);
