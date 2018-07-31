@@ -72,3 +72,7 @@ info | String | Yes | 128 | 返回信息 |
 
 2. 在tempData最后拼接上key得到signData字符串，并signData进行MD5运算，得到sign值signValue。
     - key设置路径：商户平台(paccess.pagsmile.com)
+    
+>## demo
+
+参考[php demo](DemoPHP)
