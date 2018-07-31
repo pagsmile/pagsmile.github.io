@@ -36,10 +36,10 @@ sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
 
-测试数据：
-  信用卡 测试卡号 visa 4235647728025682 mastercard 5031433215406351 持卡人姓名 APRO  cfp号 50284414727 cvc 123 有效期12/2020
-  借记卡 测试卡号 visa 0000000000000001 mastercard 0000000000000002 持卡人姓名 Test User Name  cfp号 50284414727 cvc 123 有效期12/2020
-  Deposite Express 持卡人姓名 Test User Name  cfp号 50284414727
+测试数据:  
+  信用卡 测试卡号 visa 4235647728025682 mastercard 5031433215406351 持卡人姓名 APRO  cfp_no号 50284414727 cvc 123 有效期12/2020  
+  借记卡 测试卡号 visa 0000000000000001 mastercard 0000000000000002 持卡人姓名 Test User Name  cfp_no号 50284414727 cvc 123 有效期12/2020   
+  Deposite Express 持卡人姓名 Test User Name  cfp号 50284414727  
 
 >## 返回结果
 
