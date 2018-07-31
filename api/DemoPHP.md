@@ -7,8 +7,7 @@
     
     	$appkey = 'MD5Key';//商户后台app创建key
     
-    
-        $order_time = date('Y-m-d H:i:s',time());
+        $order_time = date('Y-m-d H:i:s',time()); //下单时间
     
         $order_data = array(
                 'merchant_no' => '102320170519', //商户编号
@@ -48,15 +47,13 @@
        
     
         $str .= "&key=" . $appkey;
-    
         
         $str = substr($str, 1);
     
         echo $str;
     
         $sign = md5($str);
-    
-    
+
      ?>
     
     <html>
@@ -87,7 +84,6 @@
         <input type="hidden" name="sign_type" value="<?php echo $order_data['sign_type']?>">
         <input type="hidden" name="sign" value="<?php echo  $sign?>">
     
-    
         <center><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="333333">Go to payment ...</font></center>
     
     </form>
@@ -111,11 +107,9 @@
     
             $response = $_POST;
     
-    
             //sign不参与签名删除
             $sign = $response['sign'];
     
-        
             unset($response['sign']);
       
             ksort($response);
@@ -131,13 +125,10 @@
     
             }
             $str .= "&key=" . $appkey;
-    
-    
+        
             $str = substr($str, 1);
     
-        
             $sign_v = md5($str);
-    
         
             if($sign == $sign_v){
     
