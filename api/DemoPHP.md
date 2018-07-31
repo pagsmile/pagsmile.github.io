@@ -50,8 +50,6 @@
         
         $str = substr($str, 1);
     
-        echo $str;
-    
         $sign = md5($str);
 
      ?>
