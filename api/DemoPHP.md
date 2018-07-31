@@ -13,7 +13,7 @@
                 'merchant_no' => '102320170519', //商户编号
                 'app_id' => '2017051914172236111', //商户后台创建的app编号
                 'method' => '',//空为集成页面 101003002(Credit Card); 102001(Debit Card) ; 103001(Boleto) ; 110010(Deposite Express)
-                'out_order_no' =>'merchant_order_001',//商户订单号
+                'out_order_no' =>'merchant_order_001'.time(),//商户订单号
                 'out_uid' => 'merchant_uid_001', //商户用户唯一标示
                 'cpf_no' => '50284414727',  //巴西用户身份编号
                 'username' =>'Test User Name', //用户姓名
