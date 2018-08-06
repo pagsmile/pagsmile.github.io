@@ -1,0 +1,8 @@
+---
+title: Pagsmile API for Developers
+layout: default
+---
+
+# [](#server) Order Platform
+
+[Integrated Interface](en/api/CreateOrder) 
