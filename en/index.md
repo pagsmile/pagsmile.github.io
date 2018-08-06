@@ -5,4 +5,4 @@ layout: default
 
 # [](#server) Order Platform
 
-[Integrated Interface](en/api/IntegratedInterface) 
+[Integrated Interface](api/IntegratedInterface) 
