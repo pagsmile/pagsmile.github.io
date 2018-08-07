@@ -38,8 +38,8 @@ TRADE_SUCCESS | 成功
 TRADE_REFUND | 退款
 TRADE_CHARGEBACK | 拒付
 TRADE_DISPUTE | 争议
-PAID_MAJOR | 收款金额大于实际金额
-PAID_MINOR | 收款金额小于实际金额
+PAID_MAJOR | 收款金额大于实际金额（仅boleto）
+PAID_MINOR | 收款金额小于实际金额（仅boleto）
 
 >## 返回结果
 
