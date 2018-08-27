@@ -6,7 +6,7 @@
 
 >## 接口链接
     
-    测试URL地址：https://testenv.pagsmile.com:8443/pserver/gateway.json  
+    测试URL地址：https://testenv.pagsmile.com/pserver/gateway.json  
     正式URL地址：https://pserver.pagsmile.com/gateway.json
 
 >## 请求参数
