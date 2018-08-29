@@ -23,6 +23,8 @@ layout: default
 
 [boleto退款请求接口](api/RefundApply)
 
+[签名算法说明](api/DriectSign)
+
 # [](#fcontrol)风控平台
 
 [风控CPF邮箱校验绑定接口说明](api/CheckEmailInfo)  
