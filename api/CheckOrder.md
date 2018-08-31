@@ -25,19 +25,18 @@ sign | String | Yes | 32 | 签名 |
 
 >## 返回结果 
 
-
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | 返回状态码 | 成功:200
+code | String | Yes | 16 | 返回状态码 | 成功:200 
 info | String | Yes | 128 | 返回信息 | 成功: SUCCESSFUL
 data.merchant_no | String | Yes | 50 | pagsmile分配给商户的ID   
 data.app_id | String | Yes | 50 | pagsmile分配给商户的应用ID
 data.callback_status | String | Yes | 50 |  订单回调是否成功 
 data.order_currency | String | Yes | 50 |   订单币种  
 data.out_uid | String | Yes | 50 |     用户标示如用户id
-data.order_amount | String | Yes | 50 |    订单金额 
-data.trade_status | String | Yes | 50 |     订单状态
-data.trade_no | String | Yes | 50 |   pagsmile交易流水号
+data.order_amount | String | Yes | 50 |  订单金额 
+data.trade_status | String | Yes | 50 |  订单状态
+data.trade_no | String | Yes | 50 |  pagsmile交易流水号
 >## 错误码
 
 错误码 | 描述 | 原因 | 解决方案
