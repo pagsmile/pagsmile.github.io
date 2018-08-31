@@ -36,7 +36,8 @@ data.order_currency | String | Yes | 50 |   订单币种
 data.out_uid | String | Yes | 50 |     用户标示如用户id
 data.order_amount | String | Yes | 50 |  订单金额 
 data.trade_status | String | Yes | 50 |  订单状态
-data.trade_no | String | Yes | 50 |  pagsmile交易流水号
+data.trade_no | String | Yes | 50 |  pagsmile交易流水号 
+
 >## 错误码
 
 错误码 | 描述 | 原因 | 解决方案
