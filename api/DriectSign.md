@@ -1,4 +1,4 @@
-# 直连签名算法
+# 签名算法
 
 >## 签名说明
     
@@ -8,8 +8,10 @@
     在tempData最后拼接上key得到signData字符串，并signData进行MD5运算，得到sign值signValue。
 
 >## key的获取
+
+key设置路径：商户平台(paccess.pagsmile.com)
     
-    key设置路径：商户平台(paccess.pagsmile.com)
+具体设置方式请参照 [签名参数获取方法](/docs/接口参数获取方法.pdf)  
 
 >## 样例
     

@@ -21,7 +21,7 @@
 ---  | ---  | ---      | ---      | ---  | ---
 trade_no | String | Yes | 20 | pagsmile下单后生成的交易ID | 2018011908344902008
 out_trade_no | String | Yes | 64 | 商户请求下单时发送的对应商户的交易ID | 
-trade_status | String | Yes | 20 | 返回的订单状态 | 
+trade_status | String | Yes | 20 | 返回的订单状态 | 目前返回的订单状态包含（TRADE_SUCCESS、TRADE_REFUND、TRADE_CHARGEBACK、TRADE_DISPUTE、PAID_MAJOR、PAID_MINOR）
 passback_params | String | Yes | 255 | 暂时没有用到，传空即可。 | 
 pay_channel | String | Yes | 255 | 对应的支付渠道。 | 
 total_amount | String | Yes | 订单总金额 | 
@@ -29,6 +29,17 @@ currency | String | Yes | 3 | 币种 |
 version | String Yes | 3 | 固定为：1.0 即可 | 
 sign_type | String | Yes | 32 | 固定为：MD5 即可。 |  
 sign | String | Yes | 32 | 参照[签名算法](DriectSign)
+
+>### 返回状态对应关系  
+
+状态码 | 状态说明
+:--- | :---:
+TRADE_SUCCESS | 成功
+TRADE_REFUND | 退款
+TRADE_CHARGEBACK | 拒付
+TRADE_DISPUTE | 争议
+PAID_MAJOR | 收款金额大于实际金额（仅boleto）
+PAID_MINOR | 收款金额小于实际金额（仅boleto）
 
 >## 返回结果
 

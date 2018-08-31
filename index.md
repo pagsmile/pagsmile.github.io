@@ -25,6 +25,8 @@ layout: default
 
 [订单查询接口](api/CheckOrder)
 
+[签名算法说明](api/DriectSign)
+
 # [](#fcontrol)风控平台
 
 [风控CPF邮箱校验绑定接口说明](api/CheckEmailInfo)  
