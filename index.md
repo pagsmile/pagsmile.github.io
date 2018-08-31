@@ -21,7 +21,9 @@ layout: default
 
 [支付结果通知](api/CallBack)  
 
-[boleto退款请求接口](api/RefundApply)
+[boleto退款请求接口](api/RefundApply) 
+
+[订单查询接口](api/CheckOrder)
 
 # [](#fcontrol)风控平台
 
