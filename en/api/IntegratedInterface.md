@@ -6,7 +6,7 @@
 
 >## URL
     
-    Test    : https://testenv.pagsmile.com:8443/pserver/gateway.json  
+    Test    : http://testenv.pagsmile.com/pserver/gateway.json  
     Product : https://pserver.pagsmile.com/gateway.json
 
 >## Request Parameters
@@ -84,4 +84,4 @@ CODE | DESC | REASON | SOLUTION
     
 >## demo
 
-SEE : [php demo](DemoPHP)
+SEE : [PHP Demo](DemoPHP)
