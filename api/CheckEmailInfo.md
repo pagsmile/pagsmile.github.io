@@ -53,6 +53,8 @@ info | String | Yes | 128 | 返回信息 |
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
 930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
 
+更详细列表请参照[返回状态和错误一览](ReturnResult)
+
 >## 签名生成算法  
 
 参考直[连签名算法](DriectSign)
