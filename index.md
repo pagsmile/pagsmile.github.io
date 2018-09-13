@@ -27,6 +27,8 @@ layout: default
 
 [签名算法说明](api/DriectSign)
 
+[返回状态和错误一览](api/ReturnResult)
+
 # [](#fcontrol)风控平台
 
 [风控CPF邮箱校验绑定接口说明](api/CheckEmailInfo)  
