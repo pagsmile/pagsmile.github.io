@@ -32,14 +32,7 @@ sign | String | Yes | 32 | 参照[签名算法](DriectSign)
 
 >### 返回状态对应关系  
 
-状态码 | 状态说明
-:--- | :---:
-TRADE_SUCCESS | 成功
-TRADE_REFUND | 退款
-TRADE_CHARGEBACK | 拒付
-TRADE_DISPUTE | 争议
-PAID_MAJOR | 收款金额大于实际金额（仅boleto）
-PAID_MINOR | 收款金额小于实际金额（仅boleto）
+更详细列表请参照[返回状态和错误一览](ReturnResult)
 
 >## 返回结果
 
