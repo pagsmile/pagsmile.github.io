@@ -57,7 +57,7 @@
     <html>
     <head><title> pagesmile</title></head>
     <body>
-    <form id="pagsmile_pay" method="post" name="pagsmile_pay" action="https://testenv.pagsmile.com:8443/pserver/gateway.json">
+    <form id="pagsmile_pay" method="post" name="pagsmile_pay" action="http://testenv.pagsmile.com/pserver/gateway.json">
     
         <!-- Pagsmile Configuration -->
         <input type="hidden" name="merchant_no" value="<?php echo $order_data['merchant_no']?>">
