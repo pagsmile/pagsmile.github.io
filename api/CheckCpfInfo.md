@@ -49,6 +49,8 @@ data | String | Yes | 256 | 返回数据 | 查询剩余次数
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
 
+更详细列表请参照[返回状态和错误一览](ReturnResult)
+
 >## 签名生成算法  
 
 参考[签名算法](DriectSign)
