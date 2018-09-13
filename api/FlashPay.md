@@ -158,6 +158,7 @@ info.check_url | String | Yes | 10 | 支付凭证验证链接 |
 400 | SYSTEM_ERROR | 订单创建失败 | 请尝试重新下单。
 550 | SINGLE_DAY_PAY_LIMIT | 超过单日限额 | 检查参数设置或确认订单信息。
 
+更详细列表请参照[返回状态和错误一览](ReturnResult)
 
 >## 签名生成算法  
 
