@@ -2,7 +2,7 @@
 
 >## 接口链接
 
-    测试URL地址: https://paychanneldev.pagsmile.com:8443/api/refundapply
+    测试URL地址: https://paychanneldev.pagsmile.com/api/refundapply
     正式URL地址: https://paychannel.pagsmile.com/api/refundapply
     
 >## 请求方式
@@ -45,6 +45,8 @@ data | String | Yes | 256 | null    |
 502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
 508 | MERCHANT_STATUS_ISLOCK | 商户状态不可用 | 检查参数中的商户号是否正确或尝试联系客服。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
+
+更详细列表请参照[返回状态和错误一览](ReturnResult)
 
 >## 签名生成算法  
 
