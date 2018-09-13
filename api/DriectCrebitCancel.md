@@ -42,6 +42,8 @@ data | String | Yes | 256 | null    |
 508 | MERCHANT_STATUS_ISLOCK | 商户状态不可用 | 检查参数中的商户号是否正确或尝试联系客服。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
 
+更详细列表请参照[返回状态和错误一览](ReturnResult)
+
 >## 签名生成算法  
 
 参考[签名算法](DriectSign)
