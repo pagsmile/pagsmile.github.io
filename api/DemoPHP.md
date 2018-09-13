@@ -12,7 +12,7 @@
         $order_data = array(
                 'merchant_no' => '102320170519', //商户编号
                 'app_id' => '2017051914172236111', //商户后台创建的app编号
-                'method' => '',//空为集成页面 101003002(Credit Card); 102001(Debit Card) ; 103001(Boleto) ; 110010(Deposite Express)
+                'method' => '',//空为集成页面 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposite Express)
                 'out_order_no' =>'merchant_order_001'.time(),//商户订单号
                 'out_uid' => 'merchant_uid_001', //商户用户唯一标示
                 'cpf_no' => '50284414727',  //巴西用户身份编号
@@ -57,7 +57,7 @@
     <html>
     <head><title> pagesmile</title></head>
     <body>
-    <form id="pagsmile_pay" method="post" name="pagsmile_pay" action="https://testenv.pagsmile.com:8443/pserver/gateway.json">
+    <form id="pagsmile_pay" method="post" name="pagsmile_pay" action="http://testenv.pagsmile.com/pserver/gateway.json">
     
         <!-- Pagsmile Configuration -->
         <input type="hidden" name="merchant_no" value="<?php echo $order_data['merchant_no']?>">
