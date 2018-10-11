@@ -3,7 +3,7 @@
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com:8443/api/refund
+    测试URL地址：https://paychanneldev.pagsmile.com/api/refund
     正式URL地址：https://paychannel.pagsmile.com/api/refund 
     
 >## 请求方式
