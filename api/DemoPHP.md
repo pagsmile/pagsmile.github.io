@@ -28,8 +28,8 @@
                 'timeout_express' => '15d', //订单过期时间
                 'passback_params' => 'passback_params', //透出参数，回调原样返回
                 'sign_type' => 'md5',//加密方式
-                'notify_url' => 'www.pagsmile.com', //异步通知
-                'return_url' => 'www.pagsmile.com' //同步跳转
+                'notify_url' => 'https://www.pagsmile.com', //异步通知
+                'return_url' => 'https://www.pagsmile.com' //同步跳转
             );
     
         ksort($order_data);
