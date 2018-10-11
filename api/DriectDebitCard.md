@@ -85,8 +85,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",
-                    "return_url":"www.pagsmile.com",
-                    "notify_url":"www.pagsmile.com",
+                    "return_url":"https://www.pagsmile.com",
+                    "notify_url":"https://www.pagsmile.com",
                     "authenticate":0,
                     "authenticate_back_url":"www.pagsmile.com",
                     "debit_card":{
