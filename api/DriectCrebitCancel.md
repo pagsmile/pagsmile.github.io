@@ -2,7 +2,7 @@
 
 >## 接口链接
 
-    测试URL地址: https://paychanneldev.pagsmile.com:8443/api/cancel
+    测试URL地址: https://paychanneldev.pagsmile.com/api/cancel
     正式URL地址: https://paychannel.pagsmile.com/api/cancel
     
 >## 请求方式
