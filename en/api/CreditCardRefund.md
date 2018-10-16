@@ -66,7 +66,7 @@ code | Description | Reason | Solution
 
 >## Signature generation algorithm
 
-Reference [signature algorithm](DriectSign)
+Reference [signature algorithm](SignatureAlgorithm)
 
 >## Enable authorization link
 
