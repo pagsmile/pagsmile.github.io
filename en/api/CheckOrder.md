@@ -52,4 +52,4 @@ For a more detailed list, please refer to [Return Status and Error List](ReturnR
 
 >## Signature generation algorithm
 
-Reference [signature algorithm](DriectSign)
+Reference [signature algorithm](SignatureAlgorithm)
