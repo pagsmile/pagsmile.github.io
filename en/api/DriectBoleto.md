@@ -22,7 +22,7 @@ merchant_no | String | Yes | 20 | Pagsmile ID assigned to the merchant | 1024201
 app_id | String | Yes | 20 | Apps ID assigned to the merchant by pagsmile | 2017051914172236111
 version | String | Yes | 10 | Fixed to: 1.0 | 1.0
 timeout_express | String | Yes | 255 | Order validity | One-day assignment: 1d or 24h or 1440m;
-timestamp | String | Yes | 19 | The time unit for sending the request is seconds | 21516081919
+timestamp | String | Yes | 19 | Request is sending by second | 21516081919
 sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 payment.out_order_no | String | Yes | 64 | Merchant order number |
 payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
