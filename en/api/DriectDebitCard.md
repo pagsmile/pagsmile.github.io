@@ -20,9 +20,9 @@ Parameter | Type | Required | Maximum length | Description | Example value
 Merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
 App_id | String | Yes | 20 | pagsmile application ID assigned to the merchant | 2017051914172236111
 Version | String | Yes | 10 | The version of the interface being called, fixed at: 1.0 | 1.0
-Timeout_express | String | Yes | 255 | Order Validity | The time of day is assigned: 1d or 24h or 1440m;
+Timeout_express | String | Yes | 255 | Order Validity | One-day assignment: 1d or 24h or 1440m;
 Passback_params | String | Yes | 255 | Transparent pass parameters | default passback_params
-Timestamp | String | Yes | 19 | Time to send request in seconds | 21516081919
+Timestamp | String | Yes | 19 | Request is sending by second | 21516081919
 Sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 Payment.out_order_no | String | Yes | 64 | Merchant Order Number |
 Payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
