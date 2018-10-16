@@ -133,4 +133,4 @@ For a more detailed list, please refer to [Return Status and Error List](ReturnR
 
 >## Signature Generation Algorithm
 
-Reference [Direct Connection Signature Algorithm](DriectSign)
+Reference [Signature Algorithm](SignatureAlgorithm)
