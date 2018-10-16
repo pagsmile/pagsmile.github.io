@@ -21,7 +21,7 @@ Name | Type | Required | Max Length | Description | Sample
 merchant_no | String | Yes | 20 | Pagsmile ID assigned to the merchant | 1024201708140012289
 app_id | String | Yes | 20 | Apps ID assigned to the merchant by pagsmile | 2017051914172236111
 version | String | Yes | 10 | Fixed to: 1.0 | 1.0
-timeout_express | String | Yes | 255 | Order validity | The time of day is assigned: 1d or 24h or 1440m;
+timeout_express | String | Yes | 255 | Order validity | One-day assignment: 1d or 24h or 1440m;
 timestamp | String | Yes | 19 | The time unit for sending the request is seconds | 21516081919
 sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 payment.out_order_no | String | Yes | 64 | Merchant order number |
@@ -30,7 +30,7 @@ payment.currency | String | Yes | 3 | currency | BRL
 payment.subject | String | No | 255 | subject |
 payment.content | String | No | 255 | content |
 payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
-payment.return_url | String | No | 255 | The page http/https path returned by the server synchronization. | https://www.pagsmile.com
+payment.return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | Merchant's user ID |  
 customer.email | String | Yes | 255 | email address |  
 customer.cpf_no | String | Yes | 64 | CPF | Mall merchants are required here; game merchants are optional.
