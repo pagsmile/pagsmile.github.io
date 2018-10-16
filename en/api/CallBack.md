@@ -28,7 +28,7 @@ total_amount | String | Yes | The total amount of orders |
 currency | String | Yes | 3 | currency | 
 version | String Yes | 3 | Fixed to: 1.0 | 
 sign_type | String | Yes | 32 | Fixed to: MD5 |  
-sign | String | Yes | 32 | Reference [signature algorithm](DriectSign)
+sign | String | Yes | 32 | Reference [signature algorithm](SignatureAlgorithm)
 
 >### Return status correspondence
 
