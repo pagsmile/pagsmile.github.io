@@ -28,8 +28,8 @@ Payment.out_order_no | String | Yes | 64 | Merchant Order Number |
 Payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
 Payment.currency | String | Yes | 3 | Currency | BRL
 Payment.method | String | Yes | 10 | Channel Code (default) | 110010
-Payment.subject | String | No | 255 | Order Title |
-Payment.content | String | No | 255 | Order Content |
+Payment.subject | String | No | 255 | Subject |
+Payment.content | String | No | 255 | Content |
 Payment.bank | String | Yes | 255 | Payment Bank |tau, santander, bradesco, banco-do-brasil
 Payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
 Customer.out_uid | String | No | 255 | Merchant User ID |
@@ -96,11 +96,11 @@ After the request is successful, the returned data is in info. The returned data
 
 Parameter | Type | Required | Maximum length | Description | Example value
 --- | --- | --- | --- | --- | ---
-Code | String | Yes | 16 | Return to status code (success is 200) | 200
+Code | String | Yes | 16 | Returned status code (success is 200) | 200
 Info.trade_no | String | Yes | 128 | Platform Order Number | 2017042311015505011
 Info.out_order_no | String | Yes | 128 | Merchant Order Number | test-003192
 Info.total_amount | float | Yes | 10 | Order Amount | 10
-Info.bank_name | String | Yes | 10 | Payment to Public Account Name Bank Name |
+Info.bank_name | String | Yes | 10 | Payment to Public Account Bank Name |
 Info.account_owner | String | Yes | 50 | Payment to Public Account Name |
 Info.account_owner_document | String | Yes | 10 | Payment to public account cpf number |
 Info.account_agency | String | Yes | 10 | Bank Branch Number |
