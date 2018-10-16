@@ -124,5 +124,5 @@ For a more detailed list, please refer to [Return Status and Error List](ReturnR
 
 >## Signature generation algorithm
 
-Reference straight [continuous signature algorithm](DriectSign)
+Reference straight [continuous signature algorithm](SignatureAlgorithm)
 
