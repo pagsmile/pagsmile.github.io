@@ -31,7 +31,7 @@ version | String | Yes | 10 | API Version, for now is fixed to 1.0 | 1.0
 timeout_express | String | Yes | 255 | Order validity | 1d；1m；1h；1s
 passback_params | No | Yes | 255 | Request return parameters | 
 notify_url | String | No | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com/openapi/notify.json
-return_url | String | No | 255 | The page http/https path returned by the server synchronization. | https://www.pagsmile.com/success.html
+return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com/success.html
 sign_type | String | Yes | 10 | Only MD5 is supported | MD5
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
