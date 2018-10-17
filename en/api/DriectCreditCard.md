@@ -15,10 +15,10 @@
     
 >## Request Parameters
 
-Parameter | Type | Required | Maximum length | Description | Example value
+Parameter | Type | Required | Maximum length | Description | Example
 --- | --- | --- | --- | --- | ---
-Merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
-App_id | String | Yes | 20 | pagsmile application ID assigned to the merchant | 2017051914172236111
+Merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+App_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
 Version | String | Yes | 10 | The version of the interface being called, fixed at: 1.0 | 1.0
 Timeout_express | String | Yes | 255 | Order Validity | One-day assignment: 1d or 24h or 1440m;
 Passback_params | String | Yes | 255 | Transparent pass parameters | default passback_params
@@ -28,24 +28,24 @@ Payment.out_order_no | String | Yes | 64 | Merchant Order Number |
 Payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
 Payment.currency | String | Yes | 3 | Currency | BRL
 Payment.method | String | Yes | 10 | Channel Code (default) | 101001
-Payment.subject | String | No | 255 | Order Title |
-Payment.content | String | No | 255 | Order Content |
+Payment.subject | String | No | 255 | Subject |
+Payment.content | String | No | 255 | Content |
 Payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
-Payment.return_url | String | No | 255 | The page http/https path returned by the server synchronization. | https://www.pagsmile.com
-Payment.authenticate | int | No | 4 | Do I need cardholder authorization (default) | 0 or 1
+Payment.return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com
+Payment.authenticate | int | No | 4 | Do cardholder authorization is needed(default) | 0 or 1
 Payment.authenticate_back_url | String | No | 255 | Jump link after authorization. (must be required when payment.authenticate is 1) | https://www.pagsmile.com
 Payment.credit_card.number | String | Yse | 19 | Card Number | 455187******0183
 Payment.credit_card.holder | String | Yse | 255 | Cardholder Name. | Test User Name
 payment.credit_card.expirationDate | String | Yse | 7 | Credit card overdue time. | 12/2030
-payment.credit_card.securityCode | String | Yse | 4 | Credit card back security code. | 123
+payment.credit_card.securityCode | String | Yse | 4 | Credit card's security code. | 123
 Payment.credit_card.brand | String | No | 10 | Credit card issuer. (visa,master,amex,elo,aura,jcb,dinners,discover) | visa
 Customer.out_uid | String | No | 255 | Merchant User ID |
 Customer.email | String | No | 255 | Email Address |
 Customer.cpf_no | String | Yes | 64 | CPF Number | Mall Merchants are required here; Game Merchants are optional.
 Customer.username | String | Yes | 255 | User Name | Mall Merchants are required here; Game Merchants are optional.
-Customer.buyer_ip | String | No | 255 | Merchant ipv4 address |
+Customer.buyer_ip | String | No | 255 | User's ipv4 address |
 Customer.browser | String | No | 255 | User's browser type |
-Customer.phone | String | No | 255 | Phone of the merchant's user|
+Customer.phone | String | No | 255 | User's Phone number|
 Address.zip_code | String | No | 8-8 | User's mailing address zip code | 06233-200
 Address.street_name | String | No | 70 | User's mailing address Street name | Av. das Nações Unidas
 Address.street_number | String | No | 10 | User's mailing address Street number | 3003
@@ -54,9 +54,8 @@ Address.city | String | No | 50 | User's mailing address for the city | Osasco
 Address.federal_unit | String | No | 2 | State abbreviation for user's mailing address | SP
 Sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
 
-     Note: The currency currently only supports USD and BRL, which is used in the test environment.
-     
-        cpf_no, username is 50284414727, Test User Name
+     Note: The currency currently only supports USD and BRL, the cpf_no. and username which is used in the test environment    
+           is 50284414727 and Test User Name.
      
      Test card number, card type is not limited, recommend visa
         
@@ -120,7 +119,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
 
 After the request is successful, the returned data is in info. The returned data is returned in json format.
 
-Parameter | Type | Required | Maximum length | Description | Example value
+Parameter | Type | Required | Maximum length | Description | Example
 --- | --- | --- | --- | --- | ---
 Code | String | Yes | 16 | Return to status code (success is 200) | 200
 Info.trade_status | String | Yes | 128 | Return to order status | TRADE_SUCCESS
@@ -130,13 +129,13 @@ Info.total_amount | float | Yes | 10 | Order Amount | 10
 Info.currency | String | Yes | 10 | Currency |
 
 
-  If there is an authorized jump link, the request is returned in a post form with the address authenticate_back_url
-  
-  Parameter | Type | Required | Maximum length | Description | Example value
-  --- | --- | --- | --- | --- | ---
-  Status | String | Yes | 16 | Return status code (success is success)| success
-  Trade_no | String | Yes | 16 | Platform Order Number | 2017042311015505011
-  Info | String | Yes | 16 | Return status information (success is success)| success
+If there is an authorized jump link, the request is returned in a post form with the submit address authenticate_back_url
+  
+Parameter | Type | Required | Maximum length | Description | Example
+--- | --- | --- | --- | --- | ---
+Status | String | Yes | 16 | Return status code (success is success)| success
+Trade_no | String | Yes | 16 | Platform Order Number | 2017042311015505011
+Info | String | Yes | 16 | Return status information (success is success)| success
 
 >## Success Sample
 
