@@ -17,22 +17,22 @@
 
 Parameter | Type | Required | Maximum length | Description | Example
 ---  | ---  | ---      | ---      | ---  | ---
-Merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
-App_id | String | Yes | 20 | pagsmile application ID assigned to the merchant | 2017051914172236111
+Merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+App_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
 Trade_no | String | Yes | 255 | Pagsmile order number for refund | 2018022604263906847
-Email | String | Yes | 255 |
-Refund_amount | Float | Yes | 255 | Request a refund amount
-Currency | String | Yes | 255 | Request a refund currency
+Email | String | Yes | 255 | Refund email
+Refund_amount | Float | Yes | 255 | Refund amount
+Currency | String | Yes | 255 | Refund currency
 Description | String | No | 255 | Refund description
 Sign | String | Yes | 32 | Signature |
 
-Tip: When you send a refund request, the order must be in a successful state.
+Note: When you send a refund request, the order must be in a successful status.
 
 >## Return
 
 Parameter | Type | Required | Maximum length | Description | Example
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | status code | 200:成功
+code | String | Yes | 16 | status code | 200:success
 info | String | Yes | 128 | information | SUCCESS
 data | String | Yes | 256 | null    |
 
