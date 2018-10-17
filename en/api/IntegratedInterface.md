@@ -6,8 +6,8 @@
 
 >## URL
     
-    Test    : http://testenv.pagsmile.com/pserver/gateway.json  
-    Product : https://pserver.pagsmile.com/gateway.json
+    Test : http://testenv.pagsmile.com/pserver/gateway.json  
+    Prod : https://pserver.pagsmile.com/gateway.json
 
 >## Request Parameters
 
@@ -15,7 +15,7 @@ NAME | TYPE | REQUIRED | MAX LENGTH | DESCRIPTION | EXAMPLE
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
 app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
-method | String | No | 11 | Payment channel ID | 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposite Express) |
+method | String | No | 11 | Payment channel ID | 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposit Express) |
 out_order_no | String | Yes | 64 | Merchant order number | 
 out_uid | String | Yes | 255 | Merchant's user ID | 
 subject | String | Yes | 255 | Order Subject | 
@@ -44,7 +44,7 @@ Credit card | 4235647728025682 | visa | 50284414727 | APRO | 123 | 12/2020
 Credit card | 5031433215406351 | mastercard | 50284414727 | APRO | 123 | 12/2020
 Debit card | 0000000000000001 | visa | 50284414727 | Test User Name | 123 | 12/2020
 Debit card | 0000000000000002 | mastercard | 50284414727 | Test User Name | 123 | 12/2020
-Deposite Express | / | / | 50284414727 | Test User Name | / | /
+Deposit Express | / | / | 50284414727 | Test User Name | / | /
 
 >## Response Parameters
 
