@@ -15,10 +15,10 @@
     
 >## Request Parameters
 
-Parameter | Type | Required | Maximum length | Description | Example value
+Parameter | Type | Required | Maximum length | Description | Example
 --- | --- | --- | --- | --- | ---
-Merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
-App_id | String | Yes | 20 | pagsmile application ID assigned to the merchant | 2017051914172236111
+Merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+App_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
 Version | String | Yes | 10 | The version of the interface being called, fixed at: 1.0 | 1.0
 Timeout_express | String | Yes | 255 | Order Validity | One-day assignment: 1d or 24h or 1440m;
 Passback_params | String | Yes | 255 | Transparent pass parameters | default passback_params
@@ -29,24 +29,24 @@ Payment.order_amount | String | Yes | 10 | The total amount of the order, accura
 Payment.currency | String | Yes | 3 | Currency | BRL
 Payment.method | String | Yes | 10 | Channel Code (default) | 101001001
 Payment.installments | int | Yes | 2 | Staging Period | 2 to 12
-Payment.subject | String | No | 255 | Order Title |
+Payment.subject | String | No | 255 | Order Subject |
 Payment.content | String | No | 255 | Order Content |
 Payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
-Payment.return_url | String | No | 255 | The page http/https path returned by the server synchronization. | https://www.pagsmile.com
-Payment.authenticate | int | No | 4 | Do I need cardholder authorization (default) | 0 or 1
+Payment.return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com
+Payment.authenticate | int | No | 4 | Do cardholder authorization is needed(default) | 0 or 1
 Payment.authenticate_back_url | String | No | 255 | Jump link after authorization. (must be required when payment.authenticate is 1) | https://www.pagsmile.com
 Payment.credit_card.number | String | Yse | 19 | Card Number | 455187******0183
 Payment.credit_card.holder | String | Yse | 255 | Cardholder Name. | Test User Name
 payment.credit_card.expirationDate | String | Yse | 7 | Credit card overdue time. | 12/2030
-payment.credit_card.securityCode | String | Yse | 4 | Credit card back security code. | 123
+payment.credit_card.securityCode | String | Yse | 4 | Credit card security code. | 123
 Payment.credit_card.brand | String | No | 10 | Credit card issuer. (visa,master,amex,elo,aura,jcb,dinners,discover) | visa
 Customer.out_uid | String | No | 255 | Merchant User ID |
 Customer.email | String | No | 255 | Email Address |
 Customer.cpf_no | String | Yes | 64 | CPF Number | Mall Merchants are required here; Game Merchants are optional.
 Customer.username | String | Yes | 255 | User Name | Mall Merchants are required here; Game Merchants are optional.
-Customer.buyer_ip | String | No | 255 | Merchant ipv4 address |
+Customer.buyer_ip | String | No | 255 | User’s ipv4 address |
 Customer.browser | String | No | 255 | User's browser type |
-Customer.phone | String | No | 255 | Phone of the merchant's user|
+Customer.phone | String | No | 255 | User’s Phone number|
 Address.zip_code | String | No | 8-8 | User's mailing address zip code | 06233-200
 Address.street_name | String | No | 70 | User's mailing address Street name | Av. das Nações Unidas
 Address.street_number | String | No | 10 | User's mailing address Street number | 3003
@@ -55,9 +55,8 @@ Address.city | String | No | 50 | User's mailing address for the city | Osasco
 Address.federal_unit | String | No | 2 | State abbreviation for user's mailing address | SP
 Sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
 
-     Note: The currency currently only supports USD and BRL. Instructions used in the test environment: Currency currently only supports USD and BRL, used in the test environment.
-     
-        cpf_no, username is 50284414727, Test User Name
+     Note: The currency currently only supports USD and BRL, the cpf_no. and username which is used in the test environment    
+           is 50284414727 and Test User Name.
      
      Test card number, card type is not limited, recommend visa
         
