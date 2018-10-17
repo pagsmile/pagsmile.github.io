@@ -18,17 +18,17 @@
 
 Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-merchant_no | String | Yes | 20 | Pagsmile ID assigned to the merchant | 1024201708140012289
-app_id | String | Yes | 20 | Apps ID assigned to the merchant by pagsmile | 2017051914172236111
-version | String | Yes | 10 | Fixed to: 1.0 | 1.0
+merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant| 2017051914172236111
+version | String | Yes | 10 | API Version, for now is fixed to: 1.0 | 1.0
 timeout_express | String | Yes | 255 | Order validity | One-day assignment: 1d or 24h or 1440m;
 timestamp | String | Yes | 19 | Request is sending by second | 21516081919
 sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 payment.out_order_no | String | Yes | 64 | Merchant order number |
 payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
 payment.currency | String | Yes | 3 | currency | BRL 
-payment.subject | String | No | 255 | subject |
-payment.content | String | No | 255 | content |
+payment.subject | String | No | 255 | Order subject |
+payment.content | String | No | 255 | Order content |
 payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
 payment.return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | Merchant's user ID |  
@@ -37,13 +37,13 @@ customer.cpf_no | String | Yes | 64 | CPF | Mall merchants are required here; ga
 customer.username | String | Yes | 255 | user name | Mall merchants are required here; game merchants are optional.
 customer.buyer_ip | String | NO | 255 | user's ipv4 address | 
 customer.browser | String | NO | 255 | user's browser type|
-customer.phone | String | NO | 255 | user's phone No.|
-address.zip_code | String | Yes | 8-8 | zip_code| 06233-200
-address.street_name | String | Yes | 70 | street_name| Av. das Nações Unidas
-address.street_number | String | Yes | 10 | street_number| 3003
-address.neighborhood | String | Yes | 50 | neighborhood| Bonfim
-address.city | String | Yes | 50 | city| Osasco
-address.federal_unit | String | Yes | 2-2 | federal_unit| SP
+customer.phone | String | NO | 255 | User’s Phone number|
+address.zip_code | String | Yes | 8-8 | User’s mailing address zip code| 06233-200
+address.street_name | String | Yes | 70 | User’s mailing address Street name| Av. das Nações Unidas
+address.street_number | String | Yes | 10 | User’s mailing address Street number| 3003
+address.neighborhood | String | Yes | 50 | User’s mailing address community address| Bonfim
+address.city | String | Yes | 50 | User’s mailing address for the city| Osasco
+address.federal_unit | String | Yes | 2-2 | State abbreviation for user’s mailing address| SP
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
      Note: The boleto currency currently only supports USD and BRL. The cpf and username used in the test environment are 50284414727 and Test User Name.
