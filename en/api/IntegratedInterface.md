@@ -11,7 +11,7 @@
 
 >## Request Parameters
 
-NAME | TYPE | REQUIRED | MAX LENGTH | DESC | EXAMPLE
+NAME | TYPE | REQUIRED | MAX LENGTH | DESCRIPTION | EXAMPLE
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | Pagsmile ID assigned to the merchant | 1024201708140012289
 app_id | String | Yes | 20 | Apps ID assigned to the merchant by pagsmile | 2017051914172236111
