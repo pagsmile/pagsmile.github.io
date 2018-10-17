@@ -2,10 +2,10 @@
 
 >## How To Signature
   
-  Let all the data sent or received be the set M. If there is a multi-dimensional array in the set, first obtain the one-dimensional set of the dimension, and then sort the parameters of the non-empty parameter value in the set M according to the parameter name ASCII code from small to large (dictionary) Order), use the format of the URL key-value pair (key1=value1&key2=value2...) to form a string tempData.
-    - If the value of the parameter is null, it does not participate in the signature;
-    - Parameter names are case sensitive;
-  In the last tempData stitching, the key gets the signData string, and signData performs the MD5 operation to get the sign value signValue.
+Let all the data sent or received be the set M. If there is a multi-dimensional array in the set, first obtain the one-dimensional set of the dimension, and then sort the parameters of the non-empty parameter value in the set M according to the parameter name ASCII code from small to large (dictionary) Order), use the format of the URL key-value pair (key1=value1&key2=value2...) to form a string tempData.
+  - If the value of the parameter is null, it does not participate in the signature;
+  - Parameter names are case sensitive;
+In the last tempData stitching, the key gets the signData string, and signData performs the MD5 operation to get the sign value signValue.
 
 >## How To Get the Key?
 
