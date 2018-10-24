@@ -21,7 +21,7 @@ layout: default
 
 [直连借记卡接口](api/DriectDebitCard)
 
-[直连信用rsa加密算法卡接口](api/DriectCreditCardRsa)
+[直连信用卡rsa加密算法接口](api/DriectCreditCardRsa)
 
 [直连分期信用卡rsa加密传输接口](api/DriectRecurrentRsa)
 
