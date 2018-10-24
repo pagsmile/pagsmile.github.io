@@ -11,7 +11,7 @@ RSA密钥获取路径：商户平台(paccess.pagsmile.com)
 
 >## 样例
     
-1. 将需要加密的数据通过公钥加密
+1. 将需要加密的数据通过公钥加密，加密使用算法RSA/ECB/PKCS1Padding
     
     ```
      [

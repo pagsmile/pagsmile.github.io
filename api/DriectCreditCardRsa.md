@@ -1,4 +1,4 @@
-# 直连分期信用卡接口
+# 直连信用rsa加密算法卡接口
 
 >## 流程示意
 
@@ -6,8 +6,8 @@
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/recurrent
-    正式URL地址：https://paychannel.pagsmile.com/api/recurrent 
+    测试URL地址：https://paychanneldev.pagsmile.com/apiv2/credit
+    正式URL地址：https://paychannel.pagsmile.com/apiv2/credit 
     
 >## 请求方式
 
@@ -31,19 +31,18 @@ sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
 payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。 | 88.88
 payment.currency | String | Yes | 3 | 币种 | BRL 
-payment.method   | String | Yes | 10 | 渠道代码（默认） | 101001001 
-payment.installments   | int | Yes | 2 | 分期期数 | 2到12 期 
+payment.method   | String | Yes | 10 | 渠道代码（默认） | 101001 
 payment.subject | String | No | 255 | 订单标题 |
 payment.content | String | No | 255 | 订单内容 |
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
 payment.return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | https://www.pagsmile.com
 payment.authenticate | int | No | 4 | 是否需要持卡人授权（默认是否） | 0或者1
 payment.authenticate_back_url | String | No | 255 | 授权后跳转链接。（当payment.authenticate 为1时必须） | https://www.pagsmile.com
-payment.credit_card.number | String | Yse | 19 | 卡号 | 455187******0183
-payment.credit_card.holder | String | Yse | 255 | 持卡人姓名。 | Test User Name
-payment.credit_card.expirationDate | String | Yse | 7 | 信用卡逾期时间。 | 12/2030
-payment.credit_card.securityCode | String | Yse | 4 | 信用卡背面安全码。 | 123
-payment.credit_card.brand | String | No | 10 | 信用卡发卡行。(visa,master,amex,elo,aura,jcb,dinners,discover) | visa
+payment.credit_card.number | String | Yse | 19 | 卡号 | 455187******0183 加密传输
+payment.credit_card.holder | String | Yse | 255 | 持卡人姓名。 | Test User Name 加密传输
+payment.credit_card.expirationDate | String | Yse | 7 | 信用卡逾期时间。 | 12/2030 加密传输
+payment.credit_card.securityCode | String | Yse | 4 | 信用卡背面安全码。 | 123 加密传输
+payment.credit_card.brand | String | No | 10 | 信用卡发卡行。(visa,master,amex,elo,aura,jcb,dinners,discover) | visa 加密传输
 customer.out_uid | String | No | 255 | 商户的用户ID |  
 customer.email | String | No | 255 | 邮箱地址 |  
 customer.cpf_no | String | Yes | 64 | CPF号码 | 商城商户此处为必填项；游戏商户选填。
@@ -68,7 +67,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         成功 0000000000000001 或者 0000000000000004
         失败 0000000000000002 或者 0000000000000008
      
-
+     其中rsa加密传输卡信息包括 number holder expirationDate  securityCode brand  
+     
 >## 请求样例
 
 ```
@@ -83,21 +83,21 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         "payment":{
                     "out_order_no":"test-003192",
                     "order_amount":10,
-                    "method":"101001001",
-                    "installments":"4"
+                    "method":"101001",
                     "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",
-                    "return_url":"www.pagsmile.com",
-                    "notify_url":"www.pagsmile.com",
+                    "return_url":"https://www.pagsmile.com",
+                    "notify_url":"https://www.pagsmile.com",
                     "authenticate":0,
                     "authenticate_back_url":"www.pagsmile.com",
                     "credit_card":{
-                        "number":"0000000000000001",
-                        "holder":"Test User Name",
-                        "expirationDate":"12/2020",
-                        "securityCode":"123",
-                        "brand":"visa"
+                          "number":"WLoCFvecGC5J+mAk8IgtuLLtF7GKl9FewZZUEHF5SuyejAkjmd4hgiRkQF4LBHC3gPgKjKuYQ+V23adW6aka0ukgvkGQlv1eTHE6xd0JcZ2zOKe6XYiRmUerhY5HvO9QSh7YfB79IAVXx61TCUGYmKBjj1TD+FpRWHv+WCKhkoo=",
+                          "holder":"JZi57dOwA8JRbfrqM14Wa6Q/XGWrBSzeMXhYmnxhuHKUr5NDzQymKkOIhuihW/WLnBro6581V3o+uA1TLfnYf2uZg7vohDKSqhWVMpqwM7j5yVgP5sHIvgk3WQAQ9OAJdQN7qHNPdTQnxZKShGBs9ikaRgktBBEOGhCcraosdHY=",
+                          "expirationDate":"'BPfrZvTBEgygNlQg6OhXz52jYrD9XgGAzVdsttLcgP5Gh79tH/3fXbYPe4A9cTiNsN/gumRQNUBVgnKerF4HZezceDUb0dnY0YstVqizWfNiGeinRBYSS3irCy5QU190CVDAfdghZrCQXAioLRc6y87irr2xgZHjfQyj2/Q8axA=",
+                          "securityCode":"'ILXEUj35AiRjqdOLfzD8EHzenszCMekxXV9IPlRhuDK+0Dm69nofaZRoT1qGYMs08GPGTgoPURnN6SeZqhXhWkqwu7I1jpzNwtg7OfTsnAtQ3jlXB6xIdIbCeP5dCIvCbhYLHU/miMGowcnJfI4kiXiwgklk5Ii3uqY3z9cO6HM=",
+                          "brand":"OQCfZJK5ZR366cYHMZpy8b4qk2H4ltX4rmrpB0t4hAoGdlLuu7h8e47zXOnhPYFkoGSIRSiacggw1/PKqK4LOqibbVpdLduvBPuEhj/RQu1wH0OURPFm4H1Yi6ch29uBBN1zOAlQWLMD3W+WzA8jDngOec57bwVtbH2weQUT72Q="
+                                         
                     }
                    },
         "customer":{
@@ -135,6 +135,15 @@ info.out_order_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 | 
 
+
+  如果有授权跳转链接 ,请求成功后，返回在一个post表单中，其中提交地址为authenticate_back_url
+  
+  参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+  ---  | ---  | ---      | ---      | ---  | ---
+  status | String | Yes | 16 | 返回状态码 (成功为success)| success
+  trade_no | String | Yes | 16 | 平台订单号 | 2017042311015505011
+  info | String | Yes | 16 | 返回状态信息 (成功为success)| success
+
 >## 成功样例
 
 ```
@@ -168,8 +177,6 @@ info.currency | String | Yes | 10 | 币种 |
 602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
-813 | TRADE_OVERDUE | 卡过期       | 检查参数设置
-814 | TRADE_INS_OVER |  期数错误    | 检查参数设置
 910 | CARD_NO_ISNULL | 卡号为空     | 检查参数
 911 | CARD_TYPE_ISNULL | 卡类型为空     | 检查参数
 912 | CARD_IS_BLACK_CARD | 卡号被所     | 检查参数
@@ -191,6 +198,10 @@ info.currency | String | Yes | 10 | 币种 |
 >## 签名生成算法  
 
 参考[直连签名算法](DriectSign)
+
+>## RSA数据加密算法  
+
+参考[卡信息RSA签名算法](DriectSignRsa)
 
 >## 启用授权链接
 
