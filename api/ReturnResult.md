@@ -182,3 +182,4 @@ bank-N7	| Unauthorized transaction. Invalid security code.
 bank-R1	| Unauthorized transaction. Default card (Do not honor).
 bank-U3	| Transaction not allowed. Data validation failed.
 bank-GD	| Transaction not allowed.
+mbank-400 | Invalid transaction_amount - 4037: Invalid transaction_amount
