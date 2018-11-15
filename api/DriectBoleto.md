@@ -99,14 +99,18 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
 code | String | Yes | 16 | 返回状态码 | 
-info | String | Yes | 128 | 返回信息 | 
+info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
+info.out_order_no | String | Yes | 128 | 商户订单号| test-003192
+info.total_amount | float | Yes | 10 | 订单金额 | 10
+info.currency | String | Yes | 10 | 币种 | 
+info.boleto_url | String | Yes | 10 | 支付链接 |
 
 >## 成功样例
 
 ```
-    { 
+    {
     "code":"200",
-    "info":"https:\/\/meiosdepagamentobradesco.com.br\/apiboleto\/Bradesco?token=aTExSlFpbm51MW9XbFFXa2xyaERCTkUrNjArZ2dISUQyYktnSGVtTzJLNWlBSlVSMkQvNnp2MDc4aEJzMFR2aw.."
+    "info":{"trade_no":"2018111507382427391","currency":"BRL","amount":1003.8,"out_trade_no":"test-003393","boleto_url":"https:\/\/www.mercadopago.com\/mlb\/payments\/ticket\/helper?payment_id=4292744310&payment_method_reference_id=3618973516&caller_id=377395619&hash=16769945-a735-4810-a8b8-65aeb7b1ee58"}
     }
     
 ```
