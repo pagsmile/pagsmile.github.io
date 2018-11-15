@@ -110,7 +110,7 @@ info.boleto_url | String | Yes | 10 | 支付链接 |
 ```
     {
     "code":"200",
-    "info":{"trade_no":"2018111507382427391","currency":"BRL","amount":1003.8,"out_trade_no":"test-003393","boleto_url":"https:\/\/www.mercadopago.com\/mlb\/payments\/ticket\/helper?payment_id=4292744310&payment_method_reference_id=3618973516&caller_id=377395619&hash=16769945-a735-4810-a8b8-65aeb7b1ee58"}
+    "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","boleto_url":"https:\/\/www.mercadopago.com\/mlb\/payments\/ticket\/helper?payment_id=4292744310&payment_method_reference_id=3618973516&caller_id=377395619&hash=16769945-a735-4810-a8b8-65aeb7b1ee58"}
     }
     
 ```
