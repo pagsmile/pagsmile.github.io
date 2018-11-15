@@ -29,7 +29,7 @@ layout: default
 
 [支付结果通知](api/CallBack)  
 
-[boleto退款请求接口](api/RefundApply) 
+[退款请求接口](api/RefundApply) 
 
 [订单查询接口](api/CheckOrder)
 
