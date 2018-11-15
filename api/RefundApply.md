@@ -22,7 +22,6 @@ app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 20170519141722
 trade_no | String | Yes | 255 | 请求退款的pagsmile订单号 | 2018022604263906847
 email | String | Yes | 255 | 请求退款的邮箱
 refund_amount | Float | Yes | 255 | 请求退款金额
-currency | String | Yes | 255 | 请求校退款币种
 description | String | No | 255 | 退款描述
 sign | String | Yes | 32 | 签名 | 
 
