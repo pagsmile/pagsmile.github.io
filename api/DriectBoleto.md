@@ -28,7 +28,7 @@ timeout_express | String | Yes | 255 | 订单有效期 | 一天的时间赋值�
 timestamp | String | Yes | 19 | 发送请求的时间单位为秒 | 21516081919
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
-payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。 | 88.88
+payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。范围（5-14000） BRL| 88.88
 payment.currency | String | Yes | 3 | 币种 | BRL 
 payment.subject | String | No | 255 | 订单标题 |
 payment.content | String | No | 255 | 订单内容 |
