@@ -47,6 +47,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 Deposite Express | - | - | - | - | Test User Name | 50284414727  
 Boleto | - | - | - | - | Test User Name | 50284414727  | 38082365
 
+注：Boleto 金额限制（5-14000 BRL）
+
 >## 返回结果
 
   请求异常时不进行页面跳转，返回错误状态。
