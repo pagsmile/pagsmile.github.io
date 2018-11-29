@@ -33,7 +33,7 @@ sign | String | Yes | 32 | 签名 |
 ---  | ---  | ---      | ---      | ---  | ---
 code | String | Yes | 16 | 返回状态码 | 200:成功
 info | String | Yes | 128 | 返回信息 | SUCCESS
-data | String | Yes | 256 | null    |
+data | String | Yes | 256 | 当前订单状态    |  REFUND_IN_VERIFY（用户信息确认中）/ REFUND_IN_PROCESS（退款处理中）
 
 >## 错误码
 
