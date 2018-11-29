@@ -31,8 +31,8 @@ sign | String | Yes | 32 | 签名 |
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | 返回状态码 | 200:成功
-info | String | Yes | 128 | 返回信息 | SUCCESS
+code | String | Yes | 16 | 返回状态码 | 200:请求成功
+info | String | Yes | 128 | 返回信息 | SUCCESS(请求返回状态)
 data | String | Yes | 256 | 当前订单状态    |  REFUND_IN_VERIFY（用户信息确认中）/ REFUND_IN_PROCESS（退款处理中）/ TRADE_REFUND(退款成功)
 
 >## 错误码
