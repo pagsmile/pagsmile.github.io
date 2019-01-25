@@ -13,20 +13,6 @@ layout: default
 
 [现金闪付接口](api/FlashPay)
   
-[直连信用卡接口](api/DriectCreditCard)
-
-[直连分期信用卡接口](api/DriectRecurrent)
-
-[直连信用卡取消接口](api/DriectCrebitCancel)
-
-[直连借记卡接口](api/DriectDebitCard)
-
-[直连信用卡rsa加密算法接口](api/DriectCreditCardRsa)
-
-[直连分期信用卡rsa加密传输接口](api/DriectRecurrentRsa)
-
-[直连借记卡rsa加密传输接口](api/DriectDebitCardRsa)
-
 [支付结果通知](api/CallBack)  
 
 [退款请求接口](api/RefundApply) 
