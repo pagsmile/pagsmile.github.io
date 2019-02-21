@@ -15,7 +15,7 @@
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-method | String | No | 11 | 支付渠道ID | 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposite Express) |
+method | String | No | 11 | 支付渠道ID | 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica)|
 out_order_no | String | Yes | 64 | 商户订单号 | 
 out_uid | String | Yes | 255 | 商户的用户ID | 
 subject | String | Yes | 255 | 订单标题 |
