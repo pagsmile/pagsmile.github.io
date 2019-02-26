@@ -30,7 +30,7 @@ payment.currency | String | Yes | 3 | 币种 | BRL
 payment.subject | String | No | 255 | 订单标题 |
 payment.content | String | No | 255 | 订单内容 |
 payment.token | String | Yes | 255 | 信用卡支付凭据（有效期7天） |
-payment.installments | String | Yes | 12 | 信用卡分期期数 |
+payment.installments | String | Yes | 12 | 信用卡分期期数 | 1 不分期 最大12分期
 payment.paymentMethodId | String | Yes | 16 | 信用卡支发卡组织 |
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | 商户的用户ID |  
@@ -43,6 +43,7 @@ customer.phone | String | NO | 255 | 商户的用户的电话|
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
      说明：boleto 币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
+     
 
 >## 请求样例
 
@@ -57,6 +58,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "order_amount":10,
                     "currency":"BRL",
                     "paymentMethodId":"visa",
+                    "token"："67a9449686cf8f57dc28cbc88ad82245",
                     "subject":"test-subject",
                     "content":"test-content",
                     "return_url":"https://www.pagsmile.com",

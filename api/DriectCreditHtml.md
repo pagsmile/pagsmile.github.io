@@ -1,8 +1,6 @@
 # 商户信用卡下单页面设置
 
 
->## 
-
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com
