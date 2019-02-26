@@ -6,39 +6,10 @@
     测试URL地址：https://paychanneldev.pagsmile.com
     正式URL地址：https://paychannel.pagsmile.com
     
-    
-    
->## 请求参数
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
----  | ---  | ---      | ---      | ---  | ---
-merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
-app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
-payment.out_order_no | String | Yes | 64 | 商户订单号 |
-payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。金额范围（5-14000） BRL| 88.88
-payment.currency | String | Yes | 3 | 币种 | BRL 
-payment.subject | String | No | 255 | 订单标题 |
-payment.content | String | No | 255 | 订单内容 |
-payment.token | String | No | 255 | 信用卡支付凭据（有效期7天） |
-payment.paymentMethodId | String | No | 10 | 发卡行 |visa
-payment.installments | int | No | 4 | 信用卡分期期数 | 3
-payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
-customer.out_uid | String | No | 255 | 商户的用户ID |  
-customer.email | String | Yes | 255 | 邮箱地址 |  
-customer.cpf_no | String | Yes | 64 | CPF号码 | 
-customer.username | String | Yes | 255 | 用户姓名 | 用户信息
-customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
-customer.browser | String | NO | 255 | 商户的用户浏览器类型|
-customer.phone | String | NO | 255 | 商户的用户的电话|
-sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
+>##  表单加载内容
 
-
-
-
->## 返回结果
-
-   表单加载内容
+  
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
