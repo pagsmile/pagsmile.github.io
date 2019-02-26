@@ -11,6 +11,8 @@ layout: default
 
 [直连boleto接口](api/DriectBoleto)
 
+[信用卡接口](api/DriectCreditHtml)
+
 [现金闪付接口](api/FlashPay)
   
 [支付结果通知](api/CallBack)  
