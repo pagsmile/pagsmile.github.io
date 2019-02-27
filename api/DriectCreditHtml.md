@@ -13,7 +13,7 @@
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
-email | String | Yes | 16 | 用户邮箱 | 
+email | String | Yes | 255 | 用户邮箱 | 
 cardNumber | String | Yes | 16 |用户卡号 | 
 securityCode | String | Yes | 4 | 安全码| 123
 cardExpirationMonth | float | Yes | 2 |  信用卡过期时间月份| 
