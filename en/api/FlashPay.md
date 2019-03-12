@@ -2,7 +2,7 @@
 
 >## API URL
 
-    test URL：https://paychanneldev.pagsmile.com:8443/api/flashpay
+    test URL：https://paychanneldev.pagsmile.com/api/flashpay
     prod URL：https://paychannel.pagsmile.com/api/flashpay 
     
 >## Request Method
@@ -11,37 +11,37 @@
 
 >## Format
   
-    json
+    JSON
     
 >## Parameters
 
 Parameter | Type | Required | Maximum length | Description | Example value
 --- | --- | --- | --- | --- | ---
-Merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant  | 1024201708140012289
-App_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
-Version | String | Yes | 10 | The version of the interface being called, fixed at: 1.0 | 1.0
-Timeout_express | String | Yes | 255 | Order Validity | One-day assignment: 1d or 24h or 1440m;
-Passback_params | String | Yes | 255 | Transparent pass parameters | default passback_params
-Timestamp | String | Yes | 19 | Request is sending by second | 21516081919
-Sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
-Payment.out_order_no | String | Yes | 64 | Merchant Order Number |
-Payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
-Payment.currency | String | Yes | 3 | Currency | BRL
-Payment.method | String | Yes | 10 | Channel Code (default) | 110010
-Payment.subject | String | No | 255 | Order Subject |
-Payment.content | String | No | 255 | Order Content |
-Payment.bank | String | Yes | 255 | Payment Bank |tau, santander, bradesco, banco-do-brasil
-Payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
-Customer.out_uid | String | No | 255 | Merchant User ID |
-Customer.email | String | Yes | 255 | Email Address |
-Customer.cpf_no | String | Yes | 64 | CPF Number |
-Customer.username | String | Yes | 255 | User Name |
-Customer.buyer_ip | String | No | 255 | User’s ipv4 address |
-Customer.browser | String | No | 255 | User's browser type |
-Customer.phone | String | Yes | 9 | User’s Phone number, 8 or 9 digits |
-Sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
+merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
+version | String | Yes | 10 | The version of the interface being called, fixed at: 1.0 | 1.0
+timeout_express | String | Yes | 255 | Order Validity | One-day assignment: 1d or 24h or 1440m;
+passback_params | String | Yes | 255 | Transparent pass parameters | default passback_params
+timestamp | String | Yes | 19 | Request is sending by second | 21516081919
+sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
+payment.out_order_no | String | Yes | 64 | Merchant Order Number |
+payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
+payment.currency | String | Yes | 3 | Currency | BRL 
+payment.method   | String | Yes | 10 | Channel Code (default) | 107 
+payment.subject | String | No | 255 | Order Subject |
+payment.content | String | No | 255 | Order Content |
+payment.bank | String | Yes | 255 | Payment Bank |tau,santander,bradesco,banco-do-brasil
+payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
+customer.out_uid | String | No | 255 | Merchant User ID |  
+customer.email | String | Yes | 255 | Email Address |  
+customer.cpf_no | String | Yes | 64 | CPF Number | 
+customer.username | String | Yes | 255 | User Name | 
+customer.buyer_ip | String | No | 255 | User’s ipv4 address | 
+customer.browser | String | No | 255 | User's browser type|
+customer.phone | String | Yes | 9 | User’s Phone number, 8 or 9 digits | 
+sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
 
-     Note: The currency currently only supports USD and BRL, which is used in the test environment.
+     Note: The currency currently only supports BRL, which is used in the test environment.
      
         Cpf_no and username are 50284414727 and Test User Name
     
