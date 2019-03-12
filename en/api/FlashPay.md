@@ -1,4 +1,4 @@
-# FlashPay
+# Deposit Express
 
 >## API URL
 
