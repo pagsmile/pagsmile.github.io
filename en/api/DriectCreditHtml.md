@@ -3,8 +3,8 @@
 
 >## API URL
 
-    Test Environment ：https://paychanneldev.pagsmile.com
-    Production Environment ：https://paychannel.pagsmile.com
+    Test Environment : https://paychanneldev.pagsmile.com
+    Production Environment : https://paychannel.pagsmile.com
     
 
 >##  Form Load Content
@@ -303,10 +303,9 @@ Introduce js code to get transaction parameters
 
 Test Data:  
 
-类型 | 卡号 | 卡组织 | cvc | 有效期 | 持卡人姓名 | CPF号码 | CEP
+Type | Card NO. | Organization | Expire Date | Holder Name | CPF | CEP
 --- | --- | --- | --- | --- | --- | ---
-信用卡 | 4235647728025682 | visa | 123 | 12/2020 | APRO | 50284414727
-信用卡 | 5031433215406351 | mastercard | 123 | 12/2020 | APRO | 50284414727
-
+Credit Card | 4235647728025682 | VISA | 123 | 12/2020 | APRO | 50284414727
+Credit Card | 5031433215406351 | MasterCard | 123 | 12/2020 | APRO | 50284414727
 
 Please refer to the [credit card payment verification interface](DriectCreditdo) after the page is submitted. addEvent(document.querySelector('#pay'), 'submit', doPay);
