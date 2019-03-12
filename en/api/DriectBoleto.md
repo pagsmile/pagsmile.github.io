@@ -3,8 +3,8 @@
 
 >## API URL
 
-    test URL：https://paychanneldev.pagsmile.com/api/boleto
-    prod URL：https://paychannel.pagsmile.com/api/boleto 
+    Test Environment ：https://paychanneldev.pagsmile.com/api/boleto
+    Production Environment ：https://paychannel.pagsmile.com/api/boleto 
     
 >## Request Method
 
@@ -12,7 +12,7 @@
 
 >## Format
   
-    json
+    JSON
     
 >## Parameters
 
