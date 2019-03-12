@@ -15,15 +15,9 @@ layout: default
   
 [Credit Card API](api/DriectCreditCard)
 
-[Credit Card Installment API](api/DriectRecurrent)
-
-[Credit Card Cancel API](api/DriectCrebitCancel)
-
-[Debit Card API](api/DriectDebitCard)
-
 [CallBack Notification](api/CallBack)  
 
-[Boleto Refund API](api/RefundApply) 
+[Refund Application API](api/RefundApply) 
 
 [Order Query API](api/CheckOrder)
 
