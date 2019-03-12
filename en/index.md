@@ -13,7 +13,7 @@ layout: default
 
 [Deposit Express API](api/FlashPay)
   
-[Credit Card API](api/DriectCreditCard)
+[Credit Card API](api/DriectCreditHtml)
 
 [CallBack Notification](api/CallBack)  
 
