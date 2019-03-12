@@ -11,7 +11,7 @@ layout: default
 
 [Boleto API](api/DriectBoleto)
 
-[FlashPay API](api/FlashPay)
+[Deposit Express API](api/FlashPay)
   
 [Credit Card API](api/DriectCreditCard)
 
