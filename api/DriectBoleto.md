@@ -100,7 +100,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 ---  | ---  | ---      | ---      | ---  | ---
 code | String | Yes | 16 | 返回状态码 | 
 info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
-info.out_order_no | String | Yes | 128 | 商户订单号| test-003192
+info.out_trade_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 | 
 info.boleto_url | String | Yes | 10 | 支付链接 |
