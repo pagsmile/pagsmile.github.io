@@ -16,7 +16,7 @@ TRADE_REFUSED | Refuse to pay
 TRADE_CANCEL | Cancel
 TRADE_DISPUTE | Dispute
 DISPUTE_REVERSED | Dispute cancellation
-FRAUD_REFUSED | Wind Control Rejection
+FRAUD_REFUSED | Risk Control Rejection
 PAID_MAJOR | The amount received is greater than the actual amount (boleto only)
 PAID_MINOR | The amount received is less than the actual amount (boleto only)
 
