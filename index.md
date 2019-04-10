@@ -3,7 +3,7 @@ title: Pagsmile开发接口文档
 layout: default
 ---
 
-# [](#server)订单平台
+# [](#server)交易平台
 
 [集成式接口](api/CreateOrder) 
  
