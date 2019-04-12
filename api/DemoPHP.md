@@ -129,9 +129,12 @@
             $sign_v = md5($str);
         
             if($sign == $sign_v){
-    
-            	//successful code
-    
+                
+                if($response['trade_status'] == "TRADE_SUCCESS"){//成功状态
+                    //successful code
+                }
+            	
+   
             }
     
     ?>
