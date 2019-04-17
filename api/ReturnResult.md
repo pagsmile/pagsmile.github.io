@@ -4,6 +4,8 @@
 :--- | ---:
 WAIT_BUYER_PAY | 等待付款
 TRADE_SUCCESS | 成功
+TRADE_RISK_CONTROL | 支付风控处理中（2h-2d审核）
+TRADE_PROCESSING | 订单等待后续处理
 TRADE_REFUND | 退款
 TRADE_REFUND_MER | 退款
 REFUND_IN_VERIFY | 退款信息验证中
