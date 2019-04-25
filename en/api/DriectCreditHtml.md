@@ -4,7 +4,7 @@
 >## API URL
 
     Test Environment : https://paychanneldev.pagsmile.com
-    Production Environment : https://paychannel.pagsmile.com
+    Prod Environment : https://paychannel.pagsmile.com
     
 
 >##  Form Load Content
