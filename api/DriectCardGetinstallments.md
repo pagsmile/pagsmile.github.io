@@ -19,7 +19,7 @@
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-amount | String | Yes | 20 |  分期查询金额 | 100
+amount | String | Yes | 20 |  分期查询订单金额（按照金额大小会有期数限制，金额越大期数越多最多12期） | 100
 sign | String | Yes | 32 | 签名 | 
 
 提示：发送退款请求时，该笔订单必须是成功状态。
