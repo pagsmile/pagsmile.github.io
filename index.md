@@ -13,6 +13,8 @@ layout: default
 
 [信用卡接口](api/DriectCreditHtml)
 
+[直连信用卡分期期数金额查询](api/DriectCardGetinstallments)
+
 [现金闪付接口](api/FlashPay)
   
 [支付结果通知](api/CallBack)  
