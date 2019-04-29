@@ -1,4 +1,4 @@
-# 直连boleto接口
+# 直连lottery接口
 
 >## 流程示意
 
@@ -6,8 +6,8 @@
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
-    正式URL地址：https://paychannel.pagsmile.com/api/boleto 
+    测试URL地址：https://paychanneldev.pagsmile.com/api/lottery
+    正式URL地址：https://paychannel.pagsmile.com/api/lottery 
     
 >## 请求方式
 
@@ -49,7 +49,7 @@ address.city | String | No | 50 | 用户的通讯地址的城市| Osasco
 address.federal_unit | String | No | 2-2 | 用户的通讯地址的州| SP
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
-     说明：boleto 币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
+     说明：lottery 金额限制在4～2000 BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
 
 >## 请求样例
 
@@ -103,14 +103,14 @@ info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
 info.out_trade_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 | 
-info.boleto_url | String | Yes | 10 | 支付链接 |
+info.lottery_url | String | Yes | 10 | 支付链接 |
 
 >## 成功样例
 
 ```
     {
     "code":"200",
-    "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","boleto_url":"https://paychanneldevin.pagsmile.com/pagsmile/boletoshow?p=BE751CED5AB4F32F53CE5514DA325251E2C4A1EACCD27BE05296D5#"}
+    "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","lottery_url":"https://paychanneldev.pagsmile.com/pagsmile/lotteryshow?p=BE751CED5AB4F32F53CE5514DA325251E2C4A1EACCD27BE05296D5#"}
     }
     
 ```
@@ -138,6 +138,7 @@ info.boleto_url | String | Yes | 10 | 支付链接 |
 602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
 752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
+762 | AMOUNT ILLEGAL | 金额不合法 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
 930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
 512 | MERCHANT_TRADE_NO_ISNULL | 商户订单号为空 | 检查参数设置。
