@@ -5,6 +5,7 @@ Status Code | Status Description
 WAIT_BUYER_PAY | Waiting for payment
 TRADE_SUCCESS | Success
 TRADE_REFUND | Refund
+TRADE_REFUND_PRT | Partial Refund
 TRADE_REFUND_MER | Refund
 REFUND_IN_VERIFY | Refund information verification
 REFUND_IN_PROCESS | Refund in
