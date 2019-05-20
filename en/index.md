@@ -13,8 +13,10 @@ layout: default
 
 [Deposit Express API](api/FlashPay)
   
+[Lottery API](api/DriectLottery)
+  
 [Credit Card API](api/DriectCreditHtml)
-
+  
 [CallBack Notification](api/CallBack)  
 
 [Refund Application API](api/RefundApply) 
