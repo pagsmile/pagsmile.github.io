@@ -1,7 +1,5 @@
 # Lottery Order API
 
->## Flow
-
 >## API URL
 
     Test Environment : https://paychanneldev.pagsmile.com/api/lottery
