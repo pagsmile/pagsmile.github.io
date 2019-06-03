@@ -121,6 +121,11 @@ info.lottery_url | String | Yes | 10 | pay link |
     
 ```
 
+>## Status Flow Sample
+
+![](/assets/img/status_flow_levpay&lottery.jpg)
+
+
 >## Error Code
 
 For more detailed list, please refer to[Return Status and Error List](ReturnResult)
