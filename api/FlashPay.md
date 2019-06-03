@@ -1,9 +1,5 @@
 # 直连现金闪付接口
 
->## 流程示意
-
-
-
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com/api/flashpay
@@ -134,6 +130,11 @@ info.check_url | String | Yes | 10 | 支付凭证验证链接 |
     }
     
 ```  
+
+>## 状态流程示意
+
+![](/assets/img/status_flow_levpay&lottery.jpg)
+
 
 >## 错误码
 
