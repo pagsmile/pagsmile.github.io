@@ -1,9 +1,5 @@
 # 直连boleto接口
 
->## 流程示意
-
-
-
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
@@ -124,6 +120,11 @@ info.boleto_url | String | Yes | 10 | 支付链接 |
     }
     
 ```
+
+>## 状态流程示意
+
+![](/assets/img/status_flow_boleto.jpg)
+
 
 >## 错误码
 
