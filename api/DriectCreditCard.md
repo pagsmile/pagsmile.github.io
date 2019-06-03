@@ -1,9 +1,5 @@
 # 直连信用卡接口
 
->## 流程示意
-
-
-
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com/api/credit
@@ -161,6 +157,11 @@ info.currency | String | Yes | 10 | 币种 |
     }
     
 ```  
+
+>## 流程示意
+
+![](/assets/img/status_flow_creditcard.jpg)
+
 
 >## 错误码
 
