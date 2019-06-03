@@ -1,9 +1,5 @@
 # 直连lottery接口
 
->## 流程示意
-
-
-
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com/api/lottery
@@ -124,6 +120,11 @@ info.lottery_url | String | Yes | 10 | 支付链接 |
     }
     
 ```
+
+>## 流程示意
+
+![](/assets/img/status_flow_levpay&lottery.jpg)
+
 
 >## 错误码
 
