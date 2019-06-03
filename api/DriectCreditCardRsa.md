@@ -1,9 +1,5 @@
 # 直连信用卡rsa加密算法接口
 
->## 流程示意
-
-
-
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com/apiv2/credit
@@ -163,6 +159,11 @@ info.currency | String | Yes | 10 | 币种 |
     }
     
 ```  
+
+>## 流程示意
+
+![](/assets/img/status_flow_creditcard.jpg)
+
 
 >## 错误码
 
