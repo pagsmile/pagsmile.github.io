@@ -118,6 +118,11 @@ info | String | Yes | 128 | information |
     
 ```
 
+>## Status Flow Sample
+
+![](/assets/img/status_flow_boleto.jpg)
+
+
 >## Error Code
 
 For a more detailed list, please refer to [Return Status and Error List](ReturnResult)
