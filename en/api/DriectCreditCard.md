@@ -157,6 +157,11 @@ Info | String | Yes | 16 | Return status information (success is success)| succe
     
 ```  
 
+>## Status Flow Sample
+
+![](/assets/img/status_flow_creditcard.jpg)
+
+
 >## Error Code
 
 For a more detailed list, please refer to [Return Status and Error List](ReturnResult)
