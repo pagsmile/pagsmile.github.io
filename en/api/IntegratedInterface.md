@@ -17,7 +17,7 @@ merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 10
 app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
 method | String | No | 11 | Payment channel ID | 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposit Express) |
 out_order_no | String | Yes | 64 | Merchant order number | 
-out_uid | String | Yes | 255 | Merchant's user ID | 
+out_uid | String | Yes | 64 | Merchant's user ID | 
 subject | String | Yes | 255 | Order Subject | 
 content | String | Yes | 255 | Order content |
 order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
