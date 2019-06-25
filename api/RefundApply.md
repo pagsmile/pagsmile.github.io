@@ -24,6 +24,14 @@ out_request_no | String | Yes | 255 | 请求退款的商户流水号(成功后�
 email | String | Yes | 255 | 请求退款的邮箱
 refund_amount | Float | Yes | 255 | 请求退款金额
 description | String | No | 255 | 退款描述
+bank_info | String | No | 3 | 传银行信息为yes
+name | String | No | 255 | 退款人姓名
+cpf_no | String | No | 11 | 退款人cpf号
+bank_id | String | No | 10 | 退款人银行编号
+bank_name | String | No | 50 | 退款人银行名称
+agency | String | No | 6 | 退款人支行代码
+account_no | Int | No | 20 | 退款人银行账号
+account_type | Int | No | 1 | 退款人银行账号类型 1 savings_account 2 checking_account
 sign | String | Yes | 32 | 签名 | 
 
 提示：发送退款请求时，该笔订单必须是成功状态。
