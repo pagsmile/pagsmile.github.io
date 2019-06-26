@@ -24,17 +24,19 @@ out_request_no | String | Yes | 255 | 请求退款的商户流水号(成功后�
 email | String | Yes | 255 | 请求退款的邮箱
 refund_amount | Float | Yes | 255 | 请求退款金额
 description | String | No | 255 | 退款描述
-bank_info | String | No | 3 | 传银行信息为yes
-name | String | No | 255 | 退款人姓名
-cpf_no | String | No | 11 | 退款人cpf号
-bank_id | String | No | 10 | 退款人银行编号
-bank_name | String | No | 50 | 退款人银行名称
-agency | String | No | 6 | 退款人支行代码
-account_no | Int | No | 20 | 退款人银行账号
-account_type | Int | No | 1 | 退款人银行账号类型 1 savings_account 2 checking_account
+bank_info | String | No | 3 | 传银行信息为yes,默认为空
+name | String | No（bank_info=yes Yes） | 255 | 退款人姓名
+cpf_no | String | No（bank_info=yes Yes） | 11 | 退款人cpf号
+bank_id | String | No（bank_info=yes Yes） | 10 | 退款人银行编号
+bank_name | String | No（bank_info=yes Yes） | 50 | 退款人银行名称
+agency | String | No（bank_info=yes Yes） | 6 | 退款人支行代码
+account_no | Int | No（bank_info=yes Yes） | 20 | 退款人银行账号
+account_type | Int | No（bank_info=yes Yes） | 1 | 退款人银行账号类型 1 savings_account 2 checking_account
 sign | String | Yes | 32 | 签名 | 
 
 提示：发送退款请求时，该笔订单必须是成功状态。
+     bank_info 信息不是必填信息，是为方便用户在退款时，用户在已经提供个人转账账户信息后，方便直接收到退款。
+     默认为空，当收集到用户银行信息时候可以使用。
 
 >## 返回结果
 
