@@ -27,8 +27,8 @@ description | String | No | 255 | 退款描述
 bank_info | String | No | 3 | 传银行信息为yes,默认为空
 name | String | No（bank_info=yes Yes） | 255 | 退款人姓名
 cpf_no | String | No（bank_info=yes Yes） | 11 | 退款人cpf号
-bank_id | String | No（bank_info=yes Yes） | 10 | 退款人银行编号
-bank_name | String | No（bank_info=yes Yes） | 50 | 退款人银行名称
+bank_id | String | No（bank_info=yes Yes） | 10 | 退款人银行编号（参考[巴西银行支付列表](Bankinfo)）
+bank_name | String | No（bank_info=yes Yes） | 50 | 退款人银行名称（参考[巴西银行支付列表](Bankinfo)）
 agency | String | No（bank_info=yes Yes） | 6 | 退款人支行代码
 account_no | Int | No（bank_info=yes Yes） | 20 | 退款人银行账号
 account_type | Int | No（bank_info=yes Yes） | 1 | 退款人银行账号类型 1 savings_account 2 checking_account
