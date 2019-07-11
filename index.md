@@ -10,7 +10,7 @@ It's populated with example content to give you some ideas.
 ChatApp is a fictional chat application for sending messages and media to others.
 Teams and friend groups would use ChatApp to stay up to date if it existed.
 
-> [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/).
+     [Sign up](http://example.com/signup) or learn more about ChatApp at [example.com](http://example.com/).
 
 ### Getting Started
 
@@ -20,7 +20,7 @@ Getting a message sent is quick and easy with ChatApp:
 2. Add your friends from their email addresses
 3. Type a message or send a photo
 
-> Feel free to send us a message at [feedback@example.com](mailto:feedback@example.com) with your feedback.
+     Feel free to send us a message at [feedback@example.com](mailto:feedback@example.com) with your feedback.
 
 ### Features
 

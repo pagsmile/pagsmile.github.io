@@ -25,65 +25,101 @@
 	</head>
 
 	<body>
-		<header>
-			<h1>
-				<a href="{{ site.baseurl }}/">
-					<img src="{{ site.baseurl }}/images/emblem.svg" width="40" height="40" alt="{{ site.title }} logo"></a>
-					Docs for Developers
-				<button type="button" class="open-nav" id="open-nav"></button>
-			</h1>
-
-			<form action="{{ site.baseurl }}/search/" method="get">
-				<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
-				<input type="submit" value="Search" style="display: none;">
-			</form>
-
-			<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
-				<ul>
-					<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
-						{% assign home = site.html_pages | where: 'url', '/' | first %}
-						<a href="{{ site.baseurl }}/">{{ home.title }}</a>
-					</li>
-				</ul>
-
-				<ul>
-					{% assign grouped = site.docs | group_by: 'category' %}
-					{% for group in grouped %}
-						<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
-							{% assign items = group.items | sort: 'order' %}
-							<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
-							<ul>
-								{% for item in items %}
-									<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
-								{% endfor %}
-							</ul>
-						</li>
-					{% endfor %}
-				</ul>
-
-				<ul>
-					<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
-						{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
-						<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>
-					</li>
-				</ul>
-			</nav>
-		</header>
-
-		<section class="main">
-			<div class="page-header">
-				<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
-				<h3>{{ page.title }}</h3>
+		<div class="header-top">
+			<div class="c-menu-type-classic">
+				<div class="form-control">
+					<p class="set">1. English</p>
+					<span class="stage-span">▼</span>
+					<div class="new toggle">
+						<p style="color:#01a27e;"> 2. 中文</p>
+						<p style="color:#01a27e;"> 1. English </p>
+					</div>
+					<input type="hidden" value="1" id="installments" name="installments">
+				</div>
 			</div>
-			<article class="content">
-				{{ content }}
-			</article>
-		</section>
-
+		</div>
+		<div class="setions">
+			<header>
+				<h1>
+					<a href="{{ site.baseurl }}/">
+						
+					</a>
+						<span>Docs for Developers</span>
+					<button type="button" class="open-nav" id="open-nav"></button>
+				</h1>
+	
+				<form action="{{ site.baseurl }}/search/" method="get">
+					<input type="text" name="q" id="search-input" placeholder="Search" autofocus>
+					<input type="submit" value="Search" style="display: none;">
+				</form>
+	
+				<nav {% if site.show_full_navigation %}class="full-navigation"{% endif %}>
+					<ul>
+						<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
+							{% assign home = site.html_pages | where: 'url', '/' | first %}
+							<a href="{{ site.baseurl }}/">{{ home.title }}</a>
+						</li>
+					</ul>
+	
+					<ul>
+						{% assign grouped = site.docs | group_by: 'category' %}
+						{% for group in grouped %}
+							<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
+								{% assign items = group.items | sort: 'order' %}
+								<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+								<ul>
+									{% for item in items %}
+										<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+									{% endfor %}
+								</ul>
+							</li>
+						{% endfor %}
+					</ul>
+	
+					<ul>
+						<li class="nav-item top-level {% if page.url == '/changelog/' %}current{% endif %}">
+							{% assign changelog = site.html_pages | where: 'url', '/changelog/' | first %}
+							<a href="{{ site.baseurl }}/changelog/">{{ changelog.title }}</a>
+						</li>
+					</ul>
+				</nav>
+			</header>
+	
+			<section class="main">
+				<div class="page-header">
+					<h2>{% if page.category %}{{ page.category }}{% else %}{{ site.title }}{% endif %}</h2>
+					<h3>{{ page.title }}</h3>
+				</div>
+				<article class="content">
+					{{ content }}
+				</article>
+				
+			</section>
+		</div>
+		<!-- <footer class="footer">
+			<a href="https://www.pagsmile.com/">Pagsmile.com </a>
+			© 2019 Pagsmile Limited. All Reserved Reserved。
+		</footer> -->
 		<script>
+			
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
 			});
+
+			// 点击切换语种
+        	document.querySelector(".stage-span").addEventListener("click", function () {
+				document.querySelector(".new").classList.toggle("toggle")
+			});
+			let set = document.querySelector(".set");
+       		let oli = document.querySelector(".new").children;
+			for(var i=0; i<oli.length; i++){
+				oli[i].addEventListener("click", function(){
+					
+					set.innerHTML = this.innerText;
+					document.querySelector(".new").classList.add("toggle")
+				})
+			}
+
 		</script>
 	</body>
 </html>

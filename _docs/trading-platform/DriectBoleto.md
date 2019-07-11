@@ -8,17 +8,16 @@ order: 3
 
 ### 1. 接口链接
 
->  测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
-
->  s正式URL地址：https://paychannel.pagsmile.com/api/boleto 
+    测试URL地址：https://paychanneldev.pagsmile.com/api/boleto
+    正式URL地址：https://paychannel.pagsmile.com/api/boleto 
     
 ### 2. 请求方式
 
-> POST
+     POST
 
 ### 3. 数据格式   
   
-> json
+     json
     
 ### 4. 请求参数
 
@@ -128,7 +127,7 @@ info.boleto_url | String | Yes | 10 | 支付链接 |
     
 ```
 
-### 9.状态流程示意
+### 9. 状态流程示意
 
 ![](/images/status_flow_boleto.jpg)
 

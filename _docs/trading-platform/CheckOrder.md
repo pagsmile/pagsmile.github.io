@@ -56,6 +56,6 @@ data.trade_no | String | Yes | 50 |  pagsmile交易流水号
 
 更详细列表请参照[返回状态和错误一览](../ReturnResult)
 
-### 签名生成算法  
+### 7. 签名生成算法  
 
 参考[签名算法](../DriectSign)

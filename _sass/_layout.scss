@@ -7,10 +7,24 @@ body {
 	height: auto;
 	overflow-x: hidden;
 	background-color: $body-background-color;
-
+	font-family: "Open Sans", "Helvetica Neue", "Helvetica", "Arial, sans-serif";
 	&.nav-open {
 		overflow: hidden;
-
+		.c-menu-type-classic{
+			width: 100px;
+			border-radius: 4px;
+			position: relative;
+			left: 100px;
+			top: 67px;
+			margin: 0 auto;
+			padding: 0;
+			z-index: 100;
+			
+		}
+	
+		.setions{
+			margin-top:100px;
+		}
 		nav,
 		header > form {
 			display: block;
@@ -66,12 +80,75 @@ body {
 		}
 	}
 }
+.header-top{
+	width: 100%;
+	height: 67px;
+	background: #01a27e;
+	margin-top:-7px;
+}
+
+
+.c-menu-type-classic{
+	width: 150px;
+	padding-right: 5px;
+    padding-left: 5px;
+	text-align: left;
+	border-radius: 4px;
+    position: relative;
+    left: 880px;
+	top: 20px;
+	background: #fff;
+}
+.toggle{
+    display: none;
+}
+.form-control{
+	height: 30px;
+}
+.stage-span{
+	position: absolute;
+    top: 0;
+    right: 7px;
+    font-size: 12px;
+}
+
+.new{
+	color:#111;
+	background: #fafafa;
+	padding:0 5px;
+	margin-top:-33px;
+}
+.new p{
+	height: 30px;
+	line-height: 30px;
+	margin:0 auto
+}
+
+.stage{
+    position: absolute;
+    // top: 30px;
+    right: 10px;
+    display: inline-block;
+    width: 67px;
+    height: 30px;
+    background: url(http://img5.imgtn.bdimg.com/it/u=3300305952,1328708913&fm=26&gp=0.jpg) no-repeat;
+    background-size: 100%;
+    z-index: 300;
+}
+
+
+
+// .footer{
+// 	text-align: center;
+// 	margin: 20px auto;
+// }
 
 .main {
 	margin-top: $space + $nav-header-height;
-
+	
 	@media (min-width: $mobile-break) {
 		margin-top: 0;
+		
 	}
 }
 
@@ -97,7 +174,7 @@ header {
 		padding: $emblem-vertical-padding $emblem-horizontal-padding;
 		height: $nav-header-height;
 		box-sizing: border-box;
-		background-color: $brand-colour;
+		background-color: #01a27e;
 		color: #fff;
 		margin: 0;
 		font-size: 1.7rem;
@@ -109,12 +186,22 @@ header {
 		@include flex-direction(row);
 		@include align-items(center);
 		border-bottom: 1px solid rgba(0, 0, 0, 0.075);
-
-		img {
-			height: $emblem-size;
-			width: $emblem-size;
-			margin-right: $space - 5;
+		a{
+			width: 120px;
+			height: 30px;
+			background:url(/images/logo.png);
+			background-size: cover;
 		}
+		span{
+			width: 100px;
+			line-height: 20px;
+			margin-left: 30px;
+		}
+		// img {
+		// 	height: $emblem-size;
+		// 	width: $emblem-size;
+		// 	margin-right: $space - 5;
+		// }
 	}
 
 $nav-image: $baseurl + "/images/menu.svg";
@@ -130,7 +217,62 @@ $nav-image: $baseurl + "/images/menu.svg";
 		top: $emblem-vertical-padding;
 		right: $emblem-horizontal-padding;
 		border-radius: 2px;
-
+		.c-menu-type-classic{
+			width: 30%;
+			padding-right: 5px;
+			padding-left: 5px;
+			text-align: left;
+			border-radius: 4px;
+			position: relative;
+			left: 0;
+			top: 20px;
+			
+		}
+		.set{
+			width: 100%;
+			padding-left:10px;
+			box-sizing: border-box;
+		}
+		.toggle{
+			display: none;
+		}
+		.form-control{
+			width: 100%;
+			height: 40px;
+			line-height: 40px;
+		}
+		.stage-span{
+			position: absolute;
+			top: 0;
+			right: 7px;
+			font-size: 12px;
+		}
+		
+		.new{
+			width: 400px;
+			color: #111;
+			background: #fafafa;
+			padding: 0 0px;
+			margin-top: -33px;
+			margin-left: -4px;
+		}
+		.new p{
+			height: 30px;
+			line-height: 30px;
+			margin:0 auto
+		}
+		
+		.stage{
+			position: absolute;
+			// top: 30px;
+			right: 10px;
+			display: inline-block;
+			width: 67px;
+			height: 30px;
+			background: url(http://img5.imgtn.bdimg.com/it/u=3300305952,1328708913&fm=26&gp=0.jpg) no-repeat;
+			background-size: 100%;
+			z-index: 300;
+		}
 		&:focus {
 			outline: none;
 			background-color: rgba(0, 0, 0, 0.05);
@@ -366,7 +508,7 @@ h4 svg {
 #search-input {
 	-webkit-appearance: none;
 	display: block;
-	margin: 0;
+	margin-top: 50px;
 	padding: 10px 20px 10px 15px;
 	width: 100%;
 	box-sizing: border-box;

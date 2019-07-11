@@ -155,7 +155,7 @@ info.lottery_url | String | Yes | 10 | 支付链接 |
 
 更详细列表请参照[返回状态和错误一览](../ReturnResult)
 
-### 11.签名生成算法  
+### 11. 签名生成算法  
 
 参考直[连签名算法](../DriectSign)
 

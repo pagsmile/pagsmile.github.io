@@ -11,8 +11,8 @@ order: 1
 
 ### 2. 接口链接
     
- >   测试URL地址：http://testenv.pagsmile.com/pserver/gateway.json  
- >  正式URL地址：https://pserver.pagsmile.com/gateway.json
+    测试URL地址：http://testenv.pagsmile.com/pserver/gateway.json  
+    正式URL地址：https://pserver.pagsmile.com/gateway.json
 
 ### 3. 请求参数
 
@@ -41,7 +41,7 @@ sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
 
-### 4.测试数据:  
+### 4. 测试数据:  
 
 类型 | 卡号 | 卡组织 | cvc | 有效期 | 持卡人姓名 | CPF号码 | CEP
 --- | --- | --- | --- | --- | --- | ---
@@ -54,7 +54,7 @@ Boleto | - | - | - | - | Test User Name | 50284414727  | 38082365
 
 注：Boleto 金额限制（4-15000 BRL）
 
-### 5.返回结果
+### 5. 返回结果
 
   请求异常时不进行页面跳转，返回错误状态。
 

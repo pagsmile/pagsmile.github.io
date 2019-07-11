@@ -59,4 +59,4 @@ data | String | Yes | 256 | 返回数据 | 查询剩余次数
 
 ### 7. 签名生成算法  
 
-参考[签名算法](../DriectSign)
+参考[签名算法](../../trading-platform/DriectSign)
