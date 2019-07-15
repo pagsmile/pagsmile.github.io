@@ -1,0 +1,29 @@
+table {
+	// width: 100%;
+	// margin-bottom: 1.75em;
+    // overflow: auto;
+    // word-break: normal;
+	// word-break: keep-all;
+	display: block;
+    width: 100%;
+    overflow: auto;
+    word-break: normal;
+    word-break: keep-all; // For Firefox to horizontally scroll wider tables.
+    -webkit-overflow-scrolling: touch;
+}
+
+tr th{
+	text-align: center;
+	border-bottom: 1px solid #EEE;
+}
+
+tr:nth-child(even) {
+	background: #fcfcfc;
+}
+
+td , th{
+	padding: 0.5rem 2.5rem;
+	text-align: left;
+	border:1px solid #e9ebec;
+}
+
