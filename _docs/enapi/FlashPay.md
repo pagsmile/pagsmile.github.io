@@ -9,8 +9,8 @@ language: en
 
 ### 1. API URL
 
-    test URL：https://paychanneldev.pagsmile.com/api/flashpay
-    prod URL：https://paychannel.pagsmile.com/api/flashpay 
+    test URL: https://paychanneldev.pagsmile.com/api/flashpay
+    prod URL: https://paychannel.pagsmile.com/api/flashpay 
     
 ### 2. Request Method
 

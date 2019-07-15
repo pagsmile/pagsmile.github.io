@@ -9,8 +9,8 @@ language: en
 
 ### 1. API URL
 
-    Test Environment : https://paychanneldev.pagsmile.com
-    Prod Environment : https://paychannel.pagsmile.com
+    Test Environment:  https://paychanneldev.pagsmile.com
+    Prod Environment:  https://paychannel.pagsmile.com
     
 
 ### 2. Form Load Content

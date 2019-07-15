@@ -9,8 +9,8 @@ language: en
 
 ### 1. API URL
 
-    Test Environment : https://paychanneldev.pagsmile.com/api/lottery
-    Production Environment : https://paychannel.pagsmile.com/api/lottery 
+    Test Environment:  https://paychanneldev.pagsmile.com/api/lottery
+    Production Environment:  https://paychannel.pagsmile.com/api/lottery 
     
 ### 2. Request Method
 

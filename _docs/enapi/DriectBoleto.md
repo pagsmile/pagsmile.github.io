@@ -10,8 +10,8 @@ language: en
 
 ### 1. API URL
 
-    Test Environment ：https://paychanneldev.pagsmile.com/api/boleto
-    Production Environment ：https://paychannel.pagsmile.com/api/boleto 
+    Test Environment: https://paychanneldev.pagsmile.com/api/boleto
+    Production Environment:  https://paychannel.pagsmile.com/api/boleto 
     
 ### 2. Request Method
 

@@ -1,6 +1,6 @@
 ---
 title: Reading object
 ---
-# 阅读对象
+# Reading object
 
-本文阅读对象：商户系统集成Pagsmile支付涉及的技术架构师，研发工程师，测试工程师，系统运维工程师。
+This article reads:The merchant system integrates the technical architects, R&D engineers, test engineers, and system operation and maintenance engineers involved in Pagsmile payment.
