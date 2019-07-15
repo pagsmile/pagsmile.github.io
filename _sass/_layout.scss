@@ -2,7 +2,9 @@ input::-ms-clear,
 input::-ms-reveal {
 	display: none !important;
 }
-
+.cn-developers{
+	display: none;
+}
 body {
 	height: auto;
 	overflow-x: hidden;
@@ -13,8 +15,8 @@ body {
 		.c-menu-type-classic{
 			width: 100px;
 			border-radius: 4px;
-			position: relative;
-			left: 100px;
+			position: absolute;
+			left: 250px;
 			top: 67px;
 			margin: 0 auto;
 			padding: 0;
@@ -95,7 +97,7 @@ body {
 	text-align: left;
 	border-radius: 4px;
     position: relative;
-    left: 880px;
+    left:680px;
 	top: 20px;
 	background: #fff;
 }
@@ -197,11 +199,6 @@ header {
 			line-height: 20px;
 			margin-left: 30px;
 		}
-		// img {
-		// 	height: $emblem-size;
-		// 	width: $emblem-size;
-		// 	margin-right: $space - 5;
-		// }
 	}
 
 $nav-image: $baseurl + "/images/menu.svg";
@@ -450,6 +447,7 @@ nav > ul {
 h3 + .warning {
 	margin-top: 1.75em;
 }
+
 
 
 h4 code {

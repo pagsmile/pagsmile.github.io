@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 
-<html>
+<html lang="cn">
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-
 		{% seo %}
 		{% feed_meta %}
 
 		<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Merriweather:400,400italic,700,700italic|Open+Sans:400,400italic,600,600italic,700,700italic|Inconsolata:400,700">
 		<link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
 		<link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192">
-		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/favicon.png">
+		<!-- <link rel="icon" type="image/png" href="{{ site.baseurl }}/touch-icon.png" sizes="192x192"> -->
+		<link rel="icon" type="image/png" href="{{ site.baseurl }}/images/pagsmile logo2-1.png">
 
 		{% if jekyll.environment == 'production' and site.google_analytics_key != '' %}
 			<script>
@@ -26,19 +25,13 @@
 
 	<body>
 		<div class="header-top">
-			<div class="c-menu-type-classic">
-				<div class="form-control">
-					<p class="set">1. English</p>
-					<span class="stage-span">▼</span>
-					<div class="new toggle">
-						<p style="color:#01a27e;"> 2. 中文</p>
-						<p style="color:#01a27e;"> 1. English </p>
-					</div>
-					<input type="hidden" value="1" id="installments" name="installments">
-				</div>
-			</div>
+
+			<select id='c-menu-type-classic' class="c-menu-type-classic" onchange="ddlSomoveLanguage()">
+				<option value="en">English</option>
+				<option value="cn">中文</option>
+			</select>
 		</div>
-		<div class="setions">
+		<div class="setions cn developers">
 			<header>
 				<h1>
 					<a href="{{ site.baseurl }}/">
@@ -69,7 +62,9 @@
 								<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
 								<ul>
 									{% for item in items %}
-										<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
+										<li class="nav-item {% if item.url == page.url %}current{% endif %}">
+											<a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a>
+										</li>
 									{% endfor %}
 								</ul>
 							</li>
@@ -96,30 +91,24 @@
 				
 			</section>
 		</div>
-		<!-- <footer class="footer">
-			<a href="https://www.pagsmile.com/">Pagsmile.com </a>
-			© 2019 Pagsmile Limited. All Reserved Reserved。
-		</footer> -->
+		
 		<script>
 			
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
 			});
-
+			
 			// 点击切换语种
-        	document.querySelector(".stage-span").addEventListener("click", function () {
-				document.querySelector(".new").classList.toggle("toggle")
-			});
-			let set = document.querySelector(".set");
-       		let oli = document.querySelector(".new").children;
-			for(var i=0; i<oli.length; i++){
-				oli[i].addEventListener("click", function(){
-					
-					set.innerHTML = this.innerText;
-					document.querySelector(".new").classList.add("toggle")
-				})
+			let i18n = document.querySelector("html").getAttribute("lang");
+			var select = document.getElementById("c-menu-type-classic");
+			let ulList = document.querySelector(".full-navigation").children[1];
+			
+			function ddlSomoveLanguage(){
+				i18n = select.value;
+				console.log(i18n);
 			}
-
+			
 		</script>
 	</body>
 </html>
+

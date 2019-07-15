@@ -26,6 +26,27 @@ social:
 
 permalink: pretty
 
+# gems: [ 'jekyll-multiple-languages']
+# languages: ['en', 'cn']
+# # If not config, the first of languages will be the default
+# language_default: 'cn'
+
+# navigation:
+#   en:
+#     title:    Jekyll Multiple Languages
+#     items1:
+#       - path:     
+#         title:    
+#       - path:    
+#         title:  
+#   cn:
+#     title:    Jekyll Multiple Languages
+#     items1:
+#       - path:    
+#         title:  
+#       - path:  
+#         title:
+
 plugins:
   - jekyll-sitemap
   - jekyll-seo-tag
@@ -42,7 +63,6 @@ collections:
     title: Documentation
     permalink: /:path/
     output: true
-
 defaults:
   -
     scope:
@@ -59,7 +79,8 @@ defaults:
       _comments:
         category: Group navigation links with this field
         order: Used to sort links in the navigation
-      _options:
+        language: Used to do language switching
+        _options:
         content:
           width: 800
           height: 2000

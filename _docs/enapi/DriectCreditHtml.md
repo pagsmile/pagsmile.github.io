@@ -1,40 +1,40 @@
 ---
-title: DriectCreditHtml
-category: 交易平台
-order: 5
+title: Credit Card API
+category: enapi
+order: 6
+language: en
 ---
+# Credit Card Payment Page Setting
 
 
-# 直连信用卡接口
+### 1. API URL
 
-### 1. 接口链接
-
-    测试URL地址：https://paychanneldev.pagsmile.com
-    正式URL地址：https://paychannel.pagsmile.com
+    Test Environment : https://paychanneldev.pagsmile.com
+    Prod Environment : https://paychannel.pagsmile.com
     
 
-### 2. 表单加载内容
+### 2. Form Load Content
 
   
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-email | String | Yes | 255 | 用户邮箱 | 
-cardNumber | String | Yes | 16 |用户卡号 | 
-securityCode | String | Yes | 4 | 安全码| 123
-cardExpirationMonth | float | Yes | 2 |  信用卡过期时间月份| 
-cardExpirationYear | String | Yes | 4 |  信用卡过期时间年份 | 
-cardholderName | String | Yes | 20 |  持卡人姓名 | TEST USER NAME
-installments | int | Yes | 2 |  信用卡分期期数 | 3
-issuer | String | Yes | 10 |  发卡行（默认自动获取） | 
-amount | flaot | Yes | 2 |  分期金额 |   
+email | String | Yes | 255 | buyer e-mail | 
+cardNumber | String | Yes | 16 | buyer card number | 
+securityCode | String | Yes | 4 | security code| 123
+cardExpirationMonth | float | Yes | 2 |  expire year| 
+cardExpirationYear | String | Yes | 4 |  expire month | 
+cardholderName | String | Yes | 20 |  holder name | TEST USER NAME
+installments | int | Yes | 2 |  number of installments stages | 3
+issuer | String | Yes | 10 |  card issuing bank（auto detected by default） | 
+amount | flaot | Yes | 2 |  amount of order |   
 
-### 3. 表单内容
+### 3. Form Content
 
-引入安全js，处于安全考虑,通过商户浏览器收集卡信息。
+Introducing security js, for security reasons, collecting card information through the merchant browser.
 
 ```
-    <script src="URL地址/sdk/javascript/pagsmile.js"></script>
+    <script src="URL/sdk/javascript/pagsmile.js"></script>
     
 ```
 
@@ -96,15 +96,12 @@ amount | flaot | Yes | 2 |  分期金额 |
 ```
 
 
-引入js代码获取交易参数
+Introduce js code to get transaction parameters
 
 ```
-        //merchant_no pagsmile分配给商户的ID
-        //app_id  pagsmile分配给商户的应用ID
+       Pagsmile.setPublishableKey(merchant_no,app_id); //Get page encryption public key
     
-       Pagsmile.setPublishableKey(merchant_no,app_id); //获取页面加密公钥
-    
-       Pagsmile.getIdentificationTypes(); //检查必填字段
+       Pagsmile.getIdentificationTypes(); //Check required fields
         
         function addEvent(el, eventName, handler) {
     
@@ -128,7 +125,7 @@ amount | flaot | Yes | 2 |  分期金额 |
             }
         }
         
-        //获取信用卡支付方式，通过卡的前6位判断发卡行
+        // Get the credit card payment method, judge the issuing bank through the first 6 digits of the card
         function guessingPaymentMethod(event) {
             var bin = getBin();
     
@@ -162,7 +159,7 @@ amount | flaot | Yes | 2 |  分期金额 |
             }
         }
             
-        //获取分期金额    
+        // Get the installment amount
         function setInstallmentInfo(status, response) {
             var selectorInstallments = document.querySelector("#installments"),
                 fragment = document.createDocumentFragment();
@@ -183,7 +180,7 @@ amount | flaot | Yes | 2 |  分期金额 |
             }
         }
         
-        //验证支付安全信息
+        // Verify payment security information
         function setPaymentMethodInfo(status, response) {
             if (status == 200) {
                 var form = document.querySelector('#pay');
@@ -226,7 +223,7 @@ amount | flaot | Yes | 2 |  分期金额 |
             }
         }
     
-        //支付获取token验证码
+        // Payment to get token verification code
         function doPay(event){
             event.preventDefault();
             if(!doSubmit){
@@ -238,7 +235,7 @@ amount | flaot | Yes | 2 |  分期金额 |
             }
         };
         
-        //设置分期期数和金额
+        // Set the number of installments and amount
         function setInstallmentsByIssuerId(status, response) {
             var issuerId = document.querySelector('#issuer').value,
                 amount = document.querySelector('#amount').value;
@@ -255,7 +252,7 @@ amount | flaot | Yes | 2 |  分期金额 |
             }, setInstallmentInfo);
         }
         
-        //创建隐藏字段讲收集信息，提交到商户服务器
+        // Create hidden fields to collect information and submit it to the merchant server
         function sdkResponseHandler(status, response) {
             if (status != 200 && status != 201) {
                 alert("verify filled data");
@@ -271,7 +268,6 @@ amount | flaot | Yes | 2 |  分期金额 |
             }
         };
         
-        //获取卡bin号
         function getBin() {
             var cardSelector = document.querySelector("#cardId");
             var de = JSON.stringify(cardSelector);
@@ -310,15 +306,12 @@ amount | flaot | Yes | 2 |  分期金额 |
         addEvent(document.querySelector('#pay'), 'submit', doPay);
     
 ```
-测试数据:  
 
-类型 | 卡号 | 卡组织 | cvc | 有效期 | 持卡人姓名 | CPF号码 | CEP
+Test Data:  
+
+Type | Card NO. | Organization | Expire Date | Holder Name | CPF | CEP
 --- | --- | --- | --- | --- | --- | ---
-信用卡 | 4235647728025682 | visa | 123 | 12/2020 | APRO | 50284414727
-信用卡 | 5031433215406351 | mastercard | 123 | 12/2020 | APRO | 50284414727
+Credit Card | 4235647728025682 | VISA | 123 | 12/2020 | APRO | 50284414727
+Credit Card | 5031433215406351 | MasterCard | 123 | 12/2020 | APRO | 50284414727
 
-
-### 4. 页面提交后请参考信用卡支付验证接口
-
-参考直[信用卡支付验证接口](../DriectCreditdo)
-
+Please refer to the [credit card payment verification interface](../DriectCreditdo) after the page is submitted. addEvent(document.querySelector('#pay'), 'submit', doPay);

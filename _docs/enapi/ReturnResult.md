@@ -1,45 +1,42 @@
 ---
-title: ReturnResult
-category: 交易平台
-order: 11
+title: Result List
+category: enapi
+order: 10
+language: en
 ---
 
-# 返回状态和错误一览
+### 1. Return to order status list
 
-### 1. 返回订单状态一览  
-
-状态码 | 状态说明
+Status Code | Status Description
 :--- | ---:
-WAIT_BUYER_PAY | 等待付款
-TRADE_SUCCESS | 成功
-TRADE_RISK_CONTROL | 支付风控处理中（2h-2d审核）
-TRADE_PROCESSING | 订单等待后续处理
-TRADE_REFUND | 退款
-TRADE_REFUND_PRT | 部分退款
-TRADE_REFUND_MER | 退款
-REFUND_IN_VERIFY | 退款信息验证中
-REFUND_IN_PROCESS | 退款中
-REFUND_REFUSED | 拒付退款
-REFUND_REVERSED | 驳回退款
-TRADE_CHARGEBACK | 拒付
-CHARGEBACK_REVERSED | 拒付驳回
-TRADE_REFUSED | 拒付
-TRADE_CANCEL | 取消
-TRADE_DISPUTE | 争议
-DISPUTE_REVERSED | 争议取消
-FRAUD_REFUSED | 风控拒绝
-PAID_MAJOR | 收款金额大于实际金额（仅boleto）
-PAID_MINOR | 收款金额小于实际金额（仅boleto）
+WAIT_BUYER_PAY | Waiting for payment
+TRADE_SUCCESS | Success
+TRADE_REFUND | Refund
+TRADE_REFUND_PRT | Partial Refund
+TRADE_REFUND_MER | Refund
+REFUND_IN_VERIFY | Refund information verification
+REFUND_IN_PROCESS | Refund in
+REFUND_REFUSED | Refund refund
+REFUND_REVERSED | Refund refund
+TRADE_CHARGEBACK | Refuse to pay
+CHARGEBACK_REVERSED | Refusal to reject
+TRADE_REFUSED | Refuse to pay
+TRADE_CANCEL | Cancel
+TRADE_DISPUTE | Dispute
+DISPUTE_REVERSED | Dispute cancellation
+FRAUD_REFUSED | Risk Control Rejection
+PAID_MAJOR | The amount received is greater than the actual amount (boleto only)
+PAID_MINOR | The amount received is less than the actual amount (boleto only)
 
-### 2. 返回错误码一览  
+### 2. Error Code List
 
-错误码 | 错误描述 
-----  | --- 
+Error Code | Description 
+:----  | :--- 
 200 | SUCCESS
 300 | WARNING
-400 |	SYSTEM_ERROR
-401 |	SYSTEM_PARAM_ERROR
-402 |	SIGN_VERIFY_FAILURE
+400 | SYSTEM_ERROR
+401 | SYSTEM_PARAM_ERROR
+402 | SIGN_VERIFY_FAILURE
 403	| SIGN_ISNULL
 404	| SIGN_TYPE_ERROR
 405	| SIGN_TYPE_ISNULL
@@ -58,9 +55,6 @@ PAID_MINOR | 收款金额小于实际金额（仅boleto）
 759	| EMAIL_ISNULL
 760	| PHONE_ISNULL
 761	| BANK_ILLEGAL
-762 | AMOUNT ILLEGAL
-763 | ZIP_CODE_IS_NULL
-764 | ZIP_CODE_ILLEGAL
 801	| TRADENO_NOT_EXIST
 801	| TRADENO_EXIST
 802	| TRADENO_ISNULL
@@ -194,4 +188,3 @@ bank-N7	| Unauthorized transaction. Invalid security code.
 bank-R1	| Unauthorized transaction. Default card (Do not honor).
 bank-U3	| Transaction not allowed. Data validation failed.
 bank-GD	| Transaction not allowed.
-mbank-400 | Invalid transaction_amount - 4037: Invalid transaction_amount

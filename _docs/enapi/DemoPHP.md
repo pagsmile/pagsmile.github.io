@@ -1,12 +1,12 @@
 ---
-title: DemoPHP 
-category: 交易平台
-order: 13
+title: DemoPHP
+category: enapi
+order: 16
+language: en
 ---
+# php demo
 
-# 支付接口php demo
-
-### 1. 集成接口下单demo
+### 1. demo
 
 ```
      <?php
@@ -100,7 +100,7 @@ order: 13
 
  
 
-### 2. 支付异步回调验证签名demo
+### 2. sign demo
     
 ```
       <?php
