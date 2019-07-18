@@ -178,13 +178,13 @@ header {
 	.full-navigation>ul li.top-level.current ul{
 		display: block;
 	}
-	.full-navigation>ul li.top-level> .iconActive{
+	.full-navigation>ul li.top-level  .iconActive{
 		display: none;
 	}
-	.full-navigation>ul li.top-level.current> .iconActive{
+	.full-navigation>ul li.top-level.current  .iconActive{
 		display: inline-block ;
 	}
-	.full-navigation>ul li.top-level.current> .icon{
+	.full-navigation>ul li.top-level.current .icon{
 		display: none ;
 	}
 	h1 {
@@ -407,14 +407,13 @@ nav > ul {
 		display: inline-block;
 		width: 75%;
 	}
-	// .sidebar_icon{
-	// 	width: 15%;
-	// 	line-height: 1.5;
-	// 	float: right;
-	// 	right: 20px;
-	// 	text-align: center;
-	// 	margin-top: 10px;
-	// }
+	.sidebar_icon{
+		width: 73%;
+		line-height: 0.5;
+		float: right;
+		text-align: right;
+		margin-top: 10px;
+	}
 	
 	&.current > a,
 	> a:active,

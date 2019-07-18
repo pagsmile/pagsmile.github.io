@@ -60,9 +60,12 @@
 						{% for group in grouped %}
 							<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
 								{% assign items = group.items | sort: 'order' %}
-								<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
-								<span class="sidebar_icon icon">﹀</span>
-								<span class="sidebar_icon iconActive">︿</span>
+								<a href="{{ site.baseurl }}{{ items.first.url }}">
+									<span>{{ group.name }}</span>
+									<span class="sidebar_icon icon">﹀</span>
+									<span class="sidebar_icon iconActive">︿</span>
+								</a>
+								
 								<!-- ︿ -->
 								<ul>
 									{% for item in items %}
