@@ -167,11 +167,26 @@ header {
 	z-index: 1;
 	background-color: $nav-background-color;
 
-	ul {
+	.full-navigation ul {
 		padding: 0;
 		margin: 0;
 	}
-
+	.full-navigation>ul li.top-level ul{
+		display: none;
+	}
+	
+	.full-navigation>ul li.top-level.current ul{
+		display: block;
+	}
+	.full-navigation>ul li.top-level> .iconActive{
+		display: none;
+	}
+	.full-navigation>ul li.top-level.current> .iconActive{
+		display: inline-block ;
+	}
+	.full-navigation>ul li.top-level.current> .icon{
+		display: none ;
+	}
 	h1 {
 		padding: $emblem-vertical-padding $emblem-horizontal-padding;
 		height: $nav-header-height;
@@ -380,22 +395,27 @@ nav > ul {
 	line-height: 1;
 	margin: 0;
 
-	nav:not(.full-navigation) & > ul {
-		display: none;
+	header .top-level ul{
+		display: none !important;
 	}
-
-	nav:not(.full-navigation) &.current > ul {
-		display: block;
-	}
-
+	
 	> a {
 		color: #666;
 		text-decoration: none;
 		font-size: 1.4rem;
 		padding: $space / 2 0 $space / 2 $space * 2;
-		display: block;
+		display: inline-block;
+		width: 75%;
 	}
-
+	// .sidebar_icon{
+	// 	width: 15%;
+	// 	line-height: 1.5;
+	// 	float: right;
+	// 	right: 20px;
+	// 	text-align: center;
+	// 	margin-top: 10px;
+	// }
+	
 	&.current > a,
 	> a:active,
 	> a:hover {

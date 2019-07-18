@@ -1,16 +1,16 @@
 ---
-title: CheckOrder
+title: DriectCrebitCancel
 category: 交易平台
-order: 9
+order: 24
 language: cn
 ---
 
-# 订单查询接口
+# 直连信用卡取消接口说明
 
 ### 1. 接口链接
 
-    测试URL地址: https://paychanneldev.pagsmile.com/api/checkorder
-    正式URL地址: https://paychannel.pagsmile.com/api/checkorder
+    测试URL地址: https://paychanneldev.pagsmile.com/api/cancel
+    正式URL地址: https://paychannel.pagsmile.com/api/cancel
     
 ### 2. 请求方式
 
@@ -18,7 +18,7 @@ language: cn
 
 ### 3. 数据格式   
   
-    请求返回都为json    
+    json    
 
 ### 4. 请求参数
 
@@ -26,24 +26,18 @@ language: cn
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-trade_no/out_trade_no | String | Yes | 255 | 请求退款的pagsmile订单号 或 商户自定订单号 | 2018022604263906847
+trade_no | String | Yes | 255 | 请求退款的pagsmile订单号 | 2018022604263906847
 sign | String | Yes | 32 | 签名 | 
 
+提示：发送退款请求时，该笔订单必须是成功状态。
 
-### 5. 返回结果 
+### 5. 返回结果
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | 返回状态码 | 成功:200 
-info | String | Yes | 128 | 返回信息 | 成功: SUCCESSFUL
-data.merchant_no | String | Yes | 50 | pagsmile分配给商户的ID   
-data.app_id | String | Yes | 50 | pagsmile分配给商户的应用ID
-data.callback_status | String | Yes | 50 |  订单回调是否成功 
-data.order_currency | String | Yes | 50 |   订单币种  
-data.out_uid | String | Yes | 50 |     用户标示如用户id
-data.order_amount | String | Yes | 50 |  订单金额 
-data.trade_status | String | Yes | 50 |  订单状态
-data.trade_no | String | Yes | 50 |  pagsmile交易流水号 
+code | String | Yes | 16 | 返回状态码 | 成功:200
+info | String | Yes | 128 | 返回信息 | 成功:REFUND SUCCESSFUL
+data | String | Yes | 256 | null    |
 
 ### 6. 错误码
 

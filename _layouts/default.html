@@ -51,6 +51,7 @@
 						<li class="nav-item top-level {% if page.url == '/' %}current{% endif %}">
 							{% assign home = site.html_pages | where: 'url', '/' | first %}
 							<a href="{{ site.baseurl }}/">{{ home.title }}</a>
+							
 						</li>
 					</ul>
 	
@@ -60,6 +61,9 @@
 							<li class="nav-item top-level {% if group.name == page.category %}current{% endif %}">
 								{% assign items = group.items | sort: 'order' %}
 								<a href="{{ site.baseurl }}{{ items.first.url }}">{{ group.name }}</a>
+								<span class="sidebar_icon icon">﹀</span>
+								<span class="sidebar_icon iconActive">︿</span>
+								<!-- ︿ -->
 								<ul>
 									{% for item in items %}
 										<li class="nav-item {% if item.url == page.url %}current{% endif %}"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></li>
@@ -91,15 +95,23 @@
 		</div>
 		
 		<script>
-			
+			// window.onload = function(){
+			// 	let tabCurrent = document.querySelectorAll(".top-level");
+			// 	for(var i=0; i<tabCurrent.length; i++){
+			// 		console.log(tabCurrent[i])
+			// 		tabCurrent[i].addEventListener("click", function(){
+
+			// 		})
+			// 	}
+			// }
+
 			document.getElementById("open-nav").addEventListener("click", function () {
 				document.body.classList.toggle("nav-open");
 			});
 			
 			// 点击切换语种
 			let i18n = document.querySelector("html").getAttribute("lang");
-			
-			var select = document.getElementById("c-menu-type-classic");
+			let select = document.getElementById("c-menu-type-classic");
 			let ulList = document.querySelector(".full-navigation").children[1];
 			
 			function ddlSomoveLanguage(){
@@ -109,6 +121,8 @@
 				// }
 				console.log(i18n)
 			}
+			
+			
 			
 		</script>
 	</body>
