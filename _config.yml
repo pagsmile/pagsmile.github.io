@@ -26,26 +26,7 @@ social:
 
 permalink: pretty
 
-# gems: [ 'jekyll-multiple-languages']
-# languages: ['en', 'cn']
-# # If not config, the first of languages will be the default
-# language_default: 'cn'
 
-# navigation:
-#   en:
-#     title:    Jekyll Multiple Languages
-#     items1:
-#       - path:     
-#         title:    
-#       - path:    
-#         title:  
-#   cn:
-#     title:    Jekyll Multiple Languages
-#     items1:
-#       - path:    
-#         title:  
-#       - path:  
-#         title:
 
 plugins:
   - jekyll-sitemap
