@@ -17,7 +17,7 @@ language: cn
 
 key设置路径：商户平台(paccess.pagsmile.com)
     
-具体设置方式请参照 [签名参数获取方法](/docs/接口参数获取方法.pdf)  
+具体设置方式请参照 [签名参数获取方法](/trading-adddocs/getObject.pdf)  
 
 ### 3. 样例
     
