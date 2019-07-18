@@ -1,8 +1,8 @@
 # edition_Template
-文档api
+Document Api
 
-Product documentation template for Jekyll. Browse through a [live demo](https://long-pig.cloudvent.net/).
-Start documenting your product, application, service or website with this configurable theme.
+<!-- Product documentation template for Jekyll. Browse through a [live demo](https://long-pig.cloudvent.net/).
+Start documenting your product, application, service or website with this configurable theme. -->
 
 ![Edition template screenshot](images/_screenshot.png)
 

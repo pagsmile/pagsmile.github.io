@@ -8,6 +8,7 @@ language: en
 # Credit Card Payment Verification Interface
 
 ### 1. Flow
+![](/images/CreateOrderFlow01.png)
 
 ### 2. Interface URL
 
