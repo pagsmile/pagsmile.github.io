@@ -30,7 +30,7 @@ payment.currency | String | Yes | 3 | Currency | BRL
 payment.method   | String | Yes | 10 | Channel Code (default) | 107 
 payment.subject | String | No | 255 | Order Subject |
 payment.content | String | No | 255 | Order Content |
-payment.bank | String | Yes | 255 | Payment Bank |tau,santander,bradesco,banco-do-brasil
+payment.bank | String | Yes | 255 | Payment Bank | itau,santander,bradesco,banco-do-brasil
 payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
 customer.out_uid | String | No | 255 | Merchant User ID |  
 customer.email | String | Yes | 255 | Email Address |  
