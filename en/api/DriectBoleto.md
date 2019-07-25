@@ -39,11 +39,11 @@ customer.buyer_ip | String | NO | 255 | user's ipv4 address |
 customer.browser | String | NO | 255 | user's browser type|
 customer.phone | String | NO | 255 | User’s Phone number|
 address.zip_code | String | Yes | 8-8 | User’s mailing address zip code| 06233-200
-address.street_name | String | Yes | 70 | User’s mailing address Street name| Av. das Nações Unidas
-address.street_number | String | Yes | 10 | User’s mailing address Street number| 3003
-address.neighborhood | String | Yes | 50 | User’s mailing address community address| Bonfim
-address.city | String | Yes | 50 | User’s mailing address for the city| Osasco
-address.federal_unit | String | Yes | 2-2 | State abbreviation for user’s mailing address| SP
+address.street_name | String | NO | 70 | User’s mailing address Street name| Av. das Nações Unidas
+address.street_number | String | NO | 10 | User’s mailing address Street number| 3003
+address.neighborhood | String | NO | 50 | User’s mailing address community address| Bonfim
+address.city | String | NO | 50 | User’s mailing address for the city| Osasco
+address.federal_unit | String | NO | 2-2 | State abbreviation for user’s mailing address| SP
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
      Note: The boleto currency currently only supports USD and BRL. The cpf and username used in the test environment are 50284414727 and Test User Name.
