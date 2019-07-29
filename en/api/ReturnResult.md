@@ -4,6 +4,8 @@ Status Code | Status Description
 :--- | ---:
 WAIT_BUYER_PAY | Waiting for payment
 TRADE_SUCCESS | Success
+TRADE_RISK_CONTROL | Trade in risk control（2h-2d to approval）
+TRADE_PROCESSING | waiting for next step
 TRADE_REFUND | Refund
 TRADE_REFUND_PRT | Partial Refund
 TRADE_REFUND_MER | Refund
@@ -48,6 +50,9 @@ Error Code | Description
 759	| EMAIL_ISNULL
 760	| PHONE_ISNULL
 761	| BANK_ILLEGAL
+762 | AMOUNT ILLEGAL
+763 | ZIP_CODE_IS_NULL
+764 | ZIP_CODE_ILLEGAL
 801	| TRADENO_NOT_EXIST
 801	| TRADENO_EXIST
 802	| TRADENO_ISNULL
@@ -181,3 +186,4 @@ bank-N7	| Unauthorized transaction. Invalid security code.
 bank-R1	| Unauthorized transaction. Default card (Do not honor).
 bank-U3	| Transaction not allowed. Data validation failed.
 bank-GD	| Transaction not allowed.
+mbank-400 | Invalid transaction_amount - 4037: Invalid transaction_amount
