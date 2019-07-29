@@ -19,7 +19,7 @@ layout: default
 
 [直连现金闪付接口](api/FlashPay)
 
-[直连现oxxo接口](api/DriectOxxo)
+[直连oxxo接口](api/DriectOxxo)
 
 [直连santander接口](api/DriectSantander)
 
