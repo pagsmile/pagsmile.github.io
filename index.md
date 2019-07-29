@@ -18,6 +18,14 @@ layout: default
 [直连信用卡分期期数金额查询](api/DriectCardGetinstallments)
 
 [直连现金闪付接口](api/FlashPay)
+
+[直连现oxxo接口](api/DriectOxxo)
+
+[直连santander接口](api/DriectSantander)
+
+[直连BBVA bancomer接口](api/DriectBbvabancomer)
+
+[直连Citibanamex接口](api/DriectCitibanamex)
   
 [支付结果通知](api/CallBack)  
 
