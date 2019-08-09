@@ -28,7 +28,7 @@ currency | String | Yes | 3 | 请求金额币种 | BRL
 bank_id | String | Yes | 10 | 转账人银行编号（参考[巴西银行支付列表](Bankinfo)）
 agency | String | Yes | 6 | 转账人支行代码
 account_no | Int | Yes | 20 | 转账人银行账号
-account_type | String | Yes | 1 | 转账人银行账号类型 0 savings_account 1 checking_account
+account_type | String | Yes | 1 | 转账人银行账号类型 1 savings_account 2 checking_account
 notify_url | String | 255 | 20 |  转账结果通知地址 | https://www.pagsmile.com
 sign | String | Yes | 32 | 签名 | 
 

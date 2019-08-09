@@ -28,7 +28,7 @@ Currency | String | Yes | 3 | Request Amount Currency | BRL
 Bank_id | String | Yes | 10 | Transferr Bank Number (Refer to [Brazil Bank Payment List](Bankinfo))
 Agency | String | Yes | 6 | Transferor branch code
 Account_no | Int | Yes | 20 | Transferring bank account number
-Account_type | String | Yes | 1 | Transferring bank account type 0 savings_account 1 checking_account
+Account_type | String | Yes | 1 | Transferring bank account type 1 savings_account 2 checking_account
 Notify_url | String | 255 | 20 | Transfer result notification address | https://www.pagsmile.com
 Sign | String | Yes | 32 | Signature |
 
