@@ -7,6 +7,11 @@
     Prod Environment : https://paychannel.pagsmile.com
     
 
+>## 状态流程示意
+
+![](/assets/img/status_flow_creditcard.jpg)
+
+
 >##  Form Load Content
 
   
