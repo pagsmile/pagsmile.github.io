@@ -7,6 +7,10 @@
     正式URL地址：https://paychannel.pagsmile.com
     
 
+>## 状态流程示意
+
+![](/assets/img/status_flow_creditcard.jpg)
+
 >##  表单加载内容
 
   
