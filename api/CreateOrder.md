@@ -31,7 +31,7 @@ version | String | Yes | 10 | 调用的接口版本，固定为：1.0 | 1.0
 timeout_express | String | Yes | 255 | 订单有效期 | 1d；1m；1h；1s
 passback_params | String | Yes | 255 | 请求回传参数 | 
 notify_url | String | No | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com/openapi/notify.json
-return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | https://www.pagsmile.com/success.html
+return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | 地址会拼接上参数两个参数 https://www.pagsmile.com/success.html？trade_no=xxx&out_trade_no=xxx trade_no pagsmile 订单号 out_trade_no 商户订单号
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
