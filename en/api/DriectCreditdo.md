@@ -49,7 +49,6 @@ sign | String | Yes | 32 | sign string | The signature value calculated by the s
     {
         "merchant_no":"102320170519",
         "app_id":"2017051914172236111",
-        "timestamp":1516187084,
         "sign_type":"md5",
         "payment":{
                     "out_order_no":"test-003192",
@@ -59,7 +58,6 @@ sign | String | Yes | 32 | sign string | The signature value calculated by the s
                     "token"："67a9449686cf8f57dc28cbc88ad82245",
                     "subject":"test-subject",
                     "content":"test-content",
-                    "return_url":"https://www.pagsmile.com",
                     "notify_url":"https://www.pagsmile.com"
                    },
         "customer":{
