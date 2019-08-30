@@ -40,7 +40,7 @@ customer.username | String | Yes | 255 | 用户姓名 | 用户信息
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
-sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
+sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名说明
 
  
  >## 签名说明
@@ -202,7 +202,5 @@ info.trade_status | String | Yes | 10 | 订单状态 | TRADE_SUCCESS
 
 更详细列表请参照[返回状态和错误一览](ReturnResult)
 
->## 签名生成算法  
 
-参考直[连签名算法](DriectSign)
 
