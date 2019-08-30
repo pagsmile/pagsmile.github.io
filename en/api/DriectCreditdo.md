@@ -58,7 +58,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
  
  >## Signature sample
       
-    1. Dimension a multi-bit array. The array before dimension reduction is as follows
+   1. Dimension a multi-bit array. The array before dimension reduction is as follows
       
  ```
     
@@ -88,7 +88,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                   ],
               ]
              
-```
+ ```
  
    2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
       
