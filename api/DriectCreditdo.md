@@ -42,39 +42,107 @@ customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
-     说明：boleto 币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
+ 
+ >## 签名说明
      
+     设所有发送或者接收到的数据为集合M，如果集合内有多维数组则先进行将维得到一维集合后，将集合M内非空参数值的参数按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（key1=value1&key2=value2…）拼接成字符串tempData。
+          - 如果参数的值为空不参与签名；
+          - 参数名区分大小写；
+     在tempData最后拼接上key得到signData字符串，并signData进行MD5运算，得到sign值signValue。
+ 
+ >## key的获取
+ 
+ key设置路径：商户平台(paccess.pagsmile.com)
+     
+ 具体设置方式请参照 [签名参数获取方法](/docs/接口参数获取方法.pdf)  
+ 
+ >## 签名样例
+     
+ 1. 将一个多位数组进行降维。降维前数组如下
+     
+     ```
+      [
+          'merchant_no' => '102320170519',
+          'app_id' => '2017051914172236111',
+          'sign_type' => 'md5',
+          'payment' => [
+              'out_order_no' => 'test-003268',
+              'order_amount' => 2000,
+              'currency' => 'BRL',
+              'subject' => 'test-subject',
+              'content' => 'test-content',
+              'paymentMethodId' => null,
+              'installments' => 3,
+              'token' => '65800b24cb695abc9e1fca12a65d7106',
+              'notify_url' => 'https://www.pagsmile.com',
+          ],
+          'customer' => [
+              'username' => 'APRO',
+              'buyer_ip' => '127.0.0.1',
+              'browser' => 'safari',
+              'email' => 'kongdexin@xcloudgame.com',
+              'cpf_no' => '50284414727',
+              'out_uid' => 'out_uid',
+              'phone' => '11941523675',
+          ],
+      ]
+     
+     ```
+ 2. 数组降维就是将二维数组都降成一维数组，之前是数组的变成一个josn串，并将该一维数组按照key排序如下
+ 
+     ```
+         [
+             'app_id' => '2017051914172236111',
+             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}',
+             'merchant_no' => '102320170519',
+             'payment' => '{"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
+             'sign_type' => 'md5',
+         ]
+         
+     ```
+ 
+ 3. 按照数组按照键值对拼接，并使用'&'链接，在字符串最后拼接上在商户后台得到对密钥key
+  
+     ```
+         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
+     
+     ```
+     
+ 4. 最后将字符串用md5加密得到最后的sign
+   
+     ```
+     6fe90fb97af7d6e0b4f3344b85a9f0b5
+         
+     ```
 
->## 请求样例
+>## 信用卡请求样例
 
 ```
     {
-        "merchant_no":"102320170519",
-        "app_id":"2017051914172236111",
-        "timestamp":1516187084,
-        "sign_type":"md5",
-        "payment":{
-                    "out_order_no":"test-003192",
-                    "order_amount":10,
-                    "currency":"BRL",
-                    "paymentMethodId":"visa",
-                    "token"："67a9449686cf8f57dc28cbc88ad82245",
-                    "subject":"test-subject",
-                    "content":"test-content",
-                    "return_url":"https://www.pagsmile.com",
-                    "notify_url":"https://www.pagsmile.com"
-                   },
-        "customer":{
-                    "username":"Test User Name",
-                    "buyer_ip":"127.0.0.1",
-                    "browser":"safari",
-                    "email":"test@pagsmile.com",
-                    "cpf_no":"50284414727",
-                    "out_uid":"out_uid",
-                    "phone":"11941523675"
-                    },
-               
-        "sign":"c7412c2458a135dd3d37a655ef796a41"
+            'merchant_no' => '102320170519',      //需要根据实际情况更换成商户自己信息
+            'app_id' => '2017051914172236111',    //需要根据实际情况更换成商户自己信息
+            'sign_type' => 'md5',
+            'payment' => [
+                'out_order_no' => 'test-003268',    //需要根据实际情况更换成商户自己信息
+                'order_amount' => 2000,    //需要根据实际情况更换成商户自己的信息
+                'currency' => 'BRL',       //需要根据实际情况更换成商户自己的信息
+                'subject' => 'test-subject', //需要根据实际情况更换成商户自己的信息
+                'content' => 'test-content', //需要根据实际情况更换成商户自己的信息
+                'paymentMethodId' => 'visa',  //需要根据实际情况更换成商户自己的信息
+                'installments' => 3,  //需要根据实际情况更换成商户自己的信息
+                'token' => '65800b24cb695abc9e1fca12a65d7106', //需要根据实际情况更换成商户自己的信息
+                'notify_url' => 'https://www.pagsmile.com', //需要根据实际情况更换成商户自己的信息
+            ],
+            'customer' => [
+                'username' => 'APRO', //需要根据实际情况更换成商户自己的信息
+                'buyer_ip' => '127.0.0.1', //需要根据实际情况更换成商户自己的信息
+                'browser' => 'safari', //需要根据实际情况更换成商户自己的信息
+                'email' => 'kongdexin@xcloudgame.com', //需要根据实际情况更换成商户自己的信息
+                'cpf_no' => '50284414727',  //需要根据实际情况更换成商户自己的信息
+                'out_uid' => 'out_uid', //需要根据实际情况更换成商户自己的信息
+                'phone' => '11941523675', //需要根据实际情况更换成商户自己的信息
+            ],
+            'sign' => '6fe90fb97af7d6e0b4f3344b85a9f0b5'  //需要根据实际情况更换成商户自己的信息
     }
 
 ``` 
