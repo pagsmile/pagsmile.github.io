@@ -1,9 +1,5 @@
 # Credit card payment verification interface
 
->## Flowchart
-
-
-
 >## Interface link
 
     Test the URL address: https://paychanneldev.pagsmile.com/api/creditdo  
@@ -54,14 +50,14 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
  
  Key setting path: merchant platform (paccess.pagsmile.com)
 
- For the specific setting method, please refer to [Signature Parameter Acquisition Method](/docs/接口参数获取方法.pdf) 
+ For the specific setting method, please refer to [Signature Parameter Acquisition Method](/docs/signature_parameter_acquisition.pdf) 
  
  >## Signature sample
       
    1. Dimension a multi-bit array. The array before dimension reduction is as follows
+   
       
- ```
-    
+ ``` 
               [
                   'merchant_no' => '102320170519',
                   'app_id' => '2017051914172236111',
