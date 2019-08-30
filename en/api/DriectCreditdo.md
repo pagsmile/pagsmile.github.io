@@ -61,6 +61,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
     1. Dimension a multi-bit array. The array before dimension reduction is as follows
       
  ```
+    
               [
                   'merchant_no' => '102320170519',
                   'app_id' => '2017051914172236111',
