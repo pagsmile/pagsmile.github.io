@@ -66,12 +66,12 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
           'app_id' => '2017051914172236111',
           'sign_type' => 'md5',
           'payment' => [
-              'out_order_no' => 'test-003268',
+              'out_order_no' => 'test-003630',
               'order_amount' => 2000,
               'currency' => 'BRL',
               'subject' => 'test-subject',
               'content' => 'test-content',
-              'paymentMethodId' => null,
+              'paymentMethodId' => 'visa',
               'installments' => 3,
               'token' => '65800b24cb695abc9e1fca12a65d7106',
               'notify_url' => 'https://www.pagsmile.com',
@@ -95,7 +95,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
              'app_id' => '2017051914172236111',
              'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}',
              'merchant_no' => '102320170519',
-             'payment' => '{"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
+             'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
              'sign_type' => 'md5',
          ]
          
@@ -104,14 +104,14 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
  3. 按照数组按照键值对拼接，并使用'&'链接，在字符串最后拼接上在商户后台得到对密钥key
   
      ```
-         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
+         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
      
      ```
      
  4. 最后将字符串用md5加密得到最后的sign
    
      ```
-     6fe90fb97af7d6e0b4f3344b85a9f0b5
+     67073edadf3c554d0bf17555b0cd9e62
          
      ```
 
@@ -123,7 +123,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
             'app_id' => '2017051914172236111',    //需要根据实际情况更换成商户自己信息
             'sign_type' => 'md5',
             'payment' => [
-                'out_order_no' => 'test-003268',    //需要根据实际情况更换成商户自己信息
+                'out_order_no' => 'test-003630',    //需要根据实际情况更换成商户自己信息
                 'order_amount' => 2000,    //需要根据实际情况更换成商户自己的信息
                 'currency' => 'BRL',       //需要根据实际情况更换成商户自己的信息
                 'subject' => 'test-subject', //需要根据实际情况更换成商户自己的信息
@@ -142,7 +142,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                 'out_uid' => 'out_uid', //需要根据实际情况更换成商户自己的信息
                 'phone' => '11941523675', //需要根据实际情况更换成商户自己的信息
             ],
-            'sign' => '6fe90fb97af7d6e0b4f3344b85a9f0b5'  //需要根据实际情况更换成商户自己的信息
+            'sign' => '67073edadf3c554d0bf17555b0cd9e62'  //需要根据实际情况更换成商户自己的信息
     }
 
 ``` 

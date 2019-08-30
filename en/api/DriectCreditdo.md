@@ -66,12 +66,12 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                   'app_id' => '2017051914172236111',
                   'sign_type' => 'md5',
                   'payment' => [
-                      'out_order_no' => 'test-003268',
+                      'out_order_no' => 'test-003630',
                       'order_amount' => 2000,
                       'currency' => 'BRL',
                       'subject' => 'test-subject',
                       'content' => 'test-content',
-                      'paymentMethodId' => null,
+                      'paymentMethodId' => 'visa',
                       'installments' => 3,
                       'token' => '65800b24cb695abc9e1fca12a65d7106',
                       'notify_url' => 'https://www.pagsmile.com',
@@ -96,7 +96,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                   'app_id' => '2017051914172236111',
                   'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":" 50284414727","out_uid":"out_uid","phone":"11941523675"}',
                   'merchant_no' => '102320170519',
-                  'payment' => '{"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content" , "paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
+                  'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content" , "paymentMethodId":"visa","installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
                   'sign_type' => 'md5',
               ]
 ```
@@ -105,14 +105,14 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
    3. According to the array, splicing according to the key value pair, and using the '&' link, get the key key in the merchant background in the last stitching of the string.
    
 ```
-          App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
+          App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":"visa","installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
       
 ```
       
    4. Finally, encrypt the string with md5 to get the final sign.
     
  ```
-      6fe90fb97af7d6e0b4f3344b85a9f0b5
+      67073edadf3c554d0bf17555b0cd9e62
           
  ```
  
@@ -143,7 +143,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                  'out_uid' => 'out_uid', // need to be replaced with the merchant's own information according to the actual situation
                  'phone' => '11941523675', // ​​need to be replaced according to the actual situation of the merchant's own information
              ],
-             'sign' => '6fe90fb97af7d6e0b4f3344b85a9f0b5' //Need to be changed to the merchant's own information according to the actual situation
+             'sign' => '67073edadf3c554d0bf17555b0cd9e62' //Need to be changed to the merchant's own information according to the actual situation
      }
  
 ```
