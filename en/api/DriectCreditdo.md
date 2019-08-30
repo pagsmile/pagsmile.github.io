@@ -58,9 +58,9 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
  
  >## Signature sample
       
- 1. Dimension a multi-bit array. The array before dimension reduction is as follows
+    1. Dimension a multi-bit array. The array before dimension reduction is as follows
       
-    ```
+ ```
               [
                   'merchant_no' => '102320170519',
                   'app_id' => '2017051914172236111',
@@ -87,11 +87,11 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                   ],
               ]
              
-    ```
+```
  
- 2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
+    2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
       
-     ```
+```
               [
                   'app_id' => '2017051914172236111',
                   'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":" 50284414727","out_uid":"out_uid","phone":"11941523675"}',
@@ -99,19 +99,17 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                   'payment' => '{"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content" , "paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
                   'sign_type' => 'md5',
               ]
-      ```
+```
         
-         
-  
-3. According to the array, splicing according to the key value pair, and using the '&' link, get the key key in the merchant background in the last stitching of the string.
+          
+    3. According to the array, splicing according to the key value pair, and using the '&' link, get the key key in the merchant background in the last stitching of the string.
    
-
 ```
           App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
       
- ```
+```
       
- 4. Finally, encrypt the string with md5 to get the final sign.
+    4. Finally, encrypt the string with md5 to get the final sign.
     
  ```
       6fe90fb97af7d6e0b4f3344b85a9f0b5
