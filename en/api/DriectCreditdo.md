@@ -58,94 +58,97 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
  
  >## Signature sample
       
-  1. Dimension a multi-bit array. The array before dimension reduction is as follows
+ 1. Dimension a multi-bit array. The array before dimension reduction is as follows
       
-      ```
-       [
-           'merchant_no' => '102320170519',
-           'app_id' => '2017051914172236111',
-           'sign_type' => 'md5',
-           'payment' => [
-               'out_order_no' => 'test-003268',
-               'order_amount' => 2000,
-               'currency' => 'BRL',
-               'subject' => 'test-subject',
-               'content' => 'test-content',
-               'paymentMethodId' => null,
-               'installments' => 3,
-               'token' => '65800b24cb695abc9e1fca12a65d7106',
-               'notify_url' => 'https://www.pagsmile.com',
-           ],
-           'customer' => [
-               'username' => 'APRO',
-               'buyer_ip' => '127.0.0.1',
-               'browser' => 'safari',
-               'email' => 'kongdexin@xcloudgame.com',
-               'cpf_no' => '50284414727',
-               'out_uid' => 'out_uid',
-               'phone' => '11941523675',
-           ],
-       ]
-      
-      ```
-  2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
+    ```
+              [
+                  'merchant_no' => '102320170519',
+                  'app_id' => '2017051914172236111',
+                  'sign_type' => 'md5',
+                  'payment' => [
+                      'out_order_no' => 'test-003268',
+                      'order_amount' => 2000,
+                      'currency' => 'BRL',
+                      'subject' => 'test-subject',
+                      'content' => 'test-content',
+                      'paymentMethodId' => null,
+                      'installments' => 3,
+                      'token' => '65800b24cb695abc9e1fca12a65d7106',
+                      'notify_url' => 'https://www.pagsmile.com',
+                  ],
+                  'customer' => [
+                      'username' => 'APRO',
+                      'buyer_ip' => '127.0.0.1',
+                      'browser' => 'safari',
+                      'email' => 'kongdexin@xcloudgame.com',
+                      'cpf_no' => '50284414727',
+                      'out_uid' => 'out_uid',
+                      'phone' => '11941523675',
+                  ],
+              ]
+             
+    ```
+ 
+ 2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
+      
+     ```
+              [
+                  'app_id' => '2017051914172236111',
+                  'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":" 50284414727","out_uid":"out_uid","phone":"11941523675"}',
+                  'merchant_no' => '102320170519',
+                  'payment' => '{"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content" , "paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
+                  'sign_type' => 'md5',
+              ]
+      ```
+        
+         
   
-      ```
-          [
-              'app_id' => '2017051914172236111',
-              'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":" 50284414727","out_uid":"out_uid","phone":"11941523675"}',
-              'merchant_no' => '102320170519',
-              'payment' => '{"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content" , "paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
-              'sign_type' => 'md5',
-          ]
-          
-      ```
-  
-  3. According to the array, splicing according to the key value pair, and using the '&' link, get the key key in the merchant background in the last stitching of the string.
+3. According to the array, splicing according to the key value pair, and using the '&' link, get the key key in the merchant background in the last stitching of the string.
    
-      ```
+
+```
           App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003268","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":null,"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
-      
-      ```
-      
-  4. Finally, encrypt the string with md5 to get the final sign.
+      
+ ```
+      
+ 4. Finally, encrypt the string with md5 to get the final sign.
     
-      ```
+ ```
       6fe90fb97af7d6e0b4f3344b85a9f0b5
           
-      ```
+ ```
  
  >## Credit Card Request Sample
- 
- ```
+
+```
      {
-             'merchant_no' => '102320170519', / / ​​need to be changed to the merchant's own information according to the actual situation
-             'app_id' => '2017051914172236111', / / ​​need to be changed to the merchant's own information according to the actual situation
+             'merchant_no' => '102320170519', // ​​need to be changed to the merchant's own information according to the actual situation
+             'app_id' => '2017051914172236111', // ​​need to be changed to the merchant's own information according to the actual situation
              'sign_type' => 'md5',
              'payment' => [
                  'out_order_no' => 'test-003268', //Requires to change to the merchant's own information according to the actual situation
-                 'order_amount' => 2000, / / ​​need to be replaced according to the actual situation of the merchant's own information
-                 'currency' => 'BRL', / / ​​need to be replaced with the merchant's own information according to the actual situation
-                 'subject' => 'test-subject', / / ​​need to be replaced with the merchant's own information according to the actual situation
-                 'content' => 'test-content', / / ​​need to be replaced with the merchant's own information according to the actual situation
-                 'paymentMethodId' => 'visa', / / ​​need to be replaced with the merchant's own information according to the actual situation
-                 'installments' => 3, / / ​​need to be replaced according to the actual situation of the merchant's own information
-                 'token' => '65800b24cb695abc9e1fca12a65d7106', / / ​​need to be replaced according to the actual situation of the merchant's own information
-                 'notify_url' => 'https://www.pagsmile.com', / / ​​need to be replaced according to the actual situation of the merchant's own information
+                 'order_amount' => 2000, // ​​need to be replaced according to the actual situation of the merchant's own information
+                 'currency' => 'BRL', // ​​need to be replaced with the merchant's own information according to the actual situation
+                 'subject' => 'test-subject', // ​​need to be replaced with the merchant's own information according to the actual situation
+                 'content' => 'test-content', // ​​need to be replaced with the merchant's own information according to the actual situation
+                 'paymentMethodId' => 'visa', // ​​need to be replaced with the merchant's own information according to the actual situation
+                 'installments' => 3, // ​​need to be replaced according to the actual situation of the merchant's own information
+                 'token' => '65800b24cb695abc9e1fca12a65d7106', // ​​need to be replaced according to the actual situation of the merchant's own information
+                 'notify_url' => 'https://www.pagsmile.com', // ​​need to be replaced according to the actual situation of the merchant's own information
              ],
              'customer' => [
                  'username' => 'APRO', // need to be replaced with the merchant's own information according to the actual situation
-                 'buyer_ip' => '127.0.0.1', / / ​​need to be replaced according to the actual situation of the merchant's own information
-                 'browser' => 'safari', / / ​​need to be replaced with the merchant's own information according to the actual situation
-                 'email' => 'kongdexin@xcloudgame.com', / / ​​need to be replaced with the merchant's own information according to the actual situation
-                 'cpf_no' => '50284414727', / / ​​need to be replaced according to the actual situation of the merchant's own information
+                 'buyer_ip' => '127.0.0.1',  / ​​need to be replaced according to the actual situation of the merchant's own information
+                 'browser' => 'safari', // ​​need to be replaced with the merchant's own information according to the actual situation
+                 'email' => 'kongdexin@xcloudgame.com', // ​​need to be replaced with the merchant's own information according to the actual situation
+                 'cpf_no' => '50284414727', // ​​need to be replaced according to the actual situation of the merchant's own information
                  'out_uid' => 'out_uid', // need to be replaced with the merchant's own information according to the actual situation
-                 'phone' => '11941523675', / / ​​need to be replaced according to the actual situation of the merchant's own information
+                 'phone' => '11941523675', // ​​need to be replaced according to the actual situation of the merchant's own information
              ],
              'sign' => '6fe90fb97af7d6e0b4f3344b85a9f0b5' //Need to be changed to the merchant's own information according to the actual situation
      }
  
- ```
+```
  
 >## Return results
 
@@ -167,7 +170,6 @@ Info.trade_status | String | Yes | 10 | Order Status | TRADE_SUCCESS
     "code": "200",
     "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","trade_status":"TRADE_SUCCESS"}
     }
-    
 ```
     Trade_status has three states TRADE_SUCCESS success TRADE_REFUSED payment is rejected by the bank TRADE_RISK_CONTROL payment is reviewed within 2 hours to 2 days of review
 >## Failed sample
