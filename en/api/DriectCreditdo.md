@@ -2,7 +2,7 @@
 
 >## Interface link
 
-    Test the URL address: https://paychanneldev.pagsmile.com/api/creditdo  
+    Test  URL address: https://paychanneldev.pagsmile.com/api/creditdo  
     Official URL address: https://paychannel.pagsmile.com/api/creditdo
     
 >## Request method
@@ -11,40 +11,41 @@
 
 >## Data Format
   
-    Json
+    JSON
     
 >## request parameters
 
 Parameter | Type | Required | Maximum length | Description | Example value
 --- | --- | --- | --- | --- | ---
-Merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
-App_id | String | Yes | 20 | pagsmile App ID assigned to the merchant | 2017051914172236111
-Sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
-Payment.out_order_no | String | Yes | 64 | Merchant Order Number |
-Payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. Amount range (5-14000) BRL| 88.88
-Payment.currency | String | Yes | 3 | Currency | BRL
-Payment.subject | String | No | 255 | Order Title |
-Payment.content | String | No | 255 | Order Content |
-Payment.token | String | Yes | 255 | Credit card payment credentials (valid for 7 days) |
-Payment.installments | String | Yes | 12 | Credit Card Instalment | 1 No Staging Maximum 12 Staging
+merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
+app_id | String | Yes | 20 | pagsmile App ID assigned to the merchant | 2017051914172236111
+sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
+payment.out_order_no | String | Yes | 64 | Merchant Order Number |
+payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. Amount range (5-14000) BRL| 88.88
+payment.currency | String | Yes | 3 | Currency | BRL
+payment.subject | String | No | 255 | Order Title |
+payment.content | String | No | 255 | Order Content |
+payment.token | String | Yes | 255 | Credit card payment credentials (valid for 7 days) |
+payment.installments | String | Yes | 12 | Credit Card Instalment | 1 No Staging Maximum 12 Staging
 payment.paymentMethodId | String | Yes | 16 | Credit Card Distribution |
-Payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
-Customer.out_uid | String | Yes | 255 | Merchant User ID |
-Customer.email | String | Yes | 255 | Email Address |
-Customer.cpf_no | String | Yes | 64 | CPF Number |
-Customer.username | String | Yes | 255 | User Name | User Information
-Customer.buyer_ip | String | NO | 255 | Merchant user ipv4 address |
-Customer.browser | String | NO | 255 | User's browser type |
-Customer.phone | String | NO | 255 | Phone of the merchant's user|
-Sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
+payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
+customer.out_uid | String | Yes | 255 | Merchant User ID |
+customer.email | String | Yes | 255 | Email Address |
+customer.cpf_no | String | Yes | 64 | CPF Number |
+customer.username | String | Yes | 255 | User Name | User Information
+customer.buyer_ip | String | NO | 255 | Merchant user ipv4 address |
+customer.browser | String | NO | 255 | User's browser type |
+customer.phone | String | NO | 255 | Phone of the merchant's user|
+sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
 
  
 >## Signature Description
      
-     Let all the data sent or received be the set M. If there is a multi-dimensional array in the set, first obtain the one-dimensional set of the dimension, and then sort the parameters of the non-empty parameter value in the set M according to the parameter name ASCII code from small to large (dictionary) Order), use the format of the URL key-value pair (key1=value1&key2=value2...) to form a string tempData.
-          - If the value of the parameter is null, it does not participate in the signature;
-          - Parameter names are case sensitive;
-     In the last tempData stitching, the key gets the signData string, and signData performs the MD5 operation to get the sign value signValue.
+     Let all the data sent or received be set M. If there is a multi-dimensional array in the set, first obtain the one-dimensional set of the dimension, and then sort the parameters of the non-empty parameter value in set M according to the parameter name ASCII code from small to large (dictionary order), use the format of the URL key-value pair (key1=value1&key2=value2...) to form a string tempData.
+          -  If the value of the parameter is null, it does not participate in the signature.
+          -  Parameter names are case sensitive.
+     In the last tempData stitching, the key gets the signData string, and signData performs the MD5 operation to get the sign value signValue.  
+
  
 >## key acquisition
  
@@ -86,7 +87,7 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
              
  ```
  
-   2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
+   2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a JSON string, and the one-dimensional array is sorted by key as follows
       
 ```
               [
@@ -99,14 +100,14 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
 ```
         
           
-   3. According to the array, splicing according to the key value pair, and using the '&' link, get the key key in the merchant background in the last stitching of the string.
+   3. According to the array, splicing according to the key value pair, and using the '&' link, get the key  in the merchant background in the last stitching of the string.
    
 ```
           App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":"visa","installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
       
 ```
       
-   4. Finally, encrypt the string with md5 to get the final sign.
+   4. Finally, encrypt the string with md5 to get the final signature.
     
  ```
       67073edadf3c554d0bf17555b0cd9e62
@@ -117,28 +118,28 @@ Sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
 
 ```
      {
-             'merchant_no' => '102320170519', // ​​need to be changed to the merchant's own information according to the actual situation
-             'app_id' => '2017051914172236111', // ​​need to be changed to the merchant's own information according to the actual situation
+             'merchant_no' => '102320170519', // ​​Needs to be changed to the merchant's own information according to the actual situation
+             'app_id' => '2017051914172236111', // ​​Needs to be changed to the merchant's own information according to the actual situation
              'sign_type' => 'md5',
              'payment' => [
                  'out_order_no' => 'test-003268', //Requires to change to the merchant's own information according to the actual situation
-                 'order_amount' => 2000, // ​​need to be replaced according to the actual situation of the merchant's own information
-                 'currency' => 'BRL', // ​​need to be replaced with the merchant's own information according to the actual situation
-                 'subject' => 'test-subject', // ​​need to be replaced with the merchant's own information according to the actual situation
-                 'content' => 'test-content', // ​​need to be replaced with the merchant's own information according to the actual situation
-                 'paymentMethodId' => 'visa', // ​​need to be replaced with the merchant's own information according to the actual situation
-                 'installments' => 3, // ​​need to be replaced according to the actual situation of the merchant's own information
-                 'token' => '65800b24cb695abc9e1fca12a65d7106', // ​​need to be replaced according to the actual situation of the merchant's own information
-                 'notify_url' => 'https://www.pagsmile.com', // ​​need to be replaced according to the actual situation of the merchant's own information
+                 'order_amount' => 2000, // ​​Needs to be replaced according to the actual situation of the merchant's own information
+                 'currency' => 'BRL', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'subject' => 'test-subject', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'content' => 'test-content', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'paymentMethodId' => 'visa', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'installments' => 3, // ​​Needs to be replaced according to the actual situation of the merchant's own information
+                 'token' => '65800b24cb695abc9e1fca12a65d7106', // ​​Needs to be replaced according to the actual situation of the merchant's own information
+                 'notify_url' => 'https://www.pagsmile.com', // ​​Needs to be replaced according to the actual situation of the merchant's own information
              ],
              'customer' => [
-                 'username' => 'APRO', // need to be replaced with the merchant's own information according to the actual situation
-                 'buyer_ip' => '127.0.0.1',  / ​​need to be replaced according to the actual situation of the merchant's own information
-                 'browser' => 'safari', // ​​need to be replaced with the merchant's own information according to the actual situation
-                 'email' => 'kongdexin@xcloudgame.com', // ​​need to be replaced with the merchant's own information according to the actual situation
-                 'cpf_no' => '50284414727', // ​​need to be replaced according to the actual situation of the merchant's own information
-                 'out_uid' => 'out_uid', // need to be replaced with the merchant's own information according to the actual situation
-                 'phone' => '11941523675', // ​​need to be replaced according to the actual situation of the merchant's own information
+                 'username' => 'APRO', // Needs to be replaced with the merchant's own information according to the actual situation
+                 'buyer_ip' => '127.0.0.1',  / ​​Needs to be replaced according to the actual situation of the merchant's own information
+                 'browser' => 'safari', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'email' => 'kongdexin@xcloudgame.com', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'cpf_no' => '50284414727', // ​​Needs to be replaced according to the actual situation of the merchant's own information
+                 'out_uid' => 'out_uid', // Needs to be replaced with the merchant's own information according to the actual situation
+                 'phone' => '11941523675', // ​​Needs to be replaced according to the actual situation of the merchant's own information
              ],
              'sign' => '67073edadf3c554d0bf17555b0cd9e62' //Need to be changed to the merchant's own information according to the actual situation
      }
@@ -166,7 +167,7 @@ Info.trade_status | String | Yes | 10 | Order Status | TRADE_SUCCESS
     "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","trade_status":"TRADE_SUCCESS"}
     }
 ```
-    Trade_status has three states TRADE_SUCCESS success TRADE_REFUSED payment is rejected by the bank TRADE_RISK_CONTROL payment is reviewed within 2 hours to 2 days of review
+    Trade_status has three states TRADE_SUCCESS success TRADE_REFUSED payment is rejected by the bank TRADE_RISK_CONTROL  payment is being reviewed and will take between 2 hours to 2 days.
 >## Failed sample
 
 ```
