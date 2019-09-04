@@ -121,7 +121,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
              'merchant_no' => '102320170519', // ​​Needs to be changed to the merchant's own information according to the actual situation
              'app_id' => '2017051914172236111', // ​​Needs to be changed to the merchant's own information according to the actual situation
              'sign_type' => 'md5',
-             'payment' => [
+             'payment' => {
                  'out_order_no' => 'test-003268', //Requires to change to the merchant's own information according to the actual situation
                  'order_amount' => 2000, // ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'currency' => 'BRL', // ​​Needs to be replaced with the merchant's own information according to the actual situation
@@ -131,8 +131,8 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                  'installments' => 3, // ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'token' => '65800b24cb695abc9e1fca12a65d7106', // ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'notify_url' => 'https://www.pagsmile.com', // ​​Needs to be replaced according to the actual situation of the merchant's own information
-             ],
-             'customer' => [
+             },
+             'customer' => {
                  'username' => 'APRO', // Needs to be replaced with the merchant's own information according to the actual situation
                  'buyer_ip' => '127.0.0.1',  / ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'browser' => 'safari', // ​​Needs to be replaced with the merchant's own information according to the actual situation
@@ -140,7 +140,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                  'cpf_no' => '50284414727', // ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'out_uid' => 'out_uid', // Needs to be replaced with the merchant's own information according to the actual situation
                  'phone' => '11941523675', // ​​Needs to be replaced according to the actual situation of the merchant's own information
-             ],
+             },
              'sign' => '67073edadf3c554d0bf17555b0cd9e62' //Need to be changed to the merchant's own information according to the actual situation
      }
  
