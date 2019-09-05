@@ -23,7 +23,7 @@ securityCode | String | Yes | 4 | 安全码| 123
 cardExpirationMonth | float | Yes | 2 |  信用卡过期时间月份| 
 cardExpirationYear | String | Yes | 4 |  信用卡过期时间年份 | 
 cardholderName | String | Yes | 20 |  持卡人姓名 | TEST USER NAME
-installments | int | Yes | 2 |  信用卡分期期数 | 3
+installments | int | Yes | 2 |  信用卡分期期数 | 3 参考[直连信用卡分期期数金额查询](DriectCardGetinstallments)
 issuer | String | Yes | 10 |  发卡行（默认自动获取） | 
 amount | flaot | Yes | 2 |  分期金额 |   
 
