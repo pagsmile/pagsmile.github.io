@@ -65,10 +65,7 @@ amount | flaot | Yes | 2 |  分期金额 |
                     <label for="cardholderName">Card holder name:</label>
                     <input type="text" id="cardholderName" name="cardholderName" data-checkout="cardholderName" placeholder="APRO" />
                 </li>
-                <li>
-                    <label for="installments">installments:</label>
-                    <select id="installments" data-checkout="installments" name="installments" placeholder="installments" ></select>
-                </li>
+               
                 <li>
                     <label for="docType">Document type:</label>
                     <select id="docType" data-checkout="docType"></select>
@@ -78,7 +75,7 @@ amount | flaot | Yes | 2 |  分期金额 |
                     <input type="text" id="docNumber" data-checkout="docNumber" name="cpf_no" placeholder="12345678" />
                 </li>
                 <li>
-                    <select id="issuer" >
+                    <select id="issuer" style="display: none;">
                         <option value="issuer"  >Issuer</option>
                     </select>
                 </li>
