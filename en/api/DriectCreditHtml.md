@@ -24,7 +24,7 @@ securityCode | String | Yes | 4 | security code| 123
 cardExpirationMonth | float | Yes | 2 |  expire year| 
 cardExpirationYear | String | Yes | 4 |  expire month | 
 cardholderName | String | Yes | 20 |  holder name | TEST USER NAME
-installments | int | Yes | 2 |  number of installments stages | 3
+installments | int | Yes | 2 |  number of installments stages | 3 reference[Instalment period chceking list](DriectCardGetinstallments)
 issuer | String | Yes | 10 |  card issuing bank（auto detected by default） | 
 amount | flaot | Yes | 2 |  amount of order |   
 
@@ -66,10 +66,7 @@ Introducing security js, for security reasons, collecting card information throu
                     <label for="cardholderName">Card holder name:</label>
                     <input type="text" id="cardholderName" name="cardholderName" data-checkout="cardholderName" placeholder="APRO" />
                 </li>
-                <li>
-                    <label for="installments">installments:</label>
-                    <select id="installments" data-checkout="installments" name="installments" placeholder="installments" ></select>
-                </li>
+                
                 <li>
                     <label for="docType">Document type:</label>
                     <select id="docType" data-checkout="docType"></select>
@@ -79,7 +76,7 @@ Introducing security js, for security reasons, collecting card information throu
                     <input type="text" id="docNumber" data-checkout="docNumber" name="cpf_no" placeholder="12345678" />
                 </li>
                 <li>
-                    <select id="issuer" >
+                    <select id="issuer" style="display:none">
                         <option value="issuer"  >Issuer</option>
                     </select>
                 </li>

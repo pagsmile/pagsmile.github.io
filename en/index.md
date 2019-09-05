@@ -16,6 +16,8 @@ layout: default
 [Lottery API](api/DriectLottery)
   
 [Credit Card API](api/DriectCreditHtml)
+
+[Instalment period chceking list(by amount)](api/DriectCardGetinstallments)
   
 [CallBack Notification](api/CallBack)  
 
