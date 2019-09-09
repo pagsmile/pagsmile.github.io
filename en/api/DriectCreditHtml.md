@@ -7,7 +7,7 @@
     Prod Environment : https://paychannel.pagsmile.com
     
 
->## 状态流程示意
+>## State flow diagram
 
 ![](/assets/img/status_flow_creditcard.jpg)
 
