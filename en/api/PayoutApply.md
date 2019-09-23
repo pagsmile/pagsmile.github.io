@@ -17,20 +17,20 @@
 
 Parameter | Type | Required | Maximum length | Description | Example value
 --- | --- | --- | --- | --- | ---
-Merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
-App_id | String | Yes | 20 | pagsmile App ID assigned to the merchant | 2017051914172236111
-Email | String | Yes | 255 | Email requesting a transfer
-Name | String | Yes | 255 | Transferee Name
-Phone | String | Yes | 11 | Transfer Phone
-Cpf_no | String | Yes | 11 | Transferr cpf
-Amount | Float | Yes | 255 | Request a transfer amount
-Currency | String | Yes | 3 | Request Amount Currency | BRL
-Bank_id | String | Yes | 10 | Transferr Bank Number (Refer to [Brazil Bank Payment List](Bankinfo))
-Agency | String | Yes | 6 | Transferor branch code
-Account_no | Int | Yes | 20 | Transferring bank account number
-Account_type | String | Yes | 1 | Transferring bank account type 1 savings_account 2 checking_account
-Notify_url | String | 255 | 20 | Transfer result notification address | https://www.pagsmile.com
-Sign | String | Yes | 32 | Signature |
+merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
+app_id | String | Yes | 20 | pagsmile App ID assigned to the merchant | 2017051914172236111
+email | String | Yes | 255 | Email requesting a transfer
+name | String | Yes | 255 | Transferee Name
+phone | String | Yes | 11 | Transfer Phone
+cpf_no | String | Yes | 11 | Transferr cpf
+amount | Float | Yes | 255 | Request a transfer amount
+currency | String | Yes | 3 | Request Amount Currency | BRL
+bank_id | String | Yes | 10 | Transferr Bank Number (Refer to [Brazil Bank Payment List](Bankinfo))
+agency | String | Yes | 6 | Transferor branch code
+account_no | Int | Yes | 20 | Transferring bank account number
+account_type | String | Yes | 1 | Transferring bank account type 1 savings_account 2 checking_account
+notify_url | String | 255 | 20 | Transfer result notification address | https://www.pagsmile.com
+sign | String | Yes | 32 | Signature |
 
 
 
@@ -38,9 +38,9 @@ Sign | String | Yes | 32 | Signature |
 
 Parameter | Type | Required | Maximum length | Description | Example value
 --- | --- | --- | --- | --- | ---
-Code | String | Yes | 16 | Return to status code | 200: Request successful
-Info.trade_no | String | Yes | 128 | Successfully returned transfer number | 2019080904564629463
-Data | String | Yes | 256 | Current state description | SYSTEM_PARAM_ERROR
+code | String | Yes | 16 | Return to status code | 200: Request successful
+info.trade_no | String | Yes | 128 | Successfully returned transfer number | 2019080904564629463
+data | String | Yes | 256 | Current state description | SYSTEM_PARAM_ERROR
 
 >## Error Code
 
