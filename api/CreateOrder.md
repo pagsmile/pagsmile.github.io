@@ -28,7 +28,7 @@ username | String | No | 255 | 用户姓名 | 商城商户此处为必填项；�
 charset | String | Yes | 10 | 请求使用的编码格式，如utf-8,gbk,gb2312等 | utf-8
 timestamp | String | Yes | 19 | 发送请求的时间，格式"yyyy-MM-dd HH:mm:ss" | 2018-01-08 15:27:26
 version | String | Yes | 10 | 调用的接口版本，固定为：1.0 | 1.0
-timeout_express | String | Yes | 255 | 订单有效期 | 1d；1m；1h；1s
+timeout_express | String | Yes | 255 | 订单有效期 | 1d；1h；1m
 passback_params | String | Yes | 255 | 请求回传参数 | 
 notify_url | String | No | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com/openapi/notify.json
 return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | 地址会拼接上参数两个参数 https://www.pagsmile.com/success.html？trade_no=xxx&out_trade_no=xxx trade_no pagsmile 订单号 out_trade_no 商户订单号
