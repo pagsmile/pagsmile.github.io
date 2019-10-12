@@ -42,8 +42,8 @@ Card Type | Card No. | Organization | CPF | Name | CVS | Validity
 --------- | -------- | ------------ | --- | ---- | --- | --------
 Credit card | 4235647728025682 | visa | 50284414727 | APRO | 123 | 12/2020
 Credit card | 5031433215406351 | mastercard | 50284414727 | APRO | 123 | 12/2020
-Debit card | 0000000000000001 | visa | 50284414727 | Test User Name | 123 | 12/2020
-Debit card | 0000000000000002 | mastercard | 50284414727 | Test User Name | 123 | 12/2020
+Credit card(MXN) | 4075595716483764 | visa | 50284414727 | APRO | 123 | 12/2020
+Credit card(MXN) | 5474925432670366 | mastercard | 50284414727 | APRO | 123 | 12/2020
 Deposit Express | / | / | 50284414727 | Test User Name | / | /
 
 >## Response Parameters
