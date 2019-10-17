@@ -24,8 +24,8 @@ sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
 payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。金额范围（5-14000） BRL| 88.88
 payment.currency | String | Yes | 3 | 币种 | BRL 
-payment.subject | String | No | 255 | 订单标题 |
-payment.content | String | No | 255 | 订单内容 |
+payment.subject | String | Yes | 255 | 订单标题 |
+payment.content | String | Yes | 255 | 订单内容 |
 payment.token | String | Yes | 255 | 信用卡支付凭据（有效期7天） |
 payment.installments | String | Yes | 12 | 信用卡分期期数 | 1 不分期 最大12分期
 payment.paymentMethodId | String | Yes | 16 | 信用卡支发卡组织 |

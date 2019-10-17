@@ -26,8 +26,8 @@ sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
 payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。金额范围（5-14000） BRL| 88.88
 payment.currency | String | Yes | 3 | 币种 | BRL 
-payment.subject | String | No | 255 | 订单标题 |
-payment.content | String | No | 255 | 订单内容 |
+payment.subject | String | Yes | 255 | 订单标题 |
+payment.content | String | Yes | 255 | 订单内容 |
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
 payment.return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | 商户的用户ID |  

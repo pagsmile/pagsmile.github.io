@@ -23,8 +23,8 @@ sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 payment.out_order_no | String | Yes | 64 | Merchant Order Number |
 payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. Amount range (5-14000) BRL| 88.88
 payment.currency | String | Yes | 3 | Currency | BRL
-payment.subject | String | No | 255 | Order Title |
-payment.content | String | No | 255 | Order Content |
+payment.subject | String | Yes | 255 | Order Title |
+payment.content | String | Yes | 255 | Order Content |
 payment.token | String | Yes | 255 | Credit card payment credentials (valid for 7 days) |
 payment.installments | String | Yes | 12 | Credit Card Instalment | 1 No Staging Maximum 12 Staging
 payment.paymentMethodId | String | Yes | 16 | Credit Card Distribution |

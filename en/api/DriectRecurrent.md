@@ -29,8 +29,8 @@ Payment.order_amount | String | Yes | 10 | The total amount of the order, accura
 Payment.currency | String | Yes | 3 | Currency | BRL
 Payment.method | String | Yes | 10 | Channel Code (default) | 101001001
 Payment.installments | int | Yes | 2 | Staging Period | 2 to 12
-Payment.subject | String | No | 255 | Order Subject |
-Payment.content | String | No | 255 | Order Content |
+Payment.subject | String | Yes | 255 | Order Subject |
+Payment.content | String | Yes | 255 | Order Content |
 Payment.notify_url | String | Yes | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com
 Payment.return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com
 Payment.authenticate | int | No | 4 | Do cardholder authorization is needed(default) | 0 or 1
