@@ -28,7 +28,7 @@ username | String | No | 255 | User Name | Mall merchants are required here; gam
 charset | String | Yes | 10 | The encoding format requested | utf-8
 timestamp | String | Yes | 19 | The time the request was sent, the format "yyyy-MM-dd HH:mm:ss" | 2018-01-08 15:27:26
 version | String | Yes | 10 | API Version, for now is fixed to 1.0 | 1.0
-timeout_express | String | Yes | 255 | Order validity | 1d；1m；1h；1s
+timeout_express | String | Yes | 255 | Order validity | 1d；1h；1m
 passback_params | String | Yes | 255 | Request return parameters | 
 notify_url | String | No | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com/openapi/notify.json
 return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com/success.html
@@ -42,8 +42,8 @@ Card Type | Card No. | Organization | CPF | Name | CVS | Validity
 --------- | -------- | ------------ | --- | ---- | --- | --------
 Credit card | 4235647728025682 | visa | 50284414727 | APRO | 123 | 12/2020
 Credit card | 5031433215406351 | mastercard | 50284414727 | APRO | 123 | 12/2020
-Debit card | 0000000000000001 | visa | 50284414727 | Test User Name | 123 | 12/2020
-Debit card | 0000000000000002 | mastercard | 50284414727 | Test User Name | 123 | 12/2020
+Credit card(MXN) | 4075595716483764 | visa |  | APRO | 123 | 12/2020
+Credit card(MXN) | 5474925432670366 | mastercard |  | APRO | 123 | 12/2020
 Deposit Express | / | / | 50284414727 | Test User Name | / | /
 
 >## Response Parameters

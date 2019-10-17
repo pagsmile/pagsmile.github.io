@@ -28,7 +28,7 @@ username | String | No | 255 | 用户姓名 | 商城商户此处为必填项；�
 charset | String | Yes | 10 | 请求使用的编码格式，如utf-8,gbk,gb2312等 | utf-8
 timestamp | String | Yes | 19 | 发送请求的时间，格式"yyyy-MM-dd HH:mm:ss" | 2018-01-08 15:27:26
 version | String | Yes | 10 | 调用的接口版本，固定为：1.0 | 1.0
-timeout_express | String | Yes | 255 | 订单有效期 | 1d；1m；1h；1s
+timeout_express | String | Yes | 255 | 订单有效期 | 1d；1h；1m
 passback_params | String | Yes | 255 | 请求回传参数 | 
 notify_url | String | No | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com/openapi/notify.json
 return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | 地址会拼接上参数两个参数 https://www.pagsmile.com/success.html？trade_no=xxx&out_trade_no=xxx trade_no pagsmile 订单号 out_trade_no 商户订单号
@@ -39,10 +39,12 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 测试数据:  
 
 类型 | 卡号 | 卡组织 | cvc | 有效期 | 持卡人姓名 | CPF号码 | CEP
---- | --- | --- | --- | --- | --- | ---
-信用卡 | 4235647728025682 | visa | 123 | 12/2020 | APRO | 50284414727
-信用卡 | 5031433215406351 | mastercard | 123 | 12/2020 | APRO | 50284414727
-Deposite Express | - | - | - | - | Test User Name | 50284414727  
+--- | --- | --- | --- | --- | --- | --- | ---
+信用卡 | 4235647728025682 | visa | 123 | 12/2020 | APRO | 50284414727 | 
+信用卡 | 5031433215406351 | mastercard | 123 | 12/2020 | APRO | 50284414727 | 
+信用卡(MXN) | 4075595716483764 | visa | 123 | 12/2020 | APRO |  | 
+信用卡(MXN) | 5474925432670366 | master | 123 | 12/2020 | APRO |  |
+Deposite Express | - | - | - | - | Test User Name | 50284414727 | 
 Boleto | - | - | - | - | Test User Name | 50284414727  | 38082365
 
 注：Boleto 金额限制（4-15000 BRL）
