@@ -15,7 +15,7 @@ NAME | TYPE | REQUIRED | MAX LENGTH | DESCRIPTION | EXAMPLE
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
 app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
-method | String | No | 11 | Payment channel ID | 101(Credit Card); 102(Debit Card) ; 103(Boleto) ; 106(Deposit Express) 107(Pagamento na loterica)|
+method | String | No | 11 | Payment channel ID | 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander)|
 out_order_no | String | Yes | 64 | Merchant order number | 
 out_uid | String | Yes | 64 | Merchant's user ID | 
 subject | String | Yes | 255 | Order Subject | 
