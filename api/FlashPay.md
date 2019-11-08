@@ -30,7 +30,7 @@ payment.currency | String | Yes | 3 | 币种 | BRL
 payment.method   | String | Yes | 10 | 渠道代码（默认） | 110010 
 payment.subject | String | Yes | 255 | 订单标题 |
 payment.content | String | Yes | 255 | 订单内容 |
-payment.bank | String | Yes | 255 | 支付银行 |itau,santander,bradesco,banco-do-brasil
+payment.bank | String | Yes | 255 | 支付银行 |itau,santander,bradesco,banco-do-brasil,caixa
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
 customer.out_uid | String | No | 255 | 商户的用户ID |  
 customer.email | String | Yes | 255 | 邮箱地址 |  
