@@ -6,7 +6,7 @@
 
 >## URL
     
-    Test : http://testenv.pagsmile.com/pserver/gateway.json  
+    Test : https://testenv.pagsmile.com/pserver/gateway.json  
     Prod : https://pserver.pagsmile.com/gateway.json
 
 >## Request Parameters
