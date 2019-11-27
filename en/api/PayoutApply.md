@@ -19,17 +19,17 @@ Parameter | Type | Required | Maximum length | Description | Example value
 --- | --- | --- | --- | --- | ---
 merchant_no | String | Yes | 20 | pagsmile assigned to the merchant's ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile App ID assigned to the merchant | 2017051914172236111
-email | String | Yes | 255 | Email requesting a transfer
-name | String | Yes | 255 | Transferee Name
-phone | String | Yes | 11 | Transfer Phone
-cpf_no | String | Yes | 11 | Transferr cpf
-amount | Float | Yes | 255 | Request a transfer amount
+email | String | Yes | 255 | Email requesting a transfer | test@pagsmile.com
+name | String | Yes | 255 | Transferee Name | Test User Name
+phone | String | Yes | 11 | Transfer Phone  | 13512345678
+cpf_no | String | Yes | 11 | Transferr cpf  | 50284414727
+amount | Float | Yes | 255 | Request a transfer amount | 100.1
 currency | String | Yes | 3 | Request Amount Currency | BRL
-bank_id | String | Yes | 10 | Transferr Bank Number (Refer to [Brazil Bank Payment List](Bankinfo))
-agency | String | Yes | 6 | Transferor branch code
-account_no | Int | Yes | 20 | Transferring bank account number
-account_type | String | Yes | 1 | Transferring bank account type 1 savings_account 2 checking_account
-notify_url | String | 255 | 20 | Transfer result notification address | https://www.pagsmile.com
+bank_id | String | Yes | 10 | Transferr Bank Number (Refer to [Brazil Bank Payment List](Bankinfo)) | 318
+agency | String | Yes | 6 | Transferor branch code | 123456
+account_no | Int | Yes | 20 | Transferring bank account number | 123456789012-34
+account_type | String | Yes | 1 | Transferring bank account type 1 savings_account 2 checking_account | 1
+notify_url | String | 255 | 20 | Transfer result notification address | https://www.pagsmile.com | https://www.pagsmile.com
 sign | String | Yes | 32 | Signature |
 
 
