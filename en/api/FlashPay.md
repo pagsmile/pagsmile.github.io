@@ -27,7 +27,6 @@ sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 payment.out_order_no | String | Yes | 64 | Merchant Order Number |
 payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. | 88.88
 payment.currency | String | Yes | 3 | Currency | BRL 
-payment.method   | String | Yes | 10 | Channel Code (default) | 107 
 payment.subject | String | Yes | 255 | Order Subject |
 payment.content | String | Yes | 255 | Order Content |
 payment.bank | String | Yes | 255 | Payment Bank | itau,santander,bradesco,banco-do-brasil,caixa
@@ -61,12 +60,11 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
         "payment":{
                     "out_order_no":"test-003192",
                     "order_amount":10,
-                    "method":"110010",
                     "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",  
                     "bank":"itau",            
-                    "notify_url":"www.pagsmile.com",  
+                    "notify_url":"www.pagsmile.com" 
                    },
         "customer":{
                     "username":"Test User Name",
@@ -77,14 +75,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                     "out_uid":"out_uid",
                     "phone":"941523675"
                     },
-        "address":{
-                    "zip_code":"06233-200",
-                    "street_name":"Av. das Nações Unidas",
-                    "street_number":"3003",
-                    "neighborhood":"Bonfim",
-                    "city":"Osasco",
-                    "federal_unit":"SP"
-                    },               
+                   
         "sign":"c7412c2458a135dd3d37a655ef796a41"
     }
 
