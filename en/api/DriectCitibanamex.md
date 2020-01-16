@@ -38,7 +38,7 @@ customer.browser | String | NO | 255 | User’s browser type |
 customer.phone | String | NO | 255 | User’s Phone number |
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
-     Note : order amount Range from 5 to 10000 MXN.
+     Note : order amount Range from 10 to 40000 MXN.
 
 >## Request Sample
 
