@@ -4,13 +4,13 @@
 
     测试URL地址: https://paychanneldev.pagsmile.com/api/payoutapply
     正式URL地址: https://paychannel.pagsmile.com/api/payoutapply
-    
+
 >## 请求方式
 
      POST
 
 >## 数据格式   
-  
+
     json    
 
 >## 请求参数
@@ -30,7 +30,7 @@ agency | String | Yes | 6 | 转账人支行代码
 account_no | Int | Yes | 20 | 转账人银行账号
 account_type | String | Yes | 1 | 转账人银行账号类型 1 savings_account 2 checking_account
 notify_url | String | 255 | 20 |  转账结果通知地址 | https://www.pagsmile.com
-sign | String | Yes | 32 | 签名 | 
+sign | String | Yes | 32 | 签名 |
 
 
 
@@ -52,7 +52,14 @@ data | String | Yes | 256 | 当前状态描述 |  SYSTEM_PARAM_ERROR
 508 | MERCHANT_STATUS_ISLOCK | 商户状态不可用 | 检查参数中的商户号是否正确或尝试联系客服。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
 
-更详细列表请参照[返回状态和错误一览](ReturnResult)
+
+>## 结果回调
+
+错误码 | 描述
+---  | ---  
+PAID_OUT | 付款成功
+PAYOUT_FAILED | 付款失败
+
 
 >## 签名生成算法  
 

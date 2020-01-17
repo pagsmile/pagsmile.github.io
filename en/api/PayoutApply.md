@@ -52,8 +52,13 @@ Error Code | Description | Reason | Solution
 508 | MERCHANT_STATUS_ISLOCK | Merchant status not available | Check if the business number in the parameter is correct or try to contact customer service.
 759 | EMAIL_ISNULL | Request email is empty | Check the parameter settings.
 
-For a more detailed list, please refer to [Return Status and Error List] (ReturnResult)
+>## Callback Status
+
+Status | Description
+---  | ---  
+PAID_OUT | payout success
+PAYOUT_FAILED | payout fail
 
 >## Signature Generation Algorithm
 
-Reference [Signature Algorithm] (DriectSign)
+Reference [straight continuous signature algorithm](DriectSign)
