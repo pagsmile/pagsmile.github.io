@@ -26,7 +26,7 @@ expiration_year | String | Yes | 2 | 信用卡过期年份 | 12
 cardholder_name | String | Yes | 100 | 信用卡持卡人姓名| APRO
 sign | String | Yes | 32 | 签名 | 
 
-提示：token有效时间7天，需要提供PCI证书。
+提示：token有效时间7天，需要提供PCI证书。没有风险控制措施。
 
 >## 返回结果
 
