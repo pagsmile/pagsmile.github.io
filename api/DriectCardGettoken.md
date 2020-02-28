@@ -40,7 +40,7 @@ info.card_info.last_four_digits | string | Yes | 4 | 返回信用卡后4位数�
 info.card_info.expiration_month | int | Yes | 2 | 返回信用卡过期月份    | 12
 info.card_info.expiration_year | int | Yes | 2 | 返回信用卡过期年份    | 2022
 info.card_info.cardholder_name | string | Yes | 100 | 返回信用卡持卡人姓名    | APRO
-
+info.card_info.payment_method_id | string | NO | 10 | 返回信用卡持卡卡类型   | 实际卡为准
 >## 返回样例
 
 ```
@@ -57,6 +57,7 @@ info.card_info.cardholder_name | string | Yes | 100 | 返回信用卡持卡人�
                     "expiration_month":12,
                     "expiration_year":2022,
                     "cardholder_name":"APRO"
+                    "payment_method_id":"visa"
                 }
         }
   }
@@ -79,3 +80,7 @@ info.card_info.cardholder_name | string | Yes | 100 | 返回信用卡持卡人�
 >## 签名生成算法  
 
 参考[签名算法](DriectSign)
+
+>## 获取token后请参考直连信用卡支付PCI验证接口
+
+参考直[信用卡支付验证接口](DriectPCICreditCard)

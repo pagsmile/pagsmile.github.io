@@ -28,13 +28,13 @@ payment.subject | String | Yes | 255 | 订单标题 |
 payment.content | String | Yes | 255 | 订单内容 |
 payment.token | String | Yes | 255 | 信用卡支付凭据（有效期7天） |
 payment.installments | String | Yes | 12 | 信用卡分期期数 | 1 不分期 最大12分期
-payment.paymentMethodId | String | Yes | 16 | 信用卡支发卡组织 |
+payment.payment_method_id | String | Yes | 16 | 信用卡支发卡组织 |
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | 商户的用户ID |  
 customer.email | String | Yes | 255 | 邮箱地址 |  
-customer.identification | String | Yes | 64 | 用户信息标示 |
-customer.identification.type | String | Yes | 50 | 用户信息类型 | 巴西 CPF
-customer.identification.number | String | Yes | 64 | 用户信息id |
+customer.identification | String | Yes(NO) | 64 | 用户信息标示 | 当币种是BRL是必须
+customer.identification.type | String | Yes | 50 | 用户信息类型 |  CPF
+customer.identification.number | String | Yes | 50 | 用户信息id |  50284414727
 customer.username | String | Yes | 255 | 用户姓名 | 用户信息
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
@@ -70,7 +70,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
               'currency' => 'BRL',
               'subject' => 'test-subject',
               'content' => 'test-content',
-              'paymentMethodId' => 'visa',
+              'payment_method_id' => 'visa',
               'installments' => 3,
               'token' => '65800b24cb695abc9e1fca12a65d7106',
               'notify_url' => 'https://www.pagsmile.com',
@@ -83,6 +83,10 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
               'cpf_no' => '50284414727',
               'out_uid' => 'out_uid',
               'phone' => '11941523675',
+              'identification' => [
+                          'type' => 'CPF',
+                          'number' => '50284414727',
+                      ],
           ],
       ]
      
@@ -92,9 +96,9 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
      ```
          [
              'app_id' => '2017051914172236111',
-             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}',
+             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
              'merchant_no' => '102320170519',
-             'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
+             'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
              'sign_type' => 'md5',
          ]
          
@@ -103,7 +107,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
  3. 按照数组按照键值对拼接，并使用'&'链接，在字符串最后拼接上在商户后台得到对密钥key
   
      ```
-         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727","out_uid":"out_uid","phone":"11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","paymentMethodId":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
+         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
      
      ```
      
@@ -118,33 +122,35 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 
 ```
     {
-            'merchant_no' => '102320170519',      //需要根据实际情况更换成商户自己信息
-            'app_id' => '2017051914172236111',    //需要根据实际情况更换成商户自己信息
-            'sign_type' => 'md5',
-            'payment' => {
-                'out_order_no' => 'test-003630',    //需要根据实际情况更换成商户自己信息
-                'order_amount' => 2000,    //需要根据实际情况更换成商户自己的信息
-                'currency' => 'BRL',       //需要根据实际情况更换成商户自己的信息
-                'subject' => 'test-subject', //需要根据实际情况更换成商户自己的信息
-                'content' => 'test-content', //需要根据实际情况更换成商户自己的信息
-                'paymentMethodId' => 'visa',  //需要根据实际情况更换成商户自己的信息
-                'installments' => 3,  //需要根据实际情况更换成商户自己的信息
-                'token' => '65800b24cb695abc9e1fca12a65d7106', //需要根据实际情况更换成商户自己的信息
-                'notify_url' => 'https://www.pagsmile.com', //需要根据实际情况更换成商户自己的信息
-            },
-            'customer' => {
-                'username' => 'APRO', //需要根据实际情况更换成商户自己的信息
-                'buyer_ip' => '127.0.0.1', //需要根据实际情况更换成商户自己的信息
-                'browser' => 'safari', //需要根据实际情况更换成商户自己的信息
-                'email' => 'kongdexin@xcloudgame.com', //需要根据实际情况更换成商户自己的信息
-                'identification' => { type:CPF,number:5024884814 }',  //需要根据实际情况更换成商户自己的信息
-                'out_uid' => 'out_uid', //需要根据实际情况更换成商户自己的信息
-                'phone' => '11941523675', //需要根据实际情况更换成商户自己的信息
-            },
-            'sign' => '67073edadf3c554d0bf17555b0cd9e62'  //需要根据实际情况更换成商户自己的信息
+        "merchant_no":"102320170519",
+        "app_id":"2017051914172236111",
+        "sign_type":"md5",
+        "payment":{
+                    "out_order_no":"test-003169",
+                    "order_amount":1000,
+                    "currency":"BRL",
+                    "subject":"test-subject",
+                    "content":"test-content",
+                    "paymentMethodId":"visa",
+                    "installments":3,
+                    "token":"ce0559644ebe1251fa036ff95ea790d6",
+                    "notify_url":"https:\/\/www.pagsmile.com"
+                   },
+        "customer":{
+                      "username":"APRO",
+                      "buyer_ip":"127.0.0.1",
+                      "browser":"safari",
+                      "email":"kongdexin@xcloudgame.com",
+                      "out_uid":"out_uid",
+                      "phone":"11941523675",
+                      "identification":{
+                                    "type":"CPF",
+                                    "number":"50284414727"
+                                       }
+                       }    
     }
-
-``` 
+    
+    ``` 
 
 >## 返回结果
 
