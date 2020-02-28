@@ -1,64 +1,64 @@
-# 直连信用卡支付PCI验证接口
+# Direct credit card payment PCI verification interface
 
 
->## 接口链接
+>## API URL
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/creditpci
-    正式URL地址：https://paychannel.pagsmile.com/api/creditdopci 
+    Test environment：https://paychanneldev.pagsmile.com/api/creditpci
+    Prod environment：https://paychannel.pagsmile.com/api/creditdopci 
     
->## 请求方式
+>## Request method
 
      POST
 
->## 数据格式   
+>## Data format   
   
     JSON
     
->## 请求参数
+>## Request parameter
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
-app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
-payment.out_order_no | String | Yes | 64 | 商户订单号 |
-payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。金额范围（5-14000） BRL| 88.88
-payment.currency | String | Yes | 3 | 币种 | BRL 
-payment.subject | String | Yes | 255 | 订单标题 |
-payment.content | String | Yes | 255 | 订单内容 |
-payment.token | String | Yes | 255 | 信用卡支付凭据（有效期7天） |
-payment.installments | String | Yes | 12 | 信用卡分期期数 | 1 不分期 最大12分期
-payment.payment_method_id | String | Yes | 16 | 信用卡支发卡组织 |
-payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
-customer.out_uid | String | Yes | 255 | 商户的用户ID |  
-customer.email | String | Yes | 255 | 邮箱地址 |  
-customer.identification | String | Yes(NO) | 64 | 用户信息标示 | 当币种是BRL是必须
-customer.identification.type | String | Yes | 50 | 用户信息类型 |  CPF
-customer.identification.number | String | Yes | 50 | 用户信息id |  50284414727
-customer.username | String | Yes | 255 | 用户姓名 | 用户信息
-customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
-customer.browser | String | NO | 255 | 商户的用户浏览器类型|
-customer.phone | String | NO | 255 | 商户的用户的电话|
-sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名说明
+merchant_no | String | Yes | 20 | ID assigned to the merchant by Pagsmile | 1024201708140012289
+app_id | String | Yes | 20 | App ID assigned to the merchant by Pagsmile | 2017051914172236111
+sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
+payment.out_order_no | String | Yes | 64 | Merchant order number |
+payment.order_amount | String | Yes | 10 | The total amount of the order, accurate to two decimal places. Amount range (5-14000) BRL| 88.88
+payment.currency | String | Yes | 3 | Currency | BRL 
+payment.subject | String | Yes | 255 | Order title |
+payment.content | String | Yes | 255 | Order content |
+payment.token | String | Yes | 255 | Credit card payment voucher (valid for 7 days) |
+payment.installments | String | Yes | 12 | Credit card installments | 1 no installments, up to 12
+payment.payment_method_id | String | Yes | 16 | Credit card issuing organization |
+payment.notify_url | String | Yes | 255 | Http/https path of specific page in the server of merchant to which our server will actively send notifications | https://www.pagsmile.com
+customer.out_uid | String | Yes | 255 | Merchant's user ID |  
+customer.email | String | Yes | 255 | Email address of user |  
+customer.identification | String | Yes(NO) | 64 | User information label | Required when currency is BRL
+customer.identification.type | String | Yes | 50 | User Information Type |  CPF
+customer.identification.number | String | Yes | 50 | User information id |  50284414727
+customer.username | String | Yes | 255 | User name | User info
+customer.buyer_ip | String | NO | 255 | User's ipv4 address | 
+customer.browser | String | NO | 255 | Type of user's browser |
+customer.phone | String | NO | 255 | Phone number of user |
+sign | String | Yes | 32 | Signature string of the merchant request | The signature value calculated by the signature algorithm, see the signature description for details
 
- 提示: identification 在币种是BRL需要提供
+Tip: identification is required when the currency is BRL
  
- >## 签名说明
+ >## Signature instructions
      
-     设所有发送或者接收到的数据为集合M，如果集合内有多维数组则先进行将维得到一维集合后，将集合M内非空参数值的参数按照参数名ASCII码从小到大排序（字典序），使用URL键值对的格式（key1=value1&key2=value2…）拼接成字符串tempData。
-          - 如果参数的值为空不参与签名；
-          - 参数名区分大小写；
-     在tempData最后拼接上key得到signData字符串，并signData进行MD5运算，得到sign值signValue。
+     Let all the data sent or received be the set M. If there is a multi-dimensional array in the set, first obtain the one-dimensional set of the dimension, and then sort the parameters of the non-empty parameter value in the set M according to the parameter name ASCII code from small to large (dictionary) Order), use the format of the URL key-value pair (key1=value1&key2=value2…) to form a string tempData.
+          - If the value of the parameter is null, it does not participate in the signature;
+          - Parameter names are case sensitive;
+     In the last tempData stitching, the key gets the signData string, and signData performs the MD5 operation to get the sign value signValue.
  
- >## key的获取
+ >## How to get the key?
  
- key设置路径：商户平台(paccess.pagsmile.com)
+ Where：merchant dashboard(paccess.pagsmile.com)
      
- 具体设置方式请参照 [签名参数获取方法](/docs/接口参数获取方法.pdf)  
+ For more details, please refer to [signature parameter acquisition](/docs/signature parameter acquisition.pdf)  
  
- >## 签名样例
+ >## Signature sample
      
- 1. 将一个多位数组进行降维。降维前数组如下
+ 1. Dimension a multi-bit array. The array before dimension reduction is as follows
      
      ```
       [
@@ -92,7 +92,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
       ]
      
      ```
- 2. 数组降维就是将二维数组都降成一维数组，之前是数组的变成一个JSON串，并将该一维数组按照key排序如下
+ 2. Array dimension reduction is to reduce the two-dimensional array into a one-dimensional array, before the array becomes a josn string, and the one-dimensional array is sorted by key as follows
  
      ```
          [
@@ -105,21 +105,20 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
          
      ```
  
- 3. 按照数组按照键值对拼接，并使用'&'链接，在字符串最后拼接上在商户后台得到对密钥key
-  
+ 3. According to the array, splicing according to the key value pair, and using the ‘&’ link, get the key key in the merchant background in the last stitching of the string
      ```
          app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
      
      ```
      
- 4. 最后将字符串用md5加密得到最后的sign
+ 4. Finally, the string is encrypted with md5 to get the final sign
    
      ```
      67073edadf3c554d0bf17555b0cd9e62
          
      ```
 
->## 信用卡请求样例
+>## Sample of credit card request
 
 ```
     {
@@ -153,20 +152,20 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
     
  ``` 
 
->## 返回结果
+>## Results
 
-  请求成功后。返回的数据按照json格式返回。
+  After the request is successful. The returned data is returned in json format.
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | 返回状态码 | 
-info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
-info.out_order_no | String | Yes | 128 | 商户订单号| test-003192
-info.total_amount | float | Yes | 10 | 订单金额 | 10
-info.currency | String | Yes | 10 | 币种 | 
-info.trade_status | String | Yes | 10 | 订单状态 | TRADE_SUCCESS
+code | String | Yes | 16 | Return status code | 
+info.trade_no | String | Yes | 128 | Platform order number | 2017042311015505011
+info.out_order_no | String | Yes | 128 | Merchant order number | test-003192
+info.total_amount | float | Yes | 10 | Oder amount | 10
+info.currency | String | Yes | 10 | Currency | 
+info.trade_status | String | Yes | 10 | Order status | TRADE_SUCCESS
 
->## 成功样例
+>## Success sample
 
 ```
     {
@@ -175,9 +174,9 @@ info.trade_status | String | Yes | 10 | 订单状态 | TRADE_SUCCESS
     }
     
 ```
-    trade_status 有三个状态 TRADE_SUCCESS 成功  TRADE_REFUSED 支付被银行拒绝 TRADE_RISK_CONTROL 支付在审核中2小时到2天审核
+    There are 3 statuses of trade_status TRADE_SUCCESS success  TRADE_REFUSED the payment is refused by bank TRADE_RISK_CONTROL payment under review takes 2 hours to 2 days
     
->## 失败样例
+>## Failure example
 
 ```
     { 
@@ -187,18 +186,18 @@ info.trade_status | String | Yes | 10 | 订单状态 | TRADE_SUCCESS
     
 ```
 
->## 错误码
+>## Error code
 
-错误码 | 描述 | 原因 | 解决方案
+Code | Description | Reason | Solution
 ---  | ---  | ---  | ---
-402 | SIGN_VERIFY_FAILURE | 签名错误 | 根据给定的规则设置签名，并确认参数sign字段设置正确。
-403 | SIGN_ISNULL | 未签名 | 检查参数中的签名字段是否正确设置。
-405 | SIGN_TYPE_ISNULL | 签名类型未设置 | 检查参数设置。
-803 | TRADE_CURRENCY_ISNULL | 币种信息未设置 | 检查参数设置。
-502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
-507 | MERCHANT_ID_NOT_ACTIVE | 商户号未激活 | 联系客服查看未激活原因。
-602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
-752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
+402 | SIGN_VERIFY_FAILURE | Signature error | Set the signature according to the given rules and confirm that the parameter sign field is set correctly.
+403 | SIGN_ISNULL | Unsigned | Check that the signature fields in the parameters are set correctly.
+405 | SIGN_TYPE_ISNULL | Signature type is not set | Check parameter settings.
+803 | TRADE_CURRENCY_ISNULL | Currency information is not set | Check parameter settings.
+502 | MERCHANT_ID_INVALID | Merchant number is not available | Check whether the merchant number in the parameters is correct.
+507 | MERCHANT_ID_NOT_ACTIVE | Merchant number is not activated | Contact customer service for the reason for the inactivation.
+602 | APP_ID_INVALID | APP number is not available | Check whether the APP number in the parameters is correct.
+752 | CPF_NO_ISNULL | Request CPF number is empty | 检查参数设置。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
 924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
 930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
