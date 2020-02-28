@@ -41,6 +41,7 @@ info.card_info.expiration_month | int | Yes | 2 | 返回信用卡过期月份   
 info.card_info.expiration_year | int | Yes | 2 | 返回信用卡过期年份    | 2022
 info.card_info.cardholder_name | string | Yes | 100 | 返回信用卡持卡人姓名    | APRO
 info.card_info.payment_method_id | string | NO | 10 | 返回信用卡持卡卡类型   | 实际卡为准
+
 >## 返回样例
 
 ```
