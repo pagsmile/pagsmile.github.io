@@ -3,8 +3,8 @@
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/creditdo
-    正式URL地址：https://paychannel.pagsmile.com/api/creditdo 
+    测试URL地址：https://paychanneldev.pagsmile.com/api/creditpci
+    正式URL地址：https://paychannel.pagsmile.com/api/creditdopci 
     
 >## 请求方式
 
@@ -150,7 +150,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                        }    
     }
     
-    ``` 
+ ``` 
 
 >## 返回结果
 
@@ -175,6 +175,7 @@ info.trade_status | String | Yes | 10 | 订单状态 | TRADE_SUCCESS
     
 ```
     trade_status 有三个状态 TRADE_SUCCESS 成功  TRADE_REFUSED 支付被银行拒绝 TRADE_RISK_CONTROL 支付在审核中2小时到2天审核
+    
 >## 失败样例
 
 ```

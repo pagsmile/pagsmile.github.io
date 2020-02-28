@@ -84,4 +84,4 @@ info.card_info.payment_method_id | string | NO | 10 | 返回信用卡持卡卡�
 
 >## 获取token后请参考直连信用卡支付PCI验证接口
 
-参考直[信用卡支付验证接口](DriectPCICreditCard)
+参考直[直连信用卡支付PCI验证接口](DriectPCICreditCard)
