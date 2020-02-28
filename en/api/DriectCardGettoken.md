@@ -1,48 +1,48 @@
-# 直连信用PCI获取交易安全码token
+# Direct PCI Credit Card Get token
 
->## 接口链接
+>## API URL
 
-    测试URL地址: https://paychanneldev.pagsmile.com/api/getcardtoken
-    正式URL地址: https://paychannel.pagsmile.com/api/getcardtoken
+    Test environment: https://paychanneldev.pagsmile.com/api/getcardtoken
+    Prod environment: https://paychannel.pagsmile.com/api/getcardtoken
     
->## 请求方式
+>## Request format
 
      POST
 
->## 数据格式   
+>## Data format   
   
     json    
 
->## 请求参数
+>## Parameter requested
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
-app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-card_number | String | Yes | 20 | 信用卡卡号 | 4235647728025682
-security_code | String | Yes | 4 | 信用卡安全码 | 123
-expiration_month | String | Yes | 2 | 信用卡过期月份 | 2022
-expiration_year | String | Yes | 2 | 信用卡过期年份 | 12
-cardholder_name | String | Yes | 100 | 信用卡持卡人姓名| APRO
-sign | String | Yes | 32 | 签名 | 
+merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+app_id | String | Yes | 20 | App ID that pagsmile assigned to the merchant | 2017051914172236111
+card_number | String | Yes | 20 | Credit card number | 4235647728025682
+security_code | String | Yes | 4 | Security number of credit card | 123
+expiration_month | String | Yes | 2 | Expiration month  | 2022
+expiration_year | String | Yes | 2 | Expiration year | 12
+cardholder_name | String | Yes | 100 | Credit card holder name | APRO
+sign | String | Yes | 32 | Signature | 
 
-提示：token有效时间7天，需要提供PCI证书。没有风险控制措施。
+Tip: The token is valid for 7 days, and a PCI certificate is required. No risk control measures.
 
->## 返回结果
+>## Result
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-code | int | Yes | 10 | 返回状态码 |  200成功
-info | string | Yes | 255 | 返回信息 |  102.39
-info.token | string | Yes | 32 | 返回支付token值    | 2608f4508569a3461ddb8277844e8e62
-info.card_info.first_six_digits | string | Yes | 6 | 返回信用卡前6位数字    | 423564
-info.card_info.last_four_digits | string | Yes | 4 | 返回信用卡后4位数字  | 5682
-info.card_info.expiration_month | int | Yes | 2 | 返回信用卡过期月份    | 12
-info.card_info.expiration_year | int | Yes | 2 | 返回信用卡过期年份    | 2022
-info.card_info.cardholder_name | string | Yes | 100 | 返回信用卡持卡人姓名    | APRO
-info.card_info.payment_method_id | string | NO | 10 | 返回信用卡持卡卡类型   | 实际卡为准
+code | int | Yes | 10 | Return status code |  200success
+info | string | Yes | 255 | Return info |  102.39
+info.token | string | Yes | 32 | Return payment token value    | 2608f4508569a3461ddb8277844e8e62
+info.card_info.first_six_digits | string | Yes | 6 | Return the first 6 digits of a credit card    | 423564
+info.card_info.last_four_digits | string | Yes | 4 | Return 4 last digits of a credit card  | 5682
+info.card_info.expiration_month | int | Yes | 2 | Returns credit card expiration month    | 12
+info.card_info.expiration_year | int | Yes | 2 | Returns credit card expiration year    | 2022
+info.card_info.cardholder_name | string | Yes | 100 | Return credit card holder name    | APRO
+info.card_info.payment_method_id | string | NO | 10 | Return credit card type   | Subject to actual card
 
->## 返回样例
+>## Return sample
 
 ```
   
@@ -66,22 +66,23 @@ info.card_info.payment_method_id | string | NO | 10 | 返回信用卡持卡卡�
 ``` 
 
 
->## 错误码
+>## Error code
 
-错误码 | 描述 | 原因 | 解决方案
+Code | Description | Reason | Solution
 ---  | ---  | ---  | ---
-401 | SYSTEM_PARAM_ERROR | 包类型不正确 | 检查参数设置。
-402 | SIGN_VERIFY_FAILURE | 签名错误 | 根据给定的规则设置签名，并确认参数sign字段设置正确。
-502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
-508 | MERCHANT_STATUS_ISLOCK | 商户状态不可用 | 检查参数中的商户号是否正确或尝试联系客服。
-759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
+401 | SYSTEM_PARAM_ERROR | Parameter type is incorrect | Check parameter settings.
+402 | SIGN_VERIFY_FAILURE | Signature error | Set the signature according to the given rules and confirm that the parameter sign field is set correctly.
+502 | MERCHANT_ID_INVALID | Merchant number is unavailable | Check whether the merchant number is correct.
+508 | MERCHANT_STATUS_ISLOCK | Merchant status is unavailable | Check if the merchant number is correct or try to contact customer service.
+759 | EMAIL_ISNULL | Request email is empty | Check parameter settings.
 
-更详细列表请参照[返回状态和错误一览](ReturnResult)
+For a more detailed list, please refer to[Return status and error list](ReturnResult)
 
->## 签名生成算法  
+>## Signature algorithm 
 
-参考[签名算法](DriectSign)
+Please refer to[Signature algorithm](DriectSign)
 
->## 获取token后请参考直连信用卡支付PCI验证接口
+>## After obtaining the token, please refer to the Direct PCI credit card payment verification interface
 
-参考直[直连信用卡支付PCI验证接口](DriectPCICreditCard)
+
+Refer to[Direct PCI credit card payment verification interface](DriectPCICreditCard)
