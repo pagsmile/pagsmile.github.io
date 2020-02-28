@@ -76,13 +76,13 @@ Code | Description | Reason | Solution
 508 | MERCHANT_STATUS_ISLOCK | Merchant status is unavailable | Check if the merchant number is correct or try to contact customer service.
 759 | EMAIL_ISNULL | Request email is empty | Check parameter settings.
 
-For a more detailed list, please refer to[Return status and error list](ReturnResult)
+For a more detailed list, please refer to [Return status and error list](ReturnResult)
 
 >## Signature algorithm 
 
-Please refer to[Signature algorithm](DriectSign)
+Please refer to [Signature algorithm](DriectSign)
 
 >## After obtaining the token, please refer to the Direct PCI credit card payment verification interface
 
 
-Refer to[Direct PCI credit card payment verification interface](DriectPCICreditCard)
+Refer to [Direct PCI credit card payment verification interface](DriectPCICreditCard)
