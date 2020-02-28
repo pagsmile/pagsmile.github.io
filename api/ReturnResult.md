@@ -53,6 +53,8 @@ PAID_MINOR | 收款金额小于实际金额（仅boleto）
 762 | AMOUNT ILLEGAL
 763 | ZIP_CODE_IS_NULL
 764 | ZIP_CODE_ILLEGAL
+766 | IDENTIFICATION_IS_NULL
+767 | TYPE_ISNULL
 801	| TRADENO_NOT_EXIST
 801	| TRADENO_EXIST
 802	| TRADENO_ISNULL
@@ -82,6 +84,7 @@ PAID_MINOR | 收款金额小于实际金额（仅boleto）
 935	| MUID_TRADE_IP_LIMIT
 936	| MUID_TRADE_FREQUENT_PER_M
 937	| MUID_CPF_INFO_NOT_MATCH
+938	| USERNAME_ILLEGAL
 bank-1 | Unauthorized transaction. Referred transaction.
 bank-2 | Unauthorized transaction. Referred transaction.
 bank-3 | Transaction not allowed. Error in registering the establishment code in the TEF configuration file
