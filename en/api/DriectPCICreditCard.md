@@ -197,16 +197,16 @@ Code | Description | Reason | Solution
 502 | MERCHANT_ID_INVALID | Merchant number is not available | Check whether the merchant number in the parameters is correct.
 507 | MERCHANT_ID_NOT_ACTIVE | Merchant number is not activated | Contact customer service for the reason for the inactivation.
 602 | APP_ID_INVALID | APP number is not available | Check whether the APP number in the parameters is correct.
-752 | CPF_NO_ISNULL | Request CPF number is empty | 检查参数设置。
-759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
-924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
-930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
-512 | MERCHANT_TRADE_NO_ISNULL | 商户订单号为空 | 检查参数设置。
-806 | TRADE_TIMEOUT_CLOSE | 该订单已经超过指定过期时效 | 检查参数设置或确认订单信息。
-400 | SYSTEM_ERROR | 订单创建失败 | 请尝试重新下单。
-550 | SINGLE_DAY_PAY_LIMIT | 超过单日限额 | 检查参数设置或确认订单信息。
+752 | CPF_NO_ISNULL | Request CPF number is empty | Check parameter settings.
+759 | EMAIL_ISNULL | Request email is empty | Check parameter settings.
+924 | CPF_INFO_NOT_MATCH | CPF does not match | 
+930 | USERNAME_ISNULL | Request user name is empty | Check parameter settings.
+512 | MERCHANT_TRADE_NO_ISNULL | Merchant order number is empty | Check parameter settings.
+806 | TRADE_TIMEOUT_CLOSE | The order has exceeded the specified expiry date | Check parameter settings or confirm order information.
+400 | SYSTEM_ERROR | Order creation failed | Please try to place your order again.
+550 | SINGLE_DAY_PAY_LIMIT | Exceeded one-day limit | Check parameter settings or confirm order information.
 
-更详细列表请参照[返回状态和错误一览](ReturnResult)
+For more details please refer to [Return status and error list](ReturnResult)
 
 
 
