@@ -91,3 +91,5 @@ info | String | Yes | 128 | 返回信息 |
 >## demo
 
 参考[php demo](DemoPHP)
+
+参考[java demo](DemoJAVA)
