@@ -6,16 +6,16 @@
     public static void createOrder(HttpServletResponse response) throws IOException {
         String orderUrl = "https://testenv.pagsmile.com/pserver/gateway.json";
 
-        String merchantNo = "";
-        String appId = "";
-        String appKey = "";
+        String merchantNo = "replace with your own merchant_no.";
+        String appId = "replace with your own APP id.";
+        String appKey = "replace with your own APP key.";
         String timestamp = DateUtil.formatNow("yyyy-MM-dd HH:mm:ss");
 
         Map<String, String> params = new HashMap<>(20);
         params.put("merchant_no", merchantNo);
         params.put("app_id", appId);
-        params.put("out_order_no", RandomUtil.getRandom(8, RandomTypeEm.LETTER));
-        params.put("out_uid", RandomUtil.getRandom(4, RandomTypeEm.NUMBER));
+        params.put("out_order_no", "#replace with your own order NO.");
+        params.put("out_uid", "replace with your own user id.");
         params.put("subject", "subject");
         params.put("content", "content");
         params.put("order_amount", "10");
