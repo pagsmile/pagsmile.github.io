@@ -131,7 +131,7 @@ Tip: identification is required when the currency is BRL
                     "currency":"BRL",
                     "subject":"test-subject",
                     "content":"test-content",
-                    "paymentMethodId":"visa",
+                    "payment_method_id":"visa",
                     "installments":3,
                     "token":"ce0559644ebe1251fa036ff95ea790d6",
                     "notify_url":"https:\/\/www.pagsmile.com"
