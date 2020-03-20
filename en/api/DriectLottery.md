@@ -132,4 +132,4 @@ For more detailed list, please refer to[Return Status and Error List](ReturnResu
 
 >## Signature generation algorithm  
 
-Reference [straight continuous signature algorithm](DriectSign)
+Reference [straight continuous signature algorithm](SignatureAlgorithm)

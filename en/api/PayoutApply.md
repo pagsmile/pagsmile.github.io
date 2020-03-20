@@ -61,4 +61,4 @@ PAYOUT_FAILED | payout fail
 
 >## Signature Generation Algorithm
 
-Reference [straight continuous signature algorithm](DriectSign)
+Reference [straight continuous signature algorithm](SignatureAlgorithm)

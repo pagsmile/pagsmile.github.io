@@ -4,13 +4,13 @@
 
     Test environment: https://paychanneldev.pagsmile.com/api/getcardtoken
     Prod environment: https://paychannel.pagsmile.com/api/getcardtoken
-    
+
 >## Request format
 
      POST
 
 >## Data format   
-  
+
     json    
 
 >## Parameter requested
@@ -24,7 +24,7 @@ security_code | String | Yes | 4 | Security number of credit card | 123
 expiration_month | String | Yes | 2 | Expiration month  | 2022
 expiration_year | String | Yes | 2 | Expiration year | 12
 cardholder_name | String | Yes | 100 | Credit card holder name | APRO
-sign | String | Yes | 32 | Signature | 
+sign | String | Yes | 32 | Signature |
 
 Tip: The token is valid for 7 days, and a PCI certificate is required. No risk control measures.
 
@@ -45,7 +45,7 @@ info.card_info.payment_method_id | string | NO | 10 | Return credit card type   
 >## Return sample
 
 ```
-  
+
   {
     "code":"200",
     "info":
@@ -63,7 +63,7 @@ info.card_info.payment_method_id | string | NO | 10 | Return credit card type   
         }
   }
 
-``` 
+```
 
 
 >## Error code
@@ -78,9 +78,9 @@ Code | Description | Reason | Solution
 
 For a more detailed list, please refer to [Return status and error list](ReturnResult)
 
->## Signature algorithm 
+>## Signature algorithm
 
-Please refer to [Signature algorithm](DriectSign)
+Please refer to [Signature algorithm](SignatureAlgorithm)
 
 >## After obtaining the token, please refer to the Direct PCI credit card payment verification interface
 
