@@ -307,7 +307,7 @@ Test Data:
 
 Type | Card NO. | Organization | CVC |Expire Date | Holder Name | CPF | CEP
 --- | --- | --- | --- | --- | --- | ---| ---
-Credit Card | 4235647728025682 | VISA | 123 | 12/2020 | APRO | 50284414727 | 38082365
-Credit Card | 5031433215406351 | MasterCard | 123 | 12/2020 | APRO | 50284414727 | 38082365
+Credit Card | 4235647728025682 | visa | 123 | 12/2020 | APRO | 50284414727 | 38082365
+Credit Card | 5031433215406351 | master | 123 | 12/2020 | APRO | 50284414727 | 38082365
 
 Please refer to the [credit card payment verification interface](DriectCreditdo) after the page is submitted. addEvent(document.querySelector('#pay'), 'submit', doPay);
