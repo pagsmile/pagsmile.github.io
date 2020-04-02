@@ -55,7 +55,7 @@
      ?>
     
     <html>
-    <head><title> pagesmile</title></head>
+    <head><title>pagsmile</title></head>
     <body>
     <form id="pagsmile_pay" method="post" name="pagsmile_pay" action="https://testenv.pagsmile.com/pserver/gateway.json">
     
