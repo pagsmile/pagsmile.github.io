@@ -78,7 +78,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                       'username' => 'APRO',
                       'buyer_ip' => '127.0.0.1',
                       'browser' => 'safari',
-                      'email' => 'kongdexin@xcloudgame.com',
+                      'email' => 'kongdexin@pagsmile.com',
                       'cpf_no' => '50284414727',
                       'out_uid' => 'out_uid',
                       'phone' => '11941523675',
@@ -92,7 +92,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
 ```
               [
                   'app_id' => '2017051914172236111',
-                  'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":" 50284414727","out_uid":"out_uid","phone":"11941523675"}',
+                  'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","cpf_no":" 50284414727","out_uid":"out_uid","phone":"11941523675"}',
                   'merchant_no' => '102320170519',
                   'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content" , "paymentMethodId":"visa","installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
                   'sign_type' => 'md5',
@@ -103,7 +103,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
    3. According to the array, splicing according to the key value pair, and using the '&' link, get the key  in the merchant background in the last stitching of the string.
    
 ```
-          App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":"visa","installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
+          App_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","cpf_no":"50284414727" , "out_uid": "out_uid", "phone": "11941523675"}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject": "test-subject","content":"test-content","paymentMethodId":"visa","installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com "}&sign_type=md5&key=MD5Key
       
 ```
       
@@ -136,7 +136,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                  'username' => 'APRO', // Needs to be replaced with the merchant's own information according to the actual situation
                  'buyer_ip' => '127.0.0.1',  / ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'browser' => 'safari', // ​​Needs to be replaced with the merchant's own information according to the actual situation
-                 'email' => 'kongdexin@xcloudgame.com', // ​​Needs to be replaced with the merchant's own information according to the actual situation
+                 'email' => 'kongdexin@pagsmile.com', // ​​Needs to be replaced with the merchant's own information according to the actual situation
                  'cpf_no' => '50284414727', // ​​Needs to be replaced according to the actual situation of the merchant's own information
                  'out_uid' => 'out_uid', // Needs to be replaced with the merchant's own information according to the actual situation
                  'phone' => '11941523675', // ​​Needs to be replaced according to the actual situation of the merchant's own information

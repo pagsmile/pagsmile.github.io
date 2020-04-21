@@ -80,7 +80,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
               'username' => 'APRO',
               'buyer_ip' => '127.0.0.1',
               'browser' => 'safari',
-              'email' => 'kongdexin@xcloudgame.com',
+              'email' => 'kongdexin@pagsmile.com',
               'cpf_no' => '50284414727',
               'out_uid' => 'out_uid',
               'phone' => '11941523675',
@@ -97,7 +97,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
      ```
          [
              'app_id' => '2017051914172236111',
-             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
+             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
              'merchant_no' => '102320170519',
              'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
              'sign_type' => 'md5',
@@ -108,7 +108,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
  3. 按照数组按照键值对拼接，并使用'&'链接，在字符串最后拼接上在商户后台得到对密钥key
   
      ```
-         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
+         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
      
      ```
      
@@ -141,7 +141,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                       "username":"APRO",
                       "buyer_ip":"127.0.0.1",
                       "browser":"safari",
-                      "email":"kongdexin@xcloudgame.com",
+                      "email":"kongdexin@pagsmile.com",
                       "out_uid":"out_uid",
                       "phone":"11941523675",
                       "identification":{

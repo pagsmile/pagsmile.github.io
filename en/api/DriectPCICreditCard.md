@@ -80,7 +80,7 @@ Tip: identification is required when the currency is BRL
               'username' => 'APRO',
               'buyer_ip' => '127.0.0.1',
               'browser' => 'safari',
-              'email' => 'kongdexin@xcloudgame.com',
+              'email' => 'kongdexin@pagsmile.com',
               'cpf_no' => '50284414727',
               'out_uid' => 'out_uid',
               'phone' => '11941523675',
@@ -97,7 +97,7 @@ Tip: identification is required when the currency is BRL
      ```
          [
              'app_id' => '2017051914172236111',
-             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
+             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
              'merchant_no' => '102320170519',
              'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
              'sign_type' => 'md5',
@@ -107,7 +107,7 @@ Tip: identification is required when the currency is BRL
  
  3. According to the array, splicing according to the key value pair, and using the ‘&’ link, get the key key in the merchant background in the last stitching of the string
      ```
-         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@xcloudgame.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
+         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
      
      ```
      
@@ -140,7 +140,7 @@ Tip: identification is required when the currency is BRL
                       "username":"APRO",
                       "buyer_ip":"127.0.0.1",
                       "browser":"safari",
-                      "email":"kongdexin@xcloudgame.com",
+                      "email":"kongdexin@pagsmile.com",
                       "out_uid":"out_uid",
                       "phone":"11941523675",
                       "identification":{
