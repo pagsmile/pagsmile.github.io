@@ -21,7 +21,7 @@ Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
 trade_no | String | Yes | 20 | Transaction ID generated after pagsmile orders | 2018011908344902008
 out_trade_no | String | Yes | 64 | Transaction ID of the corresponding merchant sent when the merchant requests the order | 
-trade_status | String | Yes | 20 | Returned order status | The order status currently returned contains（TRADE_SUCCESS、TRADE_REFUND、TRADE_CHARGEBACK、TRADE_DISPUTE、PAID_MAJOR、PAID_MINOR）
+trade_status | String | Yes | 20 | Returned order status | The order status currently returned contains（TRADE_SUCCESS、TRADE_REFUND、TRADE_CHARGEBACK、TRADE_DISPUTE、PAID_MAJOR、PAID_MINOR、TRADE_REFUSED）
 passback_params | String | Yes | 255 | Temporarily not be used, can be empty | 
 pay_channel | String | Yes | 255 | The corresponding payment channel | 
 total_amount | String | Yes | The total amount of orders | 
