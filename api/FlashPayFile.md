@@ -83,7 +83,7 @@ info | String | Yes | 128 | sucsess |
 
 >## 状态流程示意
 
-![](/assets/img/status_flow_levpay&lottery.jpg)
+
 
 
 >## 错误码
