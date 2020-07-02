@@ -45,7 +45,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
      
         cpf_no 和username是50284414727和Test User Name
     
-     支付银行参数目前支持四个银行分别是itau,santander,bradesco,banco-do-brasil 
+     支付银行参数目前支持银行分别是itau,santander,bradesco,banco-do-brasil,caixa 
      
    
      
