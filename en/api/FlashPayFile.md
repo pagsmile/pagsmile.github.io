@@ -1,39 +1,39 @@
-# 直连现金闪付凭证上传接口
+# FlashPay File Upload Interface
 
->## 接口链接
+>## URL
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/flashpayfile
-    正式URL地址：https://paychannel.pagsmile.com/api/flashpayfile
+    Test：https://paychanneldev.pagsmile.com/api/flashpayfile
+    Prod：https://paychannel.pagsmile.com/api/flashpayfile
     
->## 请求方式
+>## Request Method
 
      POST
 
->## 数据格式   
+>## Data Format    
   
     json
     
->## 请求参数
+>## Request Parameters
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
-app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-trade_no | String | Yes | 19 | pagsmile 订单号  | 2019101700241026014
-payment_voucher_name | String | Yes | 10 | 银行凭据文件名称 jpeg/jpg/png/pdf | payment_voucher.jpg
-payment_voucher_file | base64 image | Yes | 10 |  银行凭据base64 文件  | 
-personal_id_name | String | No | 10 | 个人身份证文件名称 | personal_id.jpg
-personal_id_file | base64 image | No | 10 | base64 文件 | 
-proof_of_address_name | String | No | 10 |  个人住址文件名称 |  proof_of_address.jpg
-proof_of_address_file | base64 image | No | 10 |  base64 文件|  
-sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
+merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
+trade_no | String | Yes | 19 | Order number of Pagsmile  | 2019101700241026014
+payment_voucher_name | String | Yes | 10 | Name of payment voucher jpeg/jpg/png/pdf | payment_voucher.jpg
+payment_voucher_file | base64 image | Yes | 10 |  Payment voucher base64 file  | 
+personal_id_name | String | No | 10 | Personal ID document name | personal_id.jpg
+personal_id_file | base64 image | No | 10 | base64 file | 
+proof_of_address_name | String | No | 10 |  Personal address document name |  proof_of_address.jpg
+proof_of_address_file | base64 image | No | 10 |  base64 file |  
+sign | String | Yes | 32 | Signature string of merchant request's parameters | The signature value calculated by the signature algorithm, see the signature generation algorithm for details
 
-     说明： 当前订单状态必须是TRADE_PROCESSING，当订单金额大于2000金额时候需要上传个人身份证凭证和个人住址凭证,所有凭证限制在5M以内
+     Note: When the current order status is TRADE_PROCESSING and the order amount is greater than 2000, you need to upload personal ID document and personal address document, all documents are limited to 5M.
      
    
      
 
->## 请求样例
+>## Request Sample
 
 ```
     {
@@ -51,17 +51,17 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 
 ``` 
 
->## 返回结果
+>## Return Results
 
-  请求成功后，返回数据在info中。返回的数据按照json格式返回。
+  After the request is sent successfully, the returned data is in "info" and in json format.
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | 返回状态码 (成功为200)| 200
+code | String | Yes | 16 | Status code (Success is 200)| 200
 info | String | Yes | 128 | sucsess | 
 
 
->## 成功样例
+>## Success Sample
 
 ```
     { 
@@ -71,7 +71,7 @@ info | String | Yes | 128 | sucsess |
     
 ```
 
->## 失败样例
+>## Failed Sample
 
 ```
     { 
@@ -81,28 +81,28 @@ info | String | Yes | 128 | sucsess |
     
 ```  
 
->## 状态流程示意
+>## Status Flow Diagram
 
 
 
 
->## 错误码
+>## Error Code
 
-错误码 | 描述 | 原因 | 解决方案
+Code | Description | Reason | Solution
 ---  | ---  | ---  | ---
-402 | SIGN_VERIFY_FAILURE | 签名错误 | 根据给定的规则设置签名，并确认参数sign字段设置正确。
-403 | SIGN_ISNULL | 未签名 | 检查参数中的签名字段是否正确设置。
-405 | SIGN_TYPE_ISNULL | 签名类型未设置 | 检查参数设置。
-803 | TRADE_CURRENCY_ISNULL | 币种信息未设置 | 检查参数设置。
-502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
-507 | MERCHANT_ID_NOT_ACTIVE | 商户号未激活 | 联系客服查看未激活原因。
-602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
-930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
-512 | MERCHANT_TRADE_NO_ISNULL | 商户订单号为空 | 检查参数设置。。
+402 | SIGN_VERIFY_FAILURE | Signature error | Set the signature according to the given rule and confirm that the parameter sign field is set correctly.
+403 | SIGN_ISNULL | Unsigned | 	Check if the signature field in the parameter is set correctly.。
+405 | SIGN_TYPE_ISNULL | Signature type not set	 | Check the parameter settings.
+803 | TRADE_CURRENCY_ISNULL | Currency information is not set | Check the parameter settings.
+502 | MERCHANT_ID_INVALID | Merchant number is not available | Check if the merchant number in the parameter is correct.
+507 | MERCHANT_ID_NOT_ACTIVE | Merchant number is not activated	 | Contact customer service to see the reason for the inactivity.
+602 | APP_ID_INVALID | 	APPID is not available | Check if the APP number in the parameter is correct.
+930 | USERNAME_ISNULL | The username is empty | Check the parameter settings.
+512 | MERCHANT_TRADE_NO_ISNULL | The order number is empty | Check the parameter settings.
 
 
-更详细列表请参照[返回状态和错误一览](ReturnResult)
+For a more detailed list, please refer to [Return Status and Error List](ReturnResult)
 
->## 签名生成算法  
+>## Signature Generation Algorithm  
 
-参考[直连签名算法](DriectSign)
+Please refer to [Direct Signature Algorithm](DriectSign)
