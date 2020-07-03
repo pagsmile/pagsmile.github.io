@@ -81,10 +81,6 @@ info | String | Yes | 128 | sucsess |
     
 ```  
 
->## Status Flow Diagram
-
-
-
 
 >## Error Code
 
