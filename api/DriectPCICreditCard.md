@@ -4,7 +4,7 @@
 >## 接口链接
 
     测试URL地址：https://paychanneldev.pagsmile.com/api/creditpci
-    正式URL地址：https://paychannel.pagsmile.com/api/creditdopci 
+    正式URL地址：https://paychannel.pagsmile.com/api/creditpci 
     
 >## 请求方式
 
