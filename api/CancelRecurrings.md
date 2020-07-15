@@ -19,7 +19,7 @@
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-trade_no | String | Yes | 255 | 请求退款的pagsmile订单号 | 2018022604263906847
+trade_no | String | Yes | 255 | 请求取消的pagsmile订单号 | 2018022604263906847
 sign | String | Yes | 32 | 签名 | 
 
 注：必须在订单成功一天后才可以使用取消权限
