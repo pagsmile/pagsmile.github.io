@@ -1,48 +1,48 @@
-# 订阅订单取消接口
+# Cancellation API of Recurring Payments
 
->## 接口链接
+>## URL
 
-    测试URL地址: https://paychanneldev.pagsmile.com/api/cancelsubscription
-    正式URL地址: https://paychannel.pagsmile.com/api/cancelsubscription
+    Test: https://paychanneldev.pagsmile.com/api/cancelsubscription
+    Prod: https://paychannel.pagsmile.com/api/cancelsubscription
     
->## 请求方式
+>## Request Method
 
      POST
 
->## 数据格式   
+>## Data Format   
   
-    请求返回都为json    
+    Json    
 
->## 请求参数
+>## Request Parameters
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
-app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-trade_no | String | Yes | 255 | 请求退款的pagsmile订单号 | 2018022604263906847
-sign | String | Yes | 32 | 签名 | 
+merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 1024201708140012289
+app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant | 2017051914172236111
+trade_no | String | Yes | 255 | Pagsmile order ID of the transaction that needs to be cancelled | 2018022604263906847
+sign | String | Yes | 32 | Signature | 
 
-注：必须在订单成功一天后才可以使用取消权限
+Note：Only one day after the payment is made successfully, you can cancel the recurring payment.
 
->## 返回结果 
+>## Return Parameters 
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Parameter | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | 返回状态码 | 成功:200 
-info | String | Yes | 128 | 返回信息 | 成功: success
+code | String | Yes | 16 | Return status code | Success:200 
+info | String | Yes | 128 | Return info | Success: success
  
->## 错误码
+>## Error Code
 
-错误码 | 描述 | 原因 | 解决方案
+Code | Description | Reason | Solution
 ---  | ---  | ---  | ---
-401 | SYSTEM_PARAM_ERROR | 包类型不正确 | 检查参数设置。
-402 | SIGN_VERIFY_FAILURE | 签名错误 | 根据给定的规则设置签名，并确认参数sign字段设置正确。
-502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
-508 | MERCHANT_STATUS_ISLOCK | 商户状态不可用 | 检查参数中的商户号是否正确或尝试联系客服。
-759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
+401 | SYSTEM_PARAM_ERROR | The parameter is incorrect | Check the parameter settings. 
+402 | SIGN_VERIFY_FAILURE | Sign error | Set the signature according to the given rule and confirm that the parameter sign field is set correctly.
+502 | MERCHANT_ID_INVALID | The merchant ID is unavailable | Check the merchant ID.
+508 | MERCHANT_STATUS_ISLOCK | The merchant status is lock | Check if the merchant ID is correct or contact Pagsmile.
+759 | EMAIL_ISNULL | The email field is blank | Check the parameter settings.
 
-更详细列表请参照[返回状态和错误一览](ReturnResult)
+For more details please refer to [Return Status and Error List](ReturnResult)
 
->## 签名生成算法  
+>## Signature generation algorithm 
 
-参考[签名算法](DriectSign)
+Please refer to [Signature generation algorithm](DriectSign)
