@@ -15,7 +15,7 @@
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-method | String | No | 11 | 支付渠道ID | 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander)|
+method | String | No | 11 | 支付渠道ID | 124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander)|
 out_order_no | String | Yes | 64 | 商户订单号 | 
 out_uid | String | Yes | 64 | 商户的用户ID | 
 subject | String | Yes | 255 | 订单标题 |
@@ -35,6 +35,14 @@ return_url | String | No | 255 | 服务器同步返回的页面http/https路径�
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
+
+注：method 支付渠道ID
+
+124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander)
+
+订阅付费由商家发起的付款。这种付款按照月份扣费，用户第一次支付成功后，下月支付时间于上月支付时间相同，客户同意商户无需额外的客户同意即可扣款。订阅付费会在扣款失败和商户主动取消后停止扣款。
+
+Pagsmile会邮件通知持卡人每次订阅的创建、任何成功/失败的付款和订阅状态。
 
 测试数据:  
 
