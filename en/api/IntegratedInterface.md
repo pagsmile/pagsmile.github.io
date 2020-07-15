@@ -36,7 +36,9 @@ sign_type | String | Yes | 10 | Only MD5 is supported | MD5
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
 Note: Method  Payment channal ID
+
 124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander)
+
 Recurring payment is a payment initiated by a merchant. Such payments are deducted monthly. After the client's first payment is successful, the next month's payment time is the same as the previous month's payment time, and the merchant can deduct the money without additional client consent. Recurring payment will stop the deduction after the deduction fails or the merchant cancels it.
 
 Pagsmile will notify the cardholder by email of the creation of each payment, any successful/failed payments and the status of the payments.
