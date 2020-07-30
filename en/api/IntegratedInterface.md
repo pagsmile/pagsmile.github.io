@@ -53,6 +53,18 @@ Credit card(MXN) | 4075595716483764 | visa |  | APRO | 123 | 12/2020
 Credit card(MXN) | 5474925432670366 | mastercard |  | APRO | 123 | 12/2020
 Deposit Express | / | / | 50284414727 | Test User Name | / | /
 
+具体到账日期参照：  
+
+region | method | amount limit | settled time
+Brazil | Credit Card/Card virtual | 0.5~50000 (BRL) | Instant, or 1~4 day(s) when risk-controlled  
+Brazil | Boleto： | 5~ (BRL) | In 5m~3d after paid  
+Brazil | Deposit Express | 4~50000 (BRL) | In 4 hour after paid  
+Brazil | Lottery： | 4~2000 (BRL) | In 1 hour after paid  
+Mexico | Credit Card | 5~200000 (MXN) | Instant, or 1~4 day(s) when risk-controlled  
+Mexico | OXXO | 5~10000 (MXN) | In 1~2 day(s) after paid  
+Mexico | Citibanamex/Santander/BBVA Bancomer | 10~40000 (MXN) | In 1 day after paid  
+Philippines | GCash | 1~10000 (PHP) | Instant  
+
 >## Response Parameters
 
 NAME | TYPE | REQUIRED | MAX LENGTH | DESC | EXAMPLE
