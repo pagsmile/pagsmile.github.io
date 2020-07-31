@@ -53,7 +53,7 @@ Credit card(MXN) | 4075595716483764 | visa |  | APRO | 123 | 12/2020
 Credit card(MXN) | 5474925432670366 | mastercard |  | APRO | 123 | 12/2020
 Deposit Express | / | / | 50284414727 | Test User Name | / | /
 
-具体到账日期参照：  
+Reference arrival time:  
 
 region | method | amount limit | settled time
 Brazil | Credit Card/Card virtual | 0.5~50000 (BRL) | Instant, or 1~4 day(s) when risk-controlled  
