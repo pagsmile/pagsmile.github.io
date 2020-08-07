@@ -25,12 +25,12 @@ out_trade_no | String | Yes | 64 | 商户请求下单时发送的对应商户的
 trade_status | String | Yes | 20 | 返回的订单状态 | 目前返回的订单状态包含（TRADE_NORMAL、TRADE_CANCEL、RISK_CONTROL、TRADE_REFUSE）
 passback_params | String | Yes | 255 | 暂时没有用到，传空即可 | 
 pay_channel | String | Yes | 255 | 对应的支付渠道 | 
-total_amount | String | Yes | 订单总金额 | 
+total_amount | String | Yes | 12 | 订单总金额 | 
 currency | String | Yes | 3 | 币种 | 
 create_time | String | Yes | 20 | 订阅付费开启时间
 update_time | String | Yes | 20 | 订阅付费状态更新时间
 issue | String | Yes | 3 | 订阅付费当前期数
-version | String Yes | 3 | 固定为：1.0 即可 | 
+version | String | Yes | 3 | 固定为：1.0 即可 | 
 sign_type | String | Yes | 32 | 固定为：MD5 即可 |  
 sign | String | Yes | 32 | 参照[签名算法](DriectSign)
 
