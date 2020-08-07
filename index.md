@@ -37,6 +37,8 @@ layout: default
 
 [返回状态和错误一览](api/ReturnResult)
 
+[订阅付费结果通知](api/RecurringPaymentCallBack)
+
 # [](#fcontrol)风控平台
 
 [风控CPF邮箱校验绑定接口说明](api/CheckEmailInfo)  
