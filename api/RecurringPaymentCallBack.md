@@ -19,7 +19,7 @@
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
-subscription_no | String | 20 | pagsmile订阅付费的ID | 2046010108310242020
+subscription_no | String | Yes | 20 | pagsmile订阅付费的ID | 2046010108310242020
 trade_no | String | Yes | 20 | pagsmile订阅付费生成的交易ID | 2018011908344902008
 out_trade_no | String | Yes | 64 | 商户请求下单时发送的对应商户的交易ID | 
 trade_status | String | Yes | 20 | 返回的订单状态 | 目前返回的订单状态包含（TRADE_NORMAL、TRADE_CANCEL、RISK_CONTROL、TRADE_REFUSE）
