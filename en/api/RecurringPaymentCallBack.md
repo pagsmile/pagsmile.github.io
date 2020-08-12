@@ -1,45 +1,45 @@
-># 订阅付费回调通知
+># Recurring Payment Callback Notification
 
-订阅付费开启后，pagsmile会把相关支付结果和用户信息发送给商户，商户需要接收处理，并返回应答。
+After the recurring payment is turned on, pagsmile will send the relevant payment results and user information to the merchant, who needs to receive and process, and return a response("success").
 
-对后台通知交互时，如果pagsmile收到商户的应答不是成功或超时，pagsmile认为通知失败，并会通过一定的策略定期重新发起通知，尽可能提高通知的成功率，但pagsmile不保证通知最终能成功。 （通知频率为4/10/10/30/60/120，单位：分钟）
+When interacting with notifications, if pagsmile receives a response from the merchant that is not "success" or timed out, Pagsmile considers that the notification has failed, and will periodically re-initiate notifications through certain strategies to increase the success rate of the notification as much as possible, but Pagsmile does not guarantee that the notification will eventually succeed . (The notification frequency is 4/10/10/30/60/120, unit: minute)
 
-注意：同样的通知可能会多次发送给商户系统。商户系统必须能够正确处理重复的通知。
-推荐的做法是，当收到通知进行处理时，首先检查对应业务数据的状态，判断该通知是否已经处理过，如果没有处理过再进行处理，如果处理过直接返回结果成功。在对业务数据进行状态检查和处理之前，要采用数据锁进行并发控制，以避免函数重入造成的数据混乱。
+Note: The same notification may be sent to the merchant system multiple times. The merchant system must be able to properly handle duplicate notifications.
+The recommended approach is to first check the status of the corresponding business data when receiving a notification for processing, to determine whether the notification has been processed, if it has not been processed, then process it, and if it is processed, return the result directly. Before the status check and processing of business data, data locks should be used for concurrency control to avoid data confusion caused by function reentry.
 
-特别提醒：商户系统对于支付结果通知的内容一定要做签名验证,并校验返回的订单金额是否与商户侧的订单金额一致，防止数据泄漏导致出现“假通知”，造成资金损失。
+Special reminder: The merchant system must perform signature verification for the content of the payment result notification, and verify whether the returned order amount is consistent with the order amount on the merchant side to prevent data leakage from causing "false notifications" and causing financial losses.
 
-># 接口链接
+># Callback address
 
-该链接是通过【下单API】中提交的参数notify_url设置，如果链接无法访问，商户将无法接收到pagsmile通知。
+The address is set by the parameter notify_url submitted in the [create order API]. If the address is not accessible, the merchant will not receive Pagsmile notifications.
 
-通知url必须为直接可访问的url，不能携带参数。示例：notify_url：“https://callback.pagsmile.com/pay/callback.json”
+The callback address must be a directly accessible URL and cannot have parameters. Example：notify_url：“https://callback.pagsmile.com/pay/callback.json”
 
->## 通知参数
+>## Callback Parameter
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-subscription_no | String | Yes | 20 | pagsmile订阅付费的ID | 2046010108310242020
-trade_no | String | Yes | 20 | pagsmile订阅付费生成的交易ID | 2018011908344902008
-out_trade_no | String | Yes | 64 | 商户请求下单时发送的对应商户的交易ID | 
-trade_status | String | Yes | 20 | 返回的订单状态 | 目前返回的订单状态包含（TRADE_NORMAL、TRADE_CANCEL、RISK_CONTROL、TRADE_REFUSE）
-passback_params | String | Yes | 255 | 暂时没有用到，传空即可 | 
-pay_channel | String | Yes | 255 | 对应的支付渠道 | 
-total_amount | String | Yes | 12 | 订单总金额 | 
-currency | String | Yes | 3 | 币种 | 
-create_time | String | Yes | 20 | 订阅付费开启时间
-update_time | String | Yes | 20 | 订阅付费状态更新时间
-issue | String | Yes | 3 | 订阅付费当前期数
-version | String | Yes | 3 | 固定为：1.0 即可 | 
-sign_type | String | Yes | 32 | 固定为：MD5 即可 |  
-sign | String | Yes | 32 | 参照[签名算法](DriectSign)
+subscription_no | String | Yes | 20 | Subscription ID of Pagsmile | 2046010108310242020
+trade_no | String | Yes | 20 | Transaction ID of Pagsmile | 2018011908344902008
+out_trade_no | String | Yes | 64 | Transaction ID of Merchant | 
+trade_status | String | Yes | 20 | The status of that order | The current order status returned contains（TRADE_NORMAL、TRADE_CANCEL、RISK_CONTROL、TRADE_REFUSE）
+passback_params | String | Yes | 255 | Temporarily not used, just pass in the blank | 
+pay_channel | String | Yes | 255 | Corresponding payment channel | 
+total_amount | String | Yes | 12 | The total amount of the order | 
+currency | String | Yes | 3 | Currency | 
+create_time | String | Yes | 20 | Recurring payment start time | 
+update_time | String | Yes | 20 | Recurring payment status update time |
+issue | String | Yes | 3 | Installment number |
+version | String | Yes | 3 | Fixed as: 1.0 | 
+sign_type | String | Yes | 32 | Fixed as: MD5 |  
+sign | String | Yes | 32 | Refer to [Signature Algorithm](DriectSign)
 
->### 返回状态对应关系  
+>### Return Status  
 
-更详细列表请参照[返回状态和错误一览](ReturnResult)
+For more details please refer to [Return Status and Error List](ReturnResult)
 
->## 返回结果
+>## Return Result
 
-参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
+Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-result | String | Yes | 32 | 返回结果 | 'success':成功
+result | String | Yes | 32 | Return result | 'success':Success
