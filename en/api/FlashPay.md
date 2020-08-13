@@ -37,7 +37,7 @@ customer.cpf_no | String | Yes | 64 | CPF Number |
 customer.username | String | Yes | 255 | User Name | 
 customer.buyer_ip | String | No | 255 | User’s ipv4 address | 
 customer.browser | String | No | 255 | User's browser type|
-customer.phone | String | Yes | 9 | User’s Phone number, 8 or 9 digits | 
+customer.phone | String | Yes | 255 | User’s Phone number, 8 or 9 digits | 
 sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
 
      Note: The currency currently only supports BRL, which is used in the test environment.
