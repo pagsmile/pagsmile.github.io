@@ -38,7 +38,7 @@ customer.cpf_no | String | Yes | 64 | CPF号码 |
 customer.username | String | Yes | 255 | 用户姓名 | 
 customer.buyer_ip | String | No | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | No | 255 | 商户的用户浏览器类型|
-customer.phone | String | Yes | 255 | 商户的用户的电话，8位或9位数字| 
+customer.phone | String | Yes | 14 | 商户的用户的电话，8位或9位数字| 
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
      说明：币种目前只支持USD和BRL，在测试环境中使用的

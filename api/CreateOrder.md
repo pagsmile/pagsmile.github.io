@@ -34,7 +34,7 @@ notify_url | String | No | 255 | 服务器主动通知商户服务器里指定�
 return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | 地址会拼接上参数两个参数 https://www.pagsmile.com/success.html？trade_no=xxx&out_trade_no=xxx trade_no pagsmile 订单号 out_trade_no 商户订单号
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
-
+ 
 
 注：method 支付渠道ID
 
