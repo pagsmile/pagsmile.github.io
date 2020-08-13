@@ -34,3 +34,5 @@ layout: default
 [Order Query API](api/CheckOrder)
 
 [Result List](api/ReturnResult)
+
+[Subscription CallBack Notification](api/RecurringPaymentCallBack)
