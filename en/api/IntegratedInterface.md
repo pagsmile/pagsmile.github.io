@@ -37,7 +37,7 @@ sign | String | Yes | 32 | The signature string of the merchant request paramete
 
 Note: Method  Payment channal ID
 
-124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander) ; 115(GCash)
+124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander) ; 115(GCash) ; 118(wallet)
 
 Recurring payment is a payment initiated by a merchant. Such payments are deducted monthly. After the client's first payment is successful, the next month's payment time is the same as the previous month's payment time, and the merchant can deduct the money without additional client consent. Recurring payment will stop the deduction after the deduction fails or the merchant cancels it.
 

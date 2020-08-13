@@ -38,7 +38,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 
 注：method 支付渠道ID
 
-124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander) ; 115(GCash) ; 121(Net Banking) ; 122(Paytm) ; 123(UPI)
+124(Recurrings) ; 101(Credit Card) ; 103(Boleto) ; 106(Deposite Express) ; 107(Pagamento na loterica) ; 108(OXXO) ; 109(Citibanamex) ; 111(BBVA Bancomer) ; 112(Santander) ; 115(GCash) ; 118(wallet) ; 121(Net Banking) ; 122(Paytm) ; 123(UPI) 
 
 
 订阅付费由商家发起的付款。这种付款按照月份扣费，用户第一次支付成功后，下月支付时间于上月支付时间相同，客户同意商户无需额外的客户同意即可扣款。订阅付费会在扣款失败和商户主动取消后停止扣款。
