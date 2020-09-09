@@ -4,14 +4,14 @@
 
     测试URL地址: https://paychanneldev.pagsmile.com/api/refundapply
     正式URL地址: https://paychannel.pagsmile.com/api/refundapply
-    
+
 >## 请求方式
 
      POST
 
 >## 数据格式   
-  
-    json    
+
+    JSON    
 
 >## 请求参数
 
@@ -20,7 +20,7 @@
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
 trade_no | String | Yes | 255 | 请求退款的pagsmile订单号 | 2018022604263906847
-out_request_no | String | Yes | 255 | 请求退款的商户流水号(成功后会有异步通知) |  2018022604263906847 
+out_request_no | String | Yes | 255 | 请求退款的商户流水号(成功后会有异步通知) |  2018022604263906847
 email | String | Yes | 255 | 请求退款的邮箱
 refund_amount | Float | Yes | 255 | 请求退款金额
 description | String | No | 255 | 退款描述
@@ -32,7 +32,7 @@ bank_name | String | No（bank_info=yes Yes） | 50 | 退款人银行名称（�
 agency | String | No（bank_info=yes Yes） | 6 | 退款人支行代码
 account_no | Int | No（bank_info=yes Yes） | 20 | 退款人银行账号
 account_type | Int | No（bank_info=yes Yes） | 1 | 退款人银行账号类型 1 savings_account 2 checking_account
-sign | String | Yes | 32 | 签名 | 
+sign | String | Yes | 32 | 签名 |
 
 提示：发送退款请求时，该笔订单必须是成功状态。
      bank_info 信息不是必填信息，是为方便用户在退款时，用户在已经提供个人转账账户信息后，方便直接收到退款。
