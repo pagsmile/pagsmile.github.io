@@ -32,9 +32,9 @@ timeout_express | String | Yes | 255 | Order validity | 1d；1h；1m
 passback_params | String | Yes | 255 | Request return parameters |
 notify_url | String | No | 255 | The server actively notifies the http/https path of the page specified in the merchant server. | https://www.pagsmile.com/openapi/notify.json
 return_url | String | No | 255 | The http/https path of the page returned synchronously by the server. | https://www.pagsmile.com/success.html
-billing_cycle | String | No | 4 | 订阅付费的计费周期（日；月；年） | 1D；1M；1Y
-trial_price | String | No | 10 | 订阅付费首单优惠价格，精确到小数点后两位 | 99.99
-trial_period | String | No | 4 | 订阅付费首单优惠的持续时间（日；月；年） | 1D；1M；1Y
+billing_cycle | String | No | 4 | Billing period cycle of recurring payment（day；month；year） | 1D；1M；1Y
+trial_price | String | No | 10 | The first order discount price, accurate to two decimal places | 99.99
+trial_period | String | No | 4 | Duration of the first order (day; month; year) | 1D；1M；1Y
 sign_type | String | Yes | 10 | Only MD5 is supported | MD5
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
