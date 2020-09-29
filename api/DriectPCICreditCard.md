@@ -37,6 +37,8 @@ customer.identification.type | String | Yes | 50 | 用户信息类型 |  CPF
 customer.identification.number | String | Yes | 50 | 用户信息id |  50284414727
 customer.username | String | Yes | 255 | 用户姓名 | 用户信息
 customer.zip_code | String | Yes | 10 | 用户邮编 | 用户邮编 
+customer.country | String | NO | 10 | 用户所在国家 | 用户所在国家 
+customer.city | String | NO | 10 | 用户所在城市 | 用户所在城市 
 customer.bill_address | String | NO | 255 | 用户账单地址 | 用户账单地址
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
