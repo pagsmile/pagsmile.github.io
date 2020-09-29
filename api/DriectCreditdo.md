@@ -34,6 +34,8 @@ customer.out_uid | String | Yes | 255 | 商户的用户ID |
 customer.email | String | Yes | 255 | 邮箱地址 |  
 customer.cpf_no | String | Yes | 64 | CPF号码 | 
 customer.username | String | Yes | 255 | 用户姓名 | 用户信息
+customer.zip_code | String | Yes | 10 | 用户邮编 | 用户邮编 
+customer.bill_address | String | NO | 255 | 用户账单地址 | 用户账单地址
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
 customer.phone | String | NO | 255 | 商户的用户的电话|
@@ -136,6 +138,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                 'browser' => 'safari', //需要根据实际情况更换成商户自己的信息
                 'email' => 'kongdexin@pagsmile.com', //需要根据实际情况更换成商户自己的信息
                 'cpf_no' => '50284414727',  //需要根据实际情况更换成商户自己的信息
+                'zip_code' => '38082365',  //需要根据实际情况更换成商户自己的信息
+                'bill_address' => 'city test',  //需要根据实际情况更换成商户自己的信息
                 'out_uid' => 'out_uid', //需要根据实际情况更换成商户自己的信息
                 'phone' => '11941523675', //需要根据实际情况更换成商户自己的信息
             },
