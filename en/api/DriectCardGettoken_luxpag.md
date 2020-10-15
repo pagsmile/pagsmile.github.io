@@ -78,7 +78,7 @@ Code | Description | Reason | Solution
 
 For a more detailed list, please refer to [Return status and error list](ReturnResult)
 
->## Signature algorithm
+>## Signature algorithm  
 
 Please refer to [Signature algorithm](SignatureAlgorithm)
 
