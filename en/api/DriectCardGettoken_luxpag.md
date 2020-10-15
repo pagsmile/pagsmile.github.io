@@ -2,7 +2,7 @@
 
 >## API URL
 
-    Test environment: https://paydev.pagsmile.com/api/getcardtoken
+    Test environment: https://paychanneldev.pagsmile.com/api/getcardtoken
     Prod environment: https://pay.luxpag.com/api/getcardtoken
 
 >## Request format

@@ -3,7 +3,7 @@
 
 >## API URL
 
-    Test environment：https://paydev.luxpag.com/api/creditpci
+    Test environment：https://paychanneldev.luxpag.com/api/creditpci
     Prod environment：https://pay.luxpag.com/api/creditpci 
     
 >## Request method
