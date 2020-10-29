@@ -3,8 +3,8 @@
 
 >## API URL
 
-    Test environment：https://paychanneldev.pagsmile.com/api/creditpci
-    Prod environment：https://paychannel.pagsmile.com/api/creditpci 
+    Test environment：https://paychanneldev.luxpag.com/api/creditpci
+    Prod environment：https://pay.luxpag.com/api/creditpci 
     
 >## Request method
 
@@ -29,7 +29,7 @@ payment.content | String | Yes | 255 | Order content |
 payment.token | String | Yes | 255 | Credit card payment voucher (valid for 7 days) |
 payment.installments | String | Yes | 12 | Credit card installments | 1 no installments, up to 12
 payment.payment_method_id | String | Yes | 16 | Credit card issuing organization |
-payment.notify_url | String | Yes | 255 | Http/https path of specific page in the server of merchant to which our server will actively send notifications | https://www.pagsmile.com
+payment.notify_url | String | Yes | 255 | Http/https path of specific page in the server of merchant to which our server will actively send notifications | https://www.test.com
 customer.out_uid | String | Yes | 255 | User ID in merchant's system |  
 customer.email | String | Yes | 255 | Email of the user |  
 customer.identification | String | Yes(NO) | 64 | User information mark | Required when currency is BRL
@@ -78,13 +78,13 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | The
               'payment_method_id' => 'visa',
               'installments' => 3,
               'token' => '65800b24cb695abc9e1fca12a65d7106',
-              'notify_url' => 'https://www.pagsmile.com',
+              'notify_url' => 'https://www.test.com',
           ],
           'customer' => [
               'username' => 'APRO',
               'buyer_ip' => '127.0.0.1',
               'browser' => 'safari',
-              'email' => 'kongdexin@pagsmile.com',
+              'email' => 'kongdexin@test.com',
               'cpf_no' => '50284414727',
               'out_uid' => 'out_uid',
               'phone' => '11941523675',
@@ -101,9 +101,9 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | The
      ```
          [
              'app_id' => '2017051914172236111',
-             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
+             'customer' => '{"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@test.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}',
              'merchant_no' => '102320170519',
-             'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}',
+             'payment' => '{"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.test.com"}',
              'sign_type' => 'md5',
          ]
          
@@ -112,7 +112,7 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | The
  3. According to the array according to the key-value pair splicing, and use the'&' link, the last splicing of the string to get the key pair in the merchant backstage
   
      ```
-         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@pagsmile.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.pagsmile.com"}&sign_type=md5&key=MD5Key
+         app_id=2017051914172236111&customer={"username":"APRO","buyer_ip":"127.0.0.1","browser":"safari","email":"kongdexin@test.com","out_uid":"out_uid","phone":"11941523675","identification":{"type":"CPF","number":"50284414727"}}&merchant_no=102320170519&payment={"out_order_no":"test-003630","order_amount":2000,"currency":"BRL","subject":"test-subject","content":"test-content","payment_method_id":'visa',"installments":3,"token":"65800b24cb695abc9e1fca12a65d7106","notify_url":"https://www.test.com"}&sign_type=md5&key=MD5Key
      
      ```
      
@@ -139,13 +139,13 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | The
                     "paymentMethodId":"visa",
                     "installments":3,
                     "token":"ce0559644ebe1251fa036ff95ea790d6",
-                    "notify_url":"https:\/\/www.pagsmile.com"
+                    "notify_url":"https:\/\/www.test.com"
                    },
         "customer":{
                       "username":"APRO",
                       "buyer_ip":"127.0.0.1",
                       "browser":"safari",
-                      "email":"kongdexin@pagsmile.com",
+                      "email":"kongdexin@test.com",
                       "out_uid":"out_uid",
                       "phone":"11941523675",
                       "zip_code":"38082365",   

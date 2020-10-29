@@ -33,6 +33,8 @@ customer.out_uid | String | Yes | 255 | Merchant User ID |
 customer.email | String | Yes | 255 | Email Address |
 customer.cpf_no | String | Yes | 64 | CPF Number |
 customer.username | String | Yes | 255 | User Name | User Information
+customer.zip_code | String | Yes | 10 | User Zip Code | User Zip Code
+customer.bill_address | String | NO | 255 | User billing address | User billing address
 customer.buyer_ip | String | NO | 255 | Merchant user ipv4 address |
 customer.browser | String | NO | 255 | User's browser type |
 customer.phone | String | NO | 255 | Phone of the merchant's user|
@@ -76,6 +78,8 @@ sign | String | Yes | 32 | Signature string of merchant request parameters | Sig
                   ],
                   'customer' => [
                       'username' => 'APRO',
+                      'phone' => '11941523675',
+                       'zip_code'=>'38082365',   
                       'buyer_ip' => '127.0.0.1',
                       'browser' => 'safari',
                       'email' => 'kongdexin@pagsmile.com',
