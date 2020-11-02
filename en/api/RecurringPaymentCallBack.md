@@ -8,7 +8,7 @@ Note: The same notification may be sent to the merchant system multiple times. T
 The recommended approach is to first check the status of the corresponding business data when receiving a notification for processing, to determine whether the notification has been processed, if it has not been processed, then process it, and if it is processed, return the result directly. Before the status check and processing of business data, data locks should be used for concurrency control to avoid data confusion caused by function reentry.
 
 Special reminder: The merchant system must perform signature verification for the content of the payment result notification, and verify whether the returned order amount is consistent with the order amount on the merchant side to prevent data leakage from causing "false notifications" and causing financial losses.
-订阅付费的订单回调通知包括两种：1.订阅主订单的回调通知（详见：[通知参数](#dasd)） 2.订阅子订单的回调通知（详见：[订单回调通知](CallBack)）
+订阅付费的订单回调通知包括两种：1.订阅主订单的回调通知（详见：[通知参数](#jump)） 2.订阅子订单的回调通知（详见：[订单回调通知](CallBack)）
 
 ># Callback address
 
@@ -16,7 +16,7 @@ The address is set by the parameter notify_url submitted in the [create order AP
 
 The callback address must be a directly accessible URL and cannot have parameters. Example：notify_url：“https://callback.pagsmile.com/pay/callback.json”
 
->## Callback Parameter
+>## Callback Parameter<span id="jump"></span>
 
 Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
