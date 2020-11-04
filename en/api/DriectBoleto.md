@@ -95,8 +95,13 @@ sign | String | Yes | 32 | The signature string of the merchant request paramete
 
 Name | Type | Required | Max Length | Description | Sample
 ---  | ---  | ---      | ---      | ---  | ---
-code | String | Yes | 16 | status code | 
-info | String | Yes | 128 | information | 
+code | String | Yes | 16 | Return to status code (success is 200) | 
+info.trade_no | String | Yes | 128 | Platform Order Number | 2017042311015505011
+info.out_trade_no | String | Yes | 128 | Merchant Order Number| test-003192
+info.total_amount | float | Yes | 10 | Order amount | 10
+info.currency | String | Yes | 10 | Currency | 
+info.barcode | String | Yes | 44 | barcode | 
+info.boleto_url | String | Yes | 10 | boleto url |
 
 >## Success Sample
 

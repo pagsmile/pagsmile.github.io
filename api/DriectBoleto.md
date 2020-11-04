@@ -99,6 +99,7 @@ info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
 info.out_trade_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 | 
+info.barcode | String | Yes | 10 | 支付条形码 | 
 info.boleto_url | String | Yes | 10 | 支付链接 |
 
 >## 成功样例
