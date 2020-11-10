@@ -5,7 +5,7 @@
 ```
      <?php
     
-    	$appkey = 'MD5Key';//商户后台app创建key
+    	$appkey = 'TEST_APP_KEY';//商户后台app创建key
     
         $order_time = date('Y-m-d H:i:s',time()); //下单时间
     
