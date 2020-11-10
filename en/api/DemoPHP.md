@@ -5,7 +5,7 @@
 ```
      <?php
     
-    	$appkey = 'MD5Key';
+    	$appkey = 'TEST_APP_KEY';
     
         $order_time = date('Y-m-d H:i:s',time()); 
     
