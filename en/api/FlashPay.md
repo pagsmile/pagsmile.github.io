@@ -104,7 +104,7 @@ Info.check_url | String | Yes | 10 | Payment voucher verification link |
 ```
     { 
     "code":"200",
-    "info":{"code":"200","info":{"trade_no":"2018070909341506645","currency":"USD","amount":100,"bank_name":itau,"out_order_no":"test-0011531140105503","account_owner":"Agillitas Solu","account_owner_document":"13.776.742\/0001-55","account_agency":"0910","account_number":"05841-1","bank_logo":"https:\/\/d2g83ydku1zde9.cloudfront.net\/pagsmile\/Itau-logo.png","check_url":"http:\/\/bit.ly\/2NFMlMK"}
+    "info":{"code":"200","info":{"trade_no":"2018070909341506645","currency":"BRL","amount":100,"bank_name":itau,"out_order_no":"test-0011531140105503","account_owner":"Agillitas Solu","account_owner_document":"13.776.742\/0001-55","account_agency":"0910","account_number":"05841-1","bank_logo":"https:\/\/d2g83ydku1zde9.cloudfront.net\/pagsmile\/Itau-logo.png","check_url":"http:\/\/bit.ly\/2NFMlMK"}
     
 ```
 

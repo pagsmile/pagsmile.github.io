@@ -41,7 +41,7 @@ customer.browser | String | No | 255 | 商户的用户浏览器类型|
 customer.phone | String | Yes | 14 | 商户的用户的电话，8位或9位数字| 
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
-     说明：币种目前只支持USD和BRL，在测试环境中使用的
+     说明：币种目前只支持   BRL，在测试环境中使用的
      
         cpf_no 和username是50284414727和Test User Name
     
@@ -117,7 +117,7 @@ info.check_url | String | Yes | 10 | 支付凭证验证链接 |
 ```
     { 
     "code":"200",
-    "info":{"code":"200","info":{"trade_no":"2018070909341506645","currency":"USD","amount":100,"bank_name":itau,"out_order_no":"test-0011531140105503","account_owner":"Agillitas Solu","account_owner_document":"13.776.742\/0001-55","account_agency":"0910","account_number":"05841-1","bank_logo":"https:\/\/d2g83ydku1zde9.cloudfront.net\/pagsmile\/Itau-logo.png","check_url":"http:\/\/bit.ly\/2NFMlMK"}
+    "info":{"code":"200","info":{"trade_no":"2018070909341506645","currency":"BRL","amount":100,"bank_name":itau,"out_order_no":"test-0011531140105503","account_owner":"Agillitas Solu","account_owner_document":"13.776.742\/0001-55","account_agency":"0910","account_number":"05841-1","bank_logo":"https:\/\/d2g83ydku1zde9.cloudfront.net\/pagsmile\/Itau-logo.png","check_url":"http:\/\/bit.ly\/2NFMlMK"}
     
 ```
 

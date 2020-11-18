@@ -15,7 +15,7 @@
 ---  | ---  | ---      | ---      | ---  | ---
 merchant_no | String | Yes | 20 | pagsmile分配给商户的ID | 1024201708140012289
 app_id | String | Yes | 20 | pagsmile分配给商户的应用ID | 2017051914172236111
-source | String | Yes | 3 | 源币种 | USD
+source | String | Yes | 3 | 源币种 | 
 target | String | Yes | 3 | 目标币种 | BRL
 sign | String | Yes | 32 | 签名 | 
 

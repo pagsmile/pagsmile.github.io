@@ -46,7 +46,7 @@ address.city | String | NO | 50 | User’s mailing address for the city| Osasco
 address.federal_unit | String | NO | 2-2 | State abbreviation for user’s mailing address| SP
 sign | String | Yes | 32 | The signature string of the merchant request parameter | The signature value calculated by the signature algorithm is detailed in the signature generation algorithm.
 
-     Note: The boleto currency currently only supports USD and BRL. The cpf and username used in the test environment are 50284414727 and Test User Name.
+     Note: The boleto currency currently only supports    BRL. The cpf and username used in the test environment are 50284414727 and Test User Name.
 
 >## Request Sample
 

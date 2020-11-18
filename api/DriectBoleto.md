@@ -45,7 +45,7 @@ address.city | String | No | 50 | 用户的通讯地址的城市| Osasco
 address.federal_unit | String | No | 2-2 | 用户的通讯地址的州| SP
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
-     说明：boleto 币种目前只支持USD和BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
+     说明：boleto 币种目前只支持   BRL，在测试环境中使用的cpf和username是50284414727和Test User Name
 
 >## 请求样例
 

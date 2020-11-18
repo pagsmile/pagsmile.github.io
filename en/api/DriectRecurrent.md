@@ -55,7 +55,7 @@ Address.city | String | No | 50 | User's mailing address for the city | Osasco
 Address.federal_unit | String | No | 2 | State abbreviation for user's mailing address | SP
 Sign | String | Yes | 32 | Signature string of merchant request parameters | Signature value calculated by signature algorithm, see signature generation algorithm
 
-     Note: The currency currently only supports USD and BRL, the cpf_no. and username which is used in the test environment    
+     Note: The currency currently only supports    BRL, the cpf_no. and username which is used in the test environment    
            is 50284414727 and Test User Name.
      
      Test card number, card type is not limited, recommend visa
