@@ -11,6 +11,8 @@ layout: default
 
 [直连boleto接口](api/DriectBoleto)
 
+[直连wallet接口](api/DriectWallet)
+
 [直连lottery接口](api/DriectLottery)
 
 [直连信用卡接口](api/DriectCreditHtml)
