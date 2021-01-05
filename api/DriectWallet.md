@@ -53,7 +53,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         "version":"1.0",
         "timeout_express":"15d",
         "sign_type":"md5",
-        "sign_type":"mercadopago",
+        "wallet":"mercadopago",
         "payment":{
                     "out_order_no":"test-003192",
                     "order_amount":10,
