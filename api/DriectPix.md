@@ -1,9 +1,9 @@
-# 直连钱包接口
+# 直连PIX接口
 
 >## 接口链接
 
-    测试URL地址：https://paychanneldev.pagsmile.com/api/wallet
-    正式URL地址：https://paychannel.pagsmile.com/api/wallet 
+    测试URL地址：https://paychanneldev.pagsmile.com/api/pix
+    正式URL地址：https://paychannel.pagsmile.com/api/pix 
     
 >## 请求方式
 
@@ -23,7 +23,6 @@ version | String | Yes | 10 | 调用的接口版本，固定为：1.0 | 1.0
 timeout_express | String | Yes | 255 | 订单有效期 | 一天的时间赋值为:1d或者24h或者1440m；
 timestamp | String | Yes | 19 | 发送请求的时间单位为秒 | 21516081919
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
-wallet | String | Yes | 20 | 钱包类型 | 支持 mercadopago，picpay，ame
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
 payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。金额范围（5-14000） BRL| 88.88
 payment.currency | String | Yes | 3 | 币种 | BRL 
@@ -33,15 +32,15 @@ payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器�
 payment.return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | 商户的用户ID |  
 customer.email | String | Yes | 255 | 邮箱地址 |  
-customer.cpf_no | String | Yes | 64 | CPF号码 | 商城商户此处为必填项；游戏商户选填。
+customer.id_type | String | Yes | 64 | CPF/CNPJ |  
+customer.id | String | Yes | 64 | 内容 | CPF/CNPJ 内容
 customer.username | String | Yes | 255 | 用户姓名 | 商城商户此处为必填项；游戏商户选填。
-customer.phone | String | Yes | 255 | 商户的用户的电话|
+customer.phone | String | NO | 255 | 商户的用户的电话|
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
-
 sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法计算得出的签名值，详见签名生成算法
 
-     说明：wallet 目前支持   mercadopago，picpay，ame，在测试环境中使用的cpf和username是50284414727和Test User Name
+     说明：pix 币种目前支持BRL 在测试环境中使用的cpf和username是50284414727和Test User Name
 
 >## 请求样例
 
@@ -53,7 +52,6 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
         "version":"1.0",
         "timeout_express":"15d",
         "sign_type":"md5",
-        "wallet":"mercadopago",
         "payment":{
                     "out_order_no":"test-003192",
                     "order_amount":10,
@@ -68,7 +66,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "buyer_ip":"127.0.0.1",
                     "browser":"safari",
                     "email":"test@pagsmile.com",
-                    "cpf_no":"50284414727",
+                    "id_type":"CPF",
+                    "id":"50284414727",
                     "out_uid":"out_uid",
                     "phone":"11941523675"
                     },
@@ -80,7 +79,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 
 >## 返回结果
 
-  请求成功后，wallet支付链接在info中。失败info返回错误信息，返回的数据按照json格式返回。
+  请求成功后，可以使用info.qrCode生成二维码。
 
 参数 | 类型 | 是否必填 | 最大长度 | 描述 | 示例值
 ---  | ---  | ---      | ---      | ---  | ---
@@ -89,8 +88,9 @@ info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
 info.out_trade_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 | 
-info.wallet | String | Yes | 10 | 钱包类型 | 
-info.wallet_url | String | Yes | 10 | 支付链接 |
+info.expiration | int | Yes | 10 | 过期时间秒数 | 
+info.qrCode | String | Yes | 10 | 二维码数值 | 
+info.qrCode_img | String | Yes | 10 | 二维码 |
 
 >## 成功样例
 
@@ -98,14 +98,16 @@ info.wallet_url | String | Yes | 10 | 支付链接 |
     {
         "code":"200",
         "info":
-            {   
-                "trade_no":"2021010502431091345",
-                "currency":"BRL",
-                "amount":100,
-                "out_trade_no":"test-003333",
-                "wallet":"picpay",
-                "wallet_url":"https://app.picpay.com/checkout/NWZmM2ZjNzBiMzRlYWUzZGUwM2EyNTky"
-             }
+            {
+            "trade_no":"2021010603595990948",
+            "currency":"BRL",
+            "amount":100,
+            "out_trade_no":"test-003189",
+            "expiration":7200,
+            "qrCode":"00020101021126910014BR.GOV.BCB.PIX2569api-pix-h.bancobs2.com.br/spi/v2/a5631b32-8737-4abc-959d-9dface195a6f5204000053039865405100.05802BR5913Pagsmilepixpj6014Belo Horizonte61083038040362070503***63049587",
+            "qrCode_img":"https://paychanneldevin.pagsmile.com/api/pixcode?p=EB7E1DBE0CB0FB7853CE561CDA375053E2C2A1E6CDD370E95D95D8"
+            }
+            
     }
     
 ```
