@@ -15,6 +15,10 @@ layout: default
 
 [Deposit Express API](api/FlashPay)
 
+[DirectPix API](api/DirectPix)
+
+[DirectWallet API](api/DirectWallet)
+
 [Lottery API](api/DriectLottery)
 
 [OXXO API](api/DriectOxxo)
