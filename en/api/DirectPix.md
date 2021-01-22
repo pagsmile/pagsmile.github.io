@@ -3,8 +3,8 @@
 
 >## API URL
 
-    Test Environment ：https://paychanneldev.pagsmile.com/api/boleto
-    Production Environment ：https://paychannel.pagsmile.com/api/boleto 
+    Test Environment ：https://paychanneldev.pagsmile.com/api/pix
+    Production Environment ：https://paychannel.pagsmile.com/api/pix
     
 >## Request Method
 
