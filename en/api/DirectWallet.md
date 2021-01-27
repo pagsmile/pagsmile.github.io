@@ -22,7 +22,7 @@ merchant_no | String | Yes | 20 | ID that pagsmile assigned to the merchant | 10
 app_id | String | Yes | 20 | Application ID that pagsmile assigned to the merchant| 2017051914172236111
 version | String | Yes | 10 | API Version, for now is fixed to: 1.0 | 1.0
 timeout_express | String | Yes | 255 | Order validity | One day: 1d or 24h or 1440m;
-timestamp | String | Yes | 19 | Linux time stamp | 21516081919
+timestamp | String | Yes | 19 | Request is sending by second | 21516081919
 sign_type | String | Yes | 10 | Currently only supports MD5 | MD5
 wallet | String | Yes | 20 | Wallet type | Available types: mercadopago, picpay, ame
 payment.out_order_no | String | Yes | 64 | Merchant order number |
