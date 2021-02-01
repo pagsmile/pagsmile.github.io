@@ -23,11 +23,11 @@ layout: default
 
 [OXXO API](api/DriectOxxo)
 
-[Santander API](api/DriectSantander)
+<!-- [Santander API](api/DriectSantander) -->
 
-[BBVA bancomer API](api/DriectBbvabancomer)
+<!-- [BBVA bancomer API](api/DriectBbvabancomer) -->
 
-[Citibanamex API](api/DriectCitibanamex)
+<!-- [Citibanamex API](api/DriectCitibanamex) -->
 
 [Instalment period chceking list(by amount)](api/DriectCardGetinstallments)
 
