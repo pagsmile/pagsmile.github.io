@@ -93,7 +93,7 @@ info.pay_url | String | Yes | 10 | 支付链接 |
 ```
     {
     "code":"200",
-    "info":{"trade_no":"2021020207010698482","currency":"BRL","amount":1000,"out_trade_no":"test-001","pay_url":"https://paychanneldevin.pagsmile.com/oxxo/2021/02/2021020207010698482.pdf"}
+    "info":{"trade_no":"2021020207010698482","currency":"BRL","amount":1000,"out_trade_no":"test-001","pay_url":"https://paychanneldev.pagsmile.com/oxxo/2021/02/2021020207010698482.pdf"}
     }
     
 ```
