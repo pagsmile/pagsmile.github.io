@@ -32,6 +32,7 @@ payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器�
 payment.return_url | String | No | 255 | 服务器同步返回的页面http/https路径。 | https://www.pagsmile.com
 customer.out_uid | String | Yes | 255 | 商户的用户ID |  
 customer.email | String | Yes | 255 | 邮箱地址 |  
+customer.id | String | Yes | 13 | 用户税号 |  
 customer.username | String | Yes | 255 | 用户姓名 | 商城商户此处为必填项；游戏商户选填。
 customer.buyer_ip | String | NO | 255 | 商户的用户ipv4地址 | 
 customer.browser | String | NO | 255 | 商户的用户浏览器类型|
@@ -63,7 +64,8 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
                     "username":"Test User Name",
                     "buyer_ip":"127.0.0.1",
                     "browser":"safari",
-                    "email":"test@pagsmile.com",    
+                    "email":"test@pagsmile.com", 
+                    "id":"CPU1234567891",   
                     "out_uid":"out_uid",
                     "phone":"11941523675"
                     },
@@ -83,8 +85,7 @@ code | String | Yes | 16 | 返回状态码 |
 info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
 info.out_trade_no | String | Yes | 128 | 商户订单号| test-003192
 info.total_amount | float | Yes | 10 | 订单金额 | 10
-info.currency | String | Yes | 10 | 币种 | 
-info.bank_code | String | Yes | 10 | 银行交易流水号 | 
+info.currency | String | Yes | 10 | 币种 |  
 info.pay_url | String | Yes | 10 | 支付链接 |
 
 >## 成功样例
@@ -92,7 +93,7 @@ info.pay_url | String | Yes | 10 | 支付链接 |
 ```
     {
     "code":"200",
-    "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","bank_code":"88475333444003081901000004","pay_url":"https:\/\/paychanneldevin.pagsmile.com\/pagsmile\/oxxoshow?p=EC7A48BB0AB0F12653CE5514DA31525CE2C4A4EBC9DF7BEA5292D2"}
+    "info":{"trade_no":"2017111507382427391","currency":"BRL","amount":1000,"out_trade_no":"test-001","bank_code":"88475333444003081901000004","pay_url":"https://paychanneldevin.pagsmile.com/oxxo/2021/02/2021020207010698482.pdf"}
     }
     
 ```
