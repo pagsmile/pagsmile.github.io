@@ -5,13 +5,15 @@ layout: default
 
 # [](#server)交易平台
 
-[集成式接口](api/CreateOrder) 
- 
-[支付接口流程图](api/Flow) 
+[集成式接口](api/CreateOrder)
+
+[支付接口流程图](api/Flow)
 
 [直连boleto接口](api/DriectBoleto)
 
 [直连wallet接口](api/DriectWallet)
+
+[直连PIX接口](api/DriectPix)
 
 [直连lottery接口](api/DriectLottery)
 
@@ -23,15 +25,15 @@ layout: default
 
 [直连oxxo接口](api/DriectOxxo)
 
-[直连santander接口](api/DriectSantander)
+<!-- [直连santander接口](api/DriectSantander) -->
 
-[直连BBVA bancomer接口](api/DriectBbvabancomer)
+<!-- [直连BBVA bancomer接口](api/DriectBbvabancomer) -->
 
-[直连Citibanamex接口](api/DriectCitibanamex)
-  
+<!-- [直连Citibanamex接口](api/DriectCitibanamex) -->
+
 [支付结果通知](api/CallBack)  
 
-[退款请求接口](api/RefundApply) 
+[退款请求接口](api/RefundApply)
 
 [订单查询接口](api/CheckOrder)
 
@@ -46,5 +48,3 @@ layout: default
 [风控CPF邮箱校验绑定接口说明](api/CheckEmailInfo)  
 
 [风控CPF姓名校验接口说明](api/CheckCpfInfo)
-
-
