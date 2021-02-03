@@ -24,8 +24,8 @@ timeout_express | String | Yes | 255 | 订单有效期 | 一天的时间赋值�
 timestamp | String | Yes | 19 | 发送请求的时间单位为秒 | 21516081919
 sign_type | String | Yes | 10 | 目前仅支持MD5 | MD5
 payment.out_order_no | String | Yes | 64 | 商户订单号 |
-payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。金额范围（5-14000） BRL| 88.88
-payment.currency | String | Yes | 3 | 币种 | BRL 
+payment.order_amount | String | Yes | 10 | 订单总金额，精确到小数点后两位。| 88.88
+payment.currency | String | Yes | 3 | 币种 | MXN 
 payment.subject | String | Yes | 255 | 订单标题 |
 payment.content | String | Yes | 255 | 订单内容 |
 payment.notify_url | String | Yes | 255 | 服务器主动通知商户服务器里指定的页面http/https路径。 | https://www.pagsmile.com
@@ -84,7 +84,7 @@ sign | String | Yes | 32 | 商户请求参数的签名串 | 通过签名算法�
 code | String | Yes | 16 | 返回状态码 | 
 info.trade_no | String | Yes | 128 | 平台订单号 | 2017042311015505011
 info.out_trade_no | String | Yes | 128 | 商户订单号| test-003192
-info.total_amount | float | Yes | 10 | 订单金额 | 10
+info.amount | float | Yes | 10 | 订单金额 | 10
 info.currency | String | Yes | 10 | 币种 |  
 info.pay_url | String | Yes | 10 | 支付链接 |
 
@@ -93,7 +93,7 @@ info.pay_url | String | Yes | 10 | 支付链接 |
 ```
     {
     "code":"200",
-    "info":{"trade_no":"2021020207010698482","currency":"BRL","amount":1000,"out_trade_no":"test-001","pay_url":"https://paychanneldev.pagsmile.com/oxxo/2021/02/2021020207010698482.pdf"}
+    "info":{"trade_no":"2021020207010698482","currency":"MXN","amount":1000,"out_trade_no":"test-001","pay_url":"https://paychanneldev.pagsmile.com/oxxo/2021/02/2021020207010698482.pdf"}
     }
     
 ```
@@ -122,9 +122,7 @@ info.pay_url | String | Yes | 10 | 支付链接 |
 502 | MERCHANT_ID_INVALID | 商户号不可用 | 检查参数中的商户号是否正确。
 507 | MERCHANT_ID_NOT_ACTIVE | 商户号未激活 | 联系客服查看未激活原因。
 602 | APP_ID_INVALID | APP号不可用 | 检查参数中的APP号是否正确。
-752 | CPF_NO_ISNULL | 请求CPF号码为空 | 检查参数设置。
 759 | EMAIL_ISNULL | 请求email为空 | 检查参数设置。
-924 | CPF_INFO_NOT_MATCH | CPF信息不匹配 | 
 930 | USERNAME_ISNULL | 请求用户姓名为空 | 检查参数设置。
 512 | MERCHANT_TRADE_NO_ISNULL | 商户订单号为空 | 检查参数设置。
 806 | TRADE_TIMEOUT_CLOSE | 该订单已经超过指定过期时效 | 检查参数设置或确认订单信息。
